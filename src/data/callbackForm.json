@@ -1,0 +1,21 @@
+{
+    "inputs": [
+        {
+            "id": "callback-name",
+            "name": "name",
+            "label": "Имя",
+            "type": "text",
+            "required": true,
+            "notification": "Не менее 3-х символов"
+        },
+        {
+            "id": "callback-phone",
+            "name": "phone",
+            "label": "Телефон",
+            "type": "tel",
+            "required": true,
+            "notification": "Телефон не заполнен"
+        }
+    ],
+    "buttonTitle": "Отправить"
+}

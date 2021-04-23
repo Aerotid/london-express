@@ -1,0 +1,249 @@
+.smooth-hide {
+    animation-name: smooth-hide-anim;
+    animation-duration: .5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes smooth-hide-anim {
+    from { opacity: 1; visibility: visible; }
+    to {opacity: 0; visibility: hidden; }
+}
+
+.smooth-show {
+    animation: smooth-show-anim .5s linear forwards;
+}
+
+@keyframes smooth-show-anim {
+    from { opacity: 0; visibility: hidden; }
+    to {opacity: 1; visibility: visible; }
+}
+
+.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.invisible {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.no-transition {
+    transition: all 0s !important;
+}
+
+@mixin project-slider-footer {
+    position: absolute;
+    transform: translateY(50%);
+    bottom: 16%;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+.no-offset {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.no-padding-bottom {
+    margin-bottom: 0;
+}
+.no-pointer-event {
+    pointer-events: none;
+}
+
+@mixin aspect-ratio($max-ratio: 1920px, $min-ratio: 1080px) {
+    @media (max-width: $max-ratio), (max-height: $min-ratio) {
+        @content;
+    }
+}
+
+@mixin max-aspect-ratio($maxRatio: 1920, $minRatio: 1080) {
+    @media (max-aspect-ratio: #{$maxRatio} / #{$minRatio}) {
+        @content;
+    }
+}
+
+@mixin min-aspect-ratio($maxRatio: 1920, $minRatio: 1080) {
+    @media (min-aspect-ratio: #{$maxRatio} / #{$minRatio}) {
+        @content;
+    }
+}
+
+@function vw($value, $base: 1920) {
+    @return $value / $base * 100vw;
+}
+
+@function vh($value, $base: 1080) {
+    @return $value / $base * 100vh;
+}
+
+@mixin ie-only {
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        @content;
+    }
+}
+
+@mixin ie-min-height-flex-fix {
+    &::after {
+        content: '';
+        min-height: inherit;
+        font-size: 0;
+    }
+}
+
+.swiper-custom-scrollbar {
+    position: relative;
+    height: 10px;
+    background-color: transparent;
+    border-radius: 20px;
+    cursor: grab;
+
+    @include media-breakpoint-down(sm) {
+        height: 5px;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        transform: translateY(-50%);
+        background-color: rgba($color-9, .1);
+    }
+
+    .swiper-custom-scrollbar-drag {
+        height: 100%;
+        width: 100%;
+        background-color: $color-14;
+        border-radius: 20px;
+    }
+}
+
+.word {
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.letter {
+    display: inline-block;
+    opacity: 0;
+    will-change: transform, opacity;
+}
+
+.animate-wave {
+    opacity: 1;
+
+    .letter {
+        opacity: 1;
+        animation: jump-title-in 1.3s ease-in-out both;
+    }
+}
+
+
+@keyframes vibrate {
+    0% {
+        transform: translate3d(0 ,0 ,0);
+    }
+    20% {
+        transform: translate3d(0.5%, 0.25%, 0);
+    }
+    40% {
+        transform: translate3d(0, 0.5%, 0);
+    }
+    60% {
+        transform: translate3d(-0.5%, 0.25%, 0);
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes slide-in-fwd-bottom {
+    0% {
+        transform: translate3d(0, 5%, 0);
+        opacity: 0.5;
+    }
+    70% {
+        transform: translate3d(0 ,-5% ,0);
+        opacity: 0.75;
+    }
+    100% {
+        transform: translate3d(0 ,0 ,0);
+        opacity: 1;
+    }
+}
+
+@keyframes showPerson {
+    0% {
+        transform: translate3d(0, 3.5%, 0);
+        opacity: 0;
+    }
+    50% {
+        transform: translate3d(0, -1.5%, 0);
+        opacity: 1;
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes jump-title-in {
+    0% {
+        transform: translate3d(0, 10%, 0);
+        opacity: 0;
+    }
+    30% {
+        transform: translate3d(0, -10%, 0);
+        opacity: 1;
+    }
+    60% {
+        transform: translate3d(0, 2%, 0);
+    }
+    80% {
+        transform: translate3d(0, -1%, 0);
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes scale-up-bottom {
+    0% {
+        transform: scale(0.95);
+        transform-origin: 75% 100%;
+    }
+    100% {
+        transform: scale(1);
+        transform-origin: 75% 100%;
+    }
+}
+
+.new-node-animate {
+    opacity: 0;
+    animation: new-node 0.4s forwards;
+}
+
+@keyframes new-node {
+    from {
+        opacity: 0;
+        transform: translateY(-10%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.error-block {
+    margin-bottom: 20px;
+    display: none;
+
+    &.show {
+        display: block;
+    }
+}

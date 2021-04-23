@@ -1,0 +1,66 @@
+@font-face {
+    font-family: $font-gilroy;
+    src: url('../../fonts/Gilroy/Gilroy-Bold.woff2') format('woff2'),
+    url('../../fonts/Gilroy/Gilroy-Bold.woff') format('woff'),
+    url('../../fonts/Gilroy/Gilroy-Bold.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+}
+@font-face {
+    font-family: $font-gilroy;
+    src: url('../../fonts/Gilroy/Gilroy-Extrabold.woff2') format('woff2'),
+    url('../../fonts/Gilroy/Gilroy-Extrabold.woff') format('woff'),
+    url('../../fonts/Gilroy/Gilroy-Extrabold.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+}
+@font-face {
+    font-family: $font-gilroy;
+    src: url('../../fonts/Gilroy/Gilroy-Medium.woff2') format('woff2'),
+    url('../../fonts/Gilroy/Gilroy-Medium.woff') format('woff'),
+    url('../../fonts/Gilroy/Gilroy-Medium.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+}
+@font-face {
+    font-family: $font-gilroy;
+    src: url('../../fonts/Gilroy/Gilroy-Regular.woff2') format('woff2'),
+    url('../../fonts/Gilroy/Gilroy-Regular.woff') format('woff'),
+    url('../../fonts/Gilroy/Gilroy-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: $font-gilroy;
+    src: url('../../fonts/Gilroy/Gilroy-Light.woff2') format('woff2'),
+    url('../../fonts/Gilroy/Gilroy-Light.woff') format('woff'),
+    url('../../fonts/Gilroy/Gilroy-Light.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: $font-gotham;
+    src: url('../../fonts/GothamPro/GothamPro.woff2') format('woff2'),
+    url('../../fonts/GothamPro/GothamPro.woff') format('woff'),
+    url('../../fonts/GothamPro/GothamPro.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: $font-gotham;
+    src: url('../../fonts/GothamPro/GothamPro-Black.woff2') format('woff2'),
+    url('../../fonts/GothamPro/GothamPro-Black.woff') format('woff'),
+    url('../../fonts/GothamPro/GothamPro-Black.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+}

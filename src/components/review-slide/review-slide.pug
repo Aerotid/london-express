@@ -1,0 +1,10 @@
+mixin review-slide(args)
+    .review-slide&attributes(attributes)
+        .row
+            .col-md-16.offset-md-4.col-xl-10.offset-xl-7
+                .review-slide__text!= args.text.preview
+                .review-slide__bottom
+                    .review-slide__img
+                        +img({ path: args.img, lazy: true})(data-object-fit='cover')
+                    .review-slide__info
+                        .review-slide__title!= args.name + ', ' + args.course

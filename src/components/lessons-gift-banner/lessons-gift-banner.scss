@@ -1,0 +1,111 @@
+.lessons-gift-banner {
+    $root: &;
+    color: white;
+    text-align: center;
+    @include mobile-offset;
+
+    @include media-breakpoint-down(lg) {
+        //text-align: left;
+
+        @include media-breakpoint-down(sm) {
+            text-align: center;
+        }
+    }
+
+    &_child {
+        #{$root}__bg {
+            background-color: $color-6;
+        }
+    }
+
+    &_cups {
+        #{$root}__bg {
+            background-color: $color-21;
+
+            @include media-breakpoint-down(lg) {
+                background-image: linear-gradient(168.46deg, rgba(255, 184, 4, 0.4) 49.54%, rgba(255, 168, 0, 0) 84.52%);
+                background-blend-mode: multiply;
+            }
+        }
+    }
+
+    &__banner {
+        position: relative;
+        padding: 10rem calc(#{$col-width}*3) 9.1rem;
+        border-radius: 2rem;
+        box-shadow: inset 0px 30px 80px rgba(55, 84, 170, 0.1);
+
+        @include media-breakpoint-down(lg) {
+            //padding: 8rem calc(#{$col-width}*1) 8rem;
+            padding: 7rem 1rem 25rem;
+
+            @include media-breakpoint-down(sm) {
+                padding: 7rem 1rem 16.1rem;
+            }
+        }
+    }
+
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        overflow: hidden;
+        border-radius: 2rem;
+        box-shadow: 0px 30px 80px rgba(55, 84, 170, 0.1);
+
+        picture {
+            width: 100%;
+
+            @include media-breakpoint-down(lg) {
+                height: 100%;
+                transform: matrix(1, 0, 0, 1, 0, 0)!important;
+            }
+        }
+
+        img {
+            width: 100%;
+            //height: 100%;
+            object-fit: cover;
+            //transform: translateY(-20%);
+
+            @include media-breakpoint-down(lg) {
+                height: 100%;
+                object-fit: contain;
+                object-position: bottom center;
+            }
+        }
+    }
+
+    &__content {
+        width: calc(#{$col-width}*4);
+
+        @include media-breakpoint-down(xxxl) {
+            width: calc(#{$col-width}*5);
+
+            @include media-breakpoint-down(xl) {
+                width: calc(#{$col-width}*6);
+
+                @include media-breakpoint-down(lg) {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    &__title {
+        margin: 0 0 3rem;
+        @include font-12;
+    }
+
+    &__subtitle {
+        margin: 0 0 6rem;
+        @include font-26;
+
+        @include media-breakpoint-down(lg) {
+            margin-bottom: 3rem;
+        }
+    }
+}

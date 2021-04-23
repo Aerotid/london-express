@@ -1,0 +1,36 @@
+[
+    {
+        "title": "Английский для <br>взрослых",
+        "picture": {
+            "img": "../index/images/grid-item-1.jpg",
+            "sources": [
+                {
+                    "srcset": "../index/images/grid-item-1-mobile.jpg",
+                    "media": "(max-width: 767.9px)"
+                }
+            ],
+            "objectFit": "contain",
+            "objPos": ["center", "right"],
+            "lazy": "true"
+        },
+        "svg": "lesson-1",
+        "detailsHref": "/adult-courses.html"
+    },
+    {
+        "title": "Английский для <br>детей",
+        "picture": {
+            "img": "../index/images/grid-item-2.jpg",
+            "sources": [
+                {
+                    "srcset": "../index/images/grid-item-2-mobile.jpg",
+                    "media": "(max-width: 767.9px)"
+                }
+            ],
+            "objectFit": "contain",
+            "objPos": ["center", "right"],
+            "lazy": "true"
+        },
+        "svg": "lesson-2",
+        "detailsHref": "/child-courses.html"
+    }
+]

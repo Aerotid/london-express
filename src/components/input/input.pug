@@ -1,0 +1,41 @@
+mixin input(args)
+    .input&attributes(attributes)
+        -
+            var required = '';
+
+            if (args.required) {
+                required = '*';
+            }
+        if(args.type === 'tel')
+            #{(args && args.tagName) ? args.tagName : 'input'}(
+                type=args.type ? args.type : false
+                id=args.id
+                name=args.name ? args.name : args.id
+                x-autocompletetype="phone-full"
+                placeholder= args.placeholder
+                required= args && args.required ? 'required' : false
+            ).input__input
+        else if(args.type === 'date')
+            #{(args && args.tagName) ? args.tagName : 'input'}(
+                 type=args.type ? args.type : false
+                 name=args.name ? args.name : args.id
+                 id=args.id
+                 placeholder= args.placeholder
+                 required= args && args.required ? 'required' : false
+                 min='1900-01-01'
+                 max='2100-01-01'
+                 date-format='dd.mm.yyyy',
+                 lang='ru'
+             ).input__input
+        else
+            #{(args && args.tagName) ? args.tagName : 'input'}(
+                type=args.type ? args.type : false
+                name=args.name ? args.name : args.id
+                id=args.id
+                placeholder= args.placeholder
+                required= args && args.required ? 'required' : false
+                minlength='3'
+            ).input__input
+        if (args && args.label)
+            label(for= args.id).input__label!= `${args.label}${required}`
+        .input__notification(class=args.notificationTop?'input__notification_top':'')!=args.notification

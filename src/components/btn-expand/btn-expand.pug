@@ -1,0 +1,6 @@
+mixin btn-expand(args)
+     button(type='button').btn-expand.collapsed&attributes(attributes)
+        .btn-expand__text
+            span.btn-expand__expand Развернуть
+            span.btn-expand__collapse Свернуть
+        +svg({ name: 'expandArrow' }).btn-expand__arrow

@@ -1,0 +1,9 @@
+extends ../../layout/layout
+include ../../components/main/main
+include ../../components/footer/footer
+
+block content
+    div#barba-wrapper
+        .barba-container(data-namespace='${pageName}')
+            +main
+            +footer

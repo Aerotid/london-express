@@ -1,0 +1,7 @@
+mixin news-card(args)
+    a.news-card(href='/news-article.html')&attributes(attributes)
+        if (args.img)
+            .news-card__picture
+                +img({path: args.img, lazy: true})
+        time(datetime=args.date.datetime).news-card__date!= args.date.showDate
+        h3.news-card__title!= args.title

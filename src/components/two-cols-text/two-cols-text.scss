@@ -1,0 +1,12 @@
+.two-cols-text {
+    $root: &;
+    @include mobile-offset;
+
+    &_margin {
+        margin-bottom: 10rem;
+    }
+
+    &__content {
+        display: flex;
+    }
+}

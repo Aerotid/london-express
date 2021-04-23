@@ -1,0 +1,104 @@
+.comments {
+    $root: &;
+
+    &__title {
+        @include font-6;
+        transition: margin-bottom 0.2s;
+
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 4rem;
+        }
+    }
+
+    &__header {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin-bottom: 7.8rem;
+
+        @include media-breakpoint-down(sm) {
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 4rem;
+        }
+    }
+
+    &__add-btn {
+
+    }
+
+    &__comment {
+        margin-bottom: 4rem;
+        animation: appearFromOpacity 0.8s forwards;
+    }
+
+    &__comment-header {
+        display: flex;
+        margin-bottom: 3.7rem;
+
+        @include media-breakpoint-down(sm) {
+            flex-direction: column;
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__user {
+        margin-right: 3rem;
+        @include font-21;
+
+        @include media-breakpoint-down(sm) {
+            margin-right: 0;
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__time {
+        @include font-4;
+    }
+
+    &__text {
+        @include font-4;
+
+        p {
+            margin: 0 0 2rem;
+
+            &:last-child {
+                margin: 0;
+            }
+        }
+    }
+
+    &__hline {
+        margin-bottom: 4rem;
+        height: 2px;
+        width: 100%;
+        background-color: rgba($color-9, 0.2);
+
+        .endless-btn_is-hidden + &  {
+            display: none;
+        }
+    }
+
+    &__endless-btn {
+        margin: 0;
+
+        @include media-breakpoint-down(md) {
+            @include media-breakpoint-down(sm) {
+                padding: 1.03rem 3.1rem;
+                margin: 0;
+            }
+        }
+    }
+
+    &_hide-btn {
+        #{$root}__hline,
+        #{$root}__endless-btn {
+            display: none;
+        }
+    }
+}
+
+@keyframes appearFromOpacity {
+    from { opacity: 0 }
+    to { opacity: 1 }
+}

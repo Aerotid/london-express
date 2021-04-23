@@ -1,0 +1,83 @@
+.teachers-list {
+    $root: &;
+
+    margin-bottom: 8rem;
+
+    @include media-breakpoint-down(sm) {
+        margin-bottom: 4rem;
+    }
+
+    &__description {
+        margin-bottom: 13.8rem;
+        @include mobile-offset;
+        @include font-3;
+        text-align: center;
+
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 1.8rem;
+        }
+
+        p {
+            &:not(:last-child) {
+                margin-bottom: 2rem;
+            }
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 0;
+        margin-bottom: 0;
+        list-style: none;
+
+        @include media-breakpoint-down(sm) {
+            flex-wrap: nowrap;
+        }
+
+        li {
+            width: 20rem;
+            margin-right: calc((100% - 20rem * 4)/3);
+
+            @include media-breakpoint-down(lg) {
+                margin-right: calc((100% - 20rem * 3)/2);
+
+                &:nth-child(3n) {
+                    margin-right: 0;
+                }
+
+                @include media-breakpoint-down(sm) {
+                    margin-right: auto;
+                }
+            }
+
+            &:nth-child(4n) {
+                margin-right: 0;
+
+                @include media-breakpoint-down(lg) {
+                    margin-right: calc((100% - 20rem * 3)/2);
+
+                    @include media-breakpoint-down(sm) {
+                        margin-right: auto;
+                    }
+                }
+            }
+
+            &:nth-last-child(-n+3) {
+                margin-bottom: 0;
+
+                @include media-breakpoint-down(sm) {
+                    margin-right: auto;
+                }
+            }
+        }
+    }
+
+    &__scrollbar {
+        @include media-breakpoint-down(sm) {
+            margin-right: 2rem;
+            margin-left: 2rem;
+            width: 87.5%;
+        }
+    }
+}

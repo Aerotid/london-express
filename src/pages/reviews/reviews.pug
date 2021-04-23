@@ -1,0 +1,34 @@
+extends ../../layout/layout
+include ../../components/main/main
+include ../../components/footer/footer
+include ../../components/section/section
+include ../../components/h1-title/h1-title
+include ../../components/reviews-section/reviews-section
+include ../../components/text-banner/text-banner
+include ../../components/block-title/block-title
+include ../../components/block-text/block-text
+include ../../components/slider-achievements/slider-achievements
+include ../../components/exam-results-circle/exam-results-circle
+
+block content
+    div#barba-wrapper
+        .barba-container(data-namespace='reviews')
+            +main
+                +section()
+                    +h1-title({ title: 'Отзывы', description: 'В&nbsp;своей работе мы&nbsp;используем лучшие мировые методики, которые не&nbsp;только развивают языковые навыки, но&nbsp;и&nbsp;активно вовлекают в&nbsp;процесс обучения. Совместная работа преподавателя и&nbsp;студента позволяет добиваться высоких результатов. Вот, что говорят о&nbsp;своем опыте обучения наши ученики.'}).reviews__title
+                    +reviews-section
+                    +section
+                        +text-banner({
+                            svg: {
+                                name: 'brain'
+                            },
+                            text:'<p>Все наши студенты достигают и&nbsp;превосходят<br>те&nbsp;цели по&nbsp;изучению английского языка, которые они себе ставили в&nbsp;начале пути.</p>'
+                        }).text-banner_pink.reviews__text-banner
+                    +section.section_pt.section_whisper-offset.reviews__achievements-section
+                        +block-title({ title: 'Достижения учеников', description: 'London Express Online&nbsp;&mdash; это школа с&nbsp;доказанной экспертностью и&nbsp;многолетним опытом в&nbsp;академическом фундаментальном образовании. Это позволяет нашим студентам успешно сдавать как международные языковые экзамены, так и&nbsp;получать высокие баллы по&nbsp;ЕГЭ для поступления в&nbsp;ведущие вузы.'}).reviews__achievements-title
+                        +slider-achievements
+                    +section.section_pt.section_pb
+                        +block-text({text: '<p>Для сдачи ЕГЭ и&nbsp;ОГЭ на&nbsp;высокие баллы недостаточно стандартной школьной программы. Преподаватели London Express Online успешно подготовят учеников к&nbsp;экзаменам с&nbsp;учетом их&nbsp;специфики. На&nbsp;занятиях подробно разбираются примеры заданий из&nbsp;устной и&nbsp;письменной частей: аудирования, чтения, грамматики, лексики, письма и&nbsp;говорения.</p>'}).reviews__results-text
+                        +exam-results-circle
+                    //+students-achievements
+            +footer

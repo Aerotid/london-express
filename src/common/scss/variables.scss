@@ -1,0 +1,62 @@
+/* add bootstrap  breakpoints */
+$grid-breakpoints: (
+    xxxs: 0,
+    xxs: 320px,
+    xs: 568px,
+    sm: 667px,
+    md: 768px,
+    new: 823px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1440px,
+    xxxl: 1600px,
+    fhd: 1920px,
+    rt: 2560px,
+    rt15: 2880px,
+    uhd: 3840px,
+    '4k': 4096px,
+    '8k': 8192px
+);
+$container-max-widths: (
+    xxxs: 0,
+    xxs: 320px,
+    xs: 568px,
+    sm: 667px,
+    md: 768px,
+    new: 823px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1440px,
+    xxxl: 1600px,
+    fhd: 1830px,
+    rt: 2470px,
+    rt15: 2790px,
+    uhd: 3810px,
+    '4k': 4006px,
+    '8k': 8102px
+);
+
+$screen-sm-min: 576px;
+$screen-md-min: 768px;
+$screen-md-min-new: 823px;
+$screen-lg-min: 992px;
+$screen-xl-min: 1200px;
+$screen-xxl-min: 1440px;
+$mobile-breakpoint: 768px;
+$mobile-min-width: 320px;
+$mobile-min-height: 568px;
+$fhd-width: 1920px;
+$fhd-height: 1080px;
+
+$grid-side-offset: smooth-value(30px, 80px, $mobile-min-width, $fhd-width, 'w');
+$grid-columns: 24 !default;
+$grid-gutter-width: 0 !default;
+//$col-width: calc((100vw - #{$grid-side-offset} * 2) / #{$grid-columns});
+$col-width: calc(100vw / #{$grid-columns});
+$col-half-width: calc(100vw / #{$grid-columns} / 2);
+$col-width-abs: 100 / $grid-columns;
+
+$font-gilroy: Gilroy;
+$font-gotham: GothamPro;
+
+$animation-timing: cubic-bezier(0.165, 0.84, 0.44, 1);

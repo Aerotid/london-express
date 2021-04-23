@@ -1,0 +1,115 @@
+[data-namespace="teachers"] {
+    .about-team {
+        @include mobile-offset;
+
+        &__team-col {
+            margin-bottom: 14rem;
+
+            @include media-breakpoint-down(lg) {
+                margin-bottom: 10rem;
+            }
+
+            &:first-child {
+                padding-right: calc(#{$col-width}*2);
+
+                @include media-breakpoint-down(sm) {
+                    order: 2;
+                    margin-bottom: 4rem;
+                    padding: 0;
+                }
+            }
+
+            &:last-child {
+                padding-left: calc(#{$col-width}*0.5);
+
+                @include media-breakpoint-down(sm) {
+                    order: 1;
+                    padding: 0;
+                    margin-bottom: 3rem;
+                }
+            }
+        }
+
+        span {
+            display: block;
+        }
+
+        &__top-span,
+        &__bottom-span {
+            @include font-4;
+        }
+
+        &__top-span {
+            margin-bottom: 0.2rem;
+
+            @include media-breakpoint-down(sm) {
+                margin-bottom: 0;
+            }
+        }
+
+        &__top-text {
+            margin-bottom: 3rem;
+            @include font-3;
+
+            p {
+                &:not(:last-child) {
+                    margin-bottom: 2rem;
+                }
+            }
+
+            @include media-breakpoint-down(sm) {
+                margin-bottom: 2rem;
+            }
+        }
+
+        &__bottom-text {
+            margin-bottom: 0;
+            @include font-26;
+
+            p {
+                &:not(:last-child) {
+                    margin-bottom: 2rem;
+                }
+            }
+        }
+    }
+
+    .teachers {
+        &__work-title {
+            margin-bottom: 7.8rem;
+
+            @include media-breakpoint-down(md) {
+                margin-bottom: 4rem;
+
+                @include media-breakpoint-down(sm) {
+                    padding-top: 0;
+                    margin-bottom: 3rem;
+                }
+            }
+        }
+
+        &__qualification-title {
+            margin-bottom: 12.4rem;
+
+            @include media-breakpoint-down(md) {
+                margin-bottom: 4rem;
+
+                @include media-breakpoint-down(sm) {
+                    margin-bottom: 3rem;
+                }
+            }
+        }
+
+        &__list-section {
+            padding-top: 6.8rem;
+
+            @include media-breakpoint-down(md) {
+                padding-top: 4rem;
+
+                @include media-breakpoint-down(sm) {
+                    padding-top: 1.8rem;
+                }
+            }
+        }
+    }
+}

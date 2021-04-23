@@ -1,0 +1,20 @@
+include ../../components/review-slide/review-slide
+include ../../components/btn-arrow/btn-arrow
+
+mixin slider(args)
+    .slider&attributes(attributes)(data-anim="anim-1" data-hook=0.8)
+        if (args.type === 'reviews')
+            .slider__pagination
+        .swiper-container
+            .d-none.d-md-block
+                +btn-arrow({type: 'prev'})
+                +btn-arrow({type: 'next'})
+            .swiper-wrapper
+                if (args.slides)
+                    each slide in args.slides
+                        .swiper-slide
+                            if (args.type === 'reviews')
+                                +review-slide(slide)
+                            else
+                                .col-12.offset-6
+                                    +picture(slide).slider__img

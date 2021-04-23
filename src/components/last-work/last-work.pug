@@ -1,0 +1,7 @@
+mixin last-work(args)
+    .last-work&attributes(attributes)
+        img.last-work__img(src!= args.src)
+        .last-work__container
+            .last-work__title!= args.title
+            .last-work__name!= args.name
+        +btn({tagName: 'button'}).btn_white-border.btn_small Выполнить

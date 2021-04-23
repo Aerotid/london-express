@@ -1,0 +1,16 @@
+include ../../components/share/share
+
+mixin news-main(args)
+    .news-main&attributes(attributes)
+        .news-main__bg
+            include ../../pages/news/images/LondonNews.svg
+        .news-main__container
+            a(href='/news-article.html').news-main__link.news-main__link_img
+                +img({ path: data.news.main.image })(data-object-fit='cover')
+            .news-main__wrapper
+                a(href='/news-article.html').news-main__link
+                    .news-main__date!=data.news.main.date
+                    h3.news-main__title!=data.news.main.title
+                    if (data.news.main.text)
+                        p.news-main__text!=data.news.main.text
+                +share.news-main__share

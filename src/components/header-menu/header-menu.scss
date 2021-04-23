@@ -1,0 +1,67 @@
+.header-menu {
+    $root: &;
+
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    &__item {
+        margin-right: calc(#{$col-width}*0.625);
+
+        @include media-breakpoint-between(xl, xl) {
+            margin-right: calc(#{$col-width}*0.27);
+        }
+
+        @include media-breakpoint-between(xxl, xxxl) {
+            margin-right: calc(#{$col-width}*0.39);
+        }
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+    }
+
+    &__link {
+        @include font-7;
+        color: currentColor;
+
+        @include states {
+            outline: none;
+            color: currentColor;
+            text-decoration: none;
+        }
+
+        @include linkHover(false, white);
+
+        .sandwich-closing-contrast .header &,
+        .sandwich-open .header &,
+        .header_sticky  &,
+        .header._contrast & {
+            @include linkHover;
+
+            &_active {
+                @include linkHover($desktop-show-line: true);
+            }
+        }
+
+        &:focus {
+            &::after {
+                opacity: 0;
+            }
+        }
+
+
+        &_active {
+            @include linkHover($color: white, $desktop-show-line: true);
+        }
+    }
+
+    .sandwich-open & {
+        //opacity: 0;
+        //visibility: hidden;
+    }
+}

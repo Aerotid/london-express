@@ -1,0 +1,28 @@
+include ../../components/block-title/block-title
+include ../../components/btn-arrow/btn-arrow
+
+mixin class-format(args)
+    .class-format&attributes(attributes)
+        +block-title({ title: 'Формат занятий', description: 'Весь процесс обучения протекает на&nbsp;нашей онлайн-платформе.'})
+        .class-format__slider(data-anim="anim-1" data-hook=0.8)
+            .row.justify-content-center
+                .col-md-2.d-none.d-md-block.position-relative
+                    +btn-arrow({type: 'prev', svg: 'sliderArrow'})
+                .col-24.col-md-20
+                    .swiper-container
+                        .swiper-wrapper
+                            each slide in args.slides
+                                .swiper-slide
+                                    .swiper-slide__img
+                                        +picture(slide.picture)
+                                    .swiper-slide__text-content
+                                        .swiper-slide__title!= slide.title
+                                        .swiper-slide__description!= slide.description
+                        .class-format__pagination.d-md-none
+                        .swiper-custom-scrollbar.class-format__scrollbar.d-md-none
+                .col-md-2.d-none.d-md-block.position-relative
+                    +btn-arrow({type: 'next', svg: 'sliderArrow'})
+        .row
+            .col-md-12.offset-md-6
+                .class-format__text!= args.text
+

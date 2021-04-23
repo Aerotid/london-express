@@ -1,0 +1,10 @@
+include ../../components/picture/picture
+include ../../components/btn/btn
+
+mixin price-banner(args)
+    .price-banner&attributes(attributes)
+        +picture(args.picture).price-banner__picture
+        .price-banner__content
+            .price-banner__title(data-anim='anim-3')!=args.title
+            .price-banner__text(data-anim='anim-3')!=args.text
+            +btn({ tagName: 'button' })(data='free-popup').btn_white-border.price-banner__btn(data-anim='anim-3') Записаться

@@ -1,0 +1,6 @@
+mixin teacher(args)
+    .teacher&attributes(attributes)
+        .teacher__photo
+            +img({path: args.photo, lazy: true})(data-object-fit='cover')
+        .teacher__name!= args.name
+

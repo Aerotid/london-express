@@ -1,0 +1,24 @@
+[
+  {
+    "title": "Английский как родной",
+    "description": "Начните с&nbsp;любого уровня. Мы&nbsp;подберем программу и&nbsp;преподавателя специально для вас.",
+    "href": "#",
+    "bubbleText1": "bubble-1",
+    "bubbleText2": "bubble-2",
+    "imageMobile": "../index/images/slide-1-mobile.png"
+  },
+  {
+    "title": "Английский для тебя",
+    "description": "Используйте современную лексику в&nbsp;речи, устойчивые обороты и&nbsp;идиоматические выражения.",
+    "href": "#",
+    "bubbleText2": "bubble-4",
+    "imageMobile": "../index/images/slide-2-mobile.png"
+  },
+  {
+    "title": "More English!",
+    "description": "Перейдите на качественно новый уровень владения языком",
+    "href": "#",
+    "bubbleText1": "bubble-5",
+    "imageMobile": "../index/images/slide-3-mobile.png"
+  }
+]

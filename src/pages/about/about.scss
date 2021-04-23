@@ -1,0 +1,21 @@
+[data-namespace="about"] {
+
+    .about {
+
+        &__founders-block-title {
+            margin-bottom: 8rem;
+
+            @include media-breakpoint-down(md) {
+                margin-bottom: 4rem;
+
+                @include media-breakpoint-down(sm) {
+                    margin-bottom: 3rem;
+                }
+            }
+        }
+
+        &__partnership {
+            //padding-top: 9rem;
+        }
+    }
+}

@@ -1,0 +1,163 @@
+extends ../../layout/layout
+include ../../components/main/main
+include ../../components/footer/footer
+include ../../components/section/section
+include ../../components/h1-title/h1-title
+include ../../components/pink-text/pink-text
+include ../../components/price-banner/price-banner
+include ../../components/price-slider/price-slider
+include ../../components/price-advantages/price-advantages
+include ../../components/partners/partners
+include ../../components/block-title/block-title
+include ../../components/great-offers/great-offers
+include ../../components/lessons-gift-banner/lessons-gift-banner
+include ../../components/individual-group-classes/individual-group-classes
+include ../../components/questions-list/questions-list
+include ../../components/prop-block/prop-block
+
+block content
+    div#barba-wrapper
+        .barba-container(data-namespace='price')
+            +main
+                +section
+                    +h1-title({ title:'Стоимость онлайн-курсов английского языка', description: 'Выбирайте удобный формат обучения, все курсы можно пройти в&nbsp;группе или индивидуально с&nbsp;русскоязычным преподавателем или носителем языка. Продолжительность занятий 50&nbsp;мин и&nbsp;80&nbsp;мин.' })
+                    .price__row(data-anim='anim-3')
+                        .price__row-content
+                            +pink-text({
+                                title: '390',
+                                description: 'Занятия в группе от',
+                                suffix: ' ₽'
+                            }).pink-text_reverse.pink-text_black-desc.pink-text_text-center-mobile
+                        .price__row-content
+                            +pink-text({
+                                title: '690',
+                                description: 'Индивидуальные занятия от',
+                                suffix: ' ₽'
+                            }).pink-text_reverse.pink-text_black-desc.pink-text_text-center-mobile
+                        .price__row-content
+                            +pink-text({
+                                title: '0',
+                                description: 'Первое занятие',
+                                suffix: ' ₽'
+                            }).pink-text_reverse.pink-text_black-desc.pink-text_text-center-mobile
+                +section
+                    +price-banner({
+                        title: 'Попробуйте бесплатно',
+                        text: 'На&nbsp;первом пробном занятии методист познакомит вас с&nbsp;нашей онлайн-платформой, определит уровень языка, подберет программу и&nbsp;продолжительность курса, даст рекомендации по&nbsp;графику обучения.',
+                        picture: {
+                            sources: [{
+                                srcset: '../price/images/rocket.png',
+                                media: '(max-width: 1199.98px)'
+                            }],
+                            img: '../price/images/rocket.png'
+                        }
+                    })
+                +section.section_pt.section_whisper-offset.price__slider-section
+                    +block-title({
+                        title: 'Индивидуальные занятия',
+                        description: 'Для тех, кому важен персональный подход. Преподаватель выстраивает программу, темп и&nbsp;график обучения под индивидуальные потребности студента.'
+                    })
+                    +price-slider(data.price.single)
+                +section.section_pt.section_whisper-offset.price__slider-section
+                    +block-title({
+                        title: 'Групповые занятия',
+                        description: 'Экономичный вариант. В&nbsp;небольшой языковой группе до&nbsp;4&nbsp;человек лучше всего развивается коммуникативный диалоговый навык.'
+                    })
+                    +price-slider(data.price.group)
+                +section
+                    +price-advantages(data.price.advantages)
+                +partners(data.price.partners)
+                +section.section_margin
+                    +block-title({
+                        title: 'Лучшие предложения'
+                    })
+                    +great-offers
+                        .swiper-slide.great-offers__item
+                            +lessons-gift-banner({
+                                picture: {
+                                    sources: [{
+                                        srcset: '../../components/lessons-gift-banner/images/lessons-gift-child-mobile.jpg',
+                                        media: '(max-width: 1199.98px)'
+                                    }],
+                                    img: '../../components/lessons-gift-banner/images/lessons-gift-child.jpg',
+                                    lazy: true,
+                                    objectFit: 'cover',
+                                    objPos: ['center']
+                                },
+                                href: '#'
+                            }).lessons-gift-banner_child
+                        .swiper-slide.great-offers__item
+                            +lessons-gift-banner({
+                                picture: {
+                                    sources: [{
+                                        srcset: '../../components/lessons-gift-banner/images/lessons-gift-cups-mobile.png',
+                                        media: '(max-width: 1199.98px)'
+                                    }],
+                                    img: '../../components/lessons-gift-banner/images/lessons-gift-cups.png',
+                                    lazy: true,
+                                    objectFit: 'cover',
+                                    objPos: ['center']
+                                },
+                                href: '#'
+                            }).lessons-gift-banner_cups
+                +section.section_hint-of-red.section_margin
+                    +individual-group-classes({
+                        blocks: [
+                            {
+                                title: 'Бесплатные<br>спикинг-клабы',
+                                description: 'Расширяйте свои горизонты, участвуйте в&nbsp;разговорных клубах.',
+                                text: 'Актуальные темы каждую неделю, интересные собеседники, живая практика общения. Бесплатное посещение для наших студентов.',
+                                picture: {
+                                    sources: [],
+                                    img: '../../common/images/speaking-club.png',
+                                    lazy: true
+                                },
+                                circlesNum: 1
+                            },
+                            {
+                                title: 'Надежный сервис',
+                                description: 'Все платежи защищены технологией https, соединением через SSL-сертификат',
+                                text: 'Отслеживайте всю финансовую информацию в&nbsp;своем личном кабинете. Переносите занятия с&nbsp;сохранением баланса.',
+                                picture: {
+                                    sources: [],
+                                    img: '../price/images/1.png',
+                                    lazy: true
+                                },
+                                circlesNum: 1
+                            },
+                            {
+                                title: 'Корпоративным клиентам',
+                                description: 'Групповой и&nbsp;индивидуальный формат. Учебная программа под языковые потребности компании.',
+                                text: 'Курсы для специальных профессиональных целей, международных экзаменов и&nbsp;др. Подробнее об&nbsp;условиях и&nbsp;стоимости узнавайте school@londonexpress-online.ru',
+                                picture: {
+                                    sources: [],
+                                    img: '../price/images/2.png',
+                                    lazy: true
+                                },
+                                circlesNum: 1
+                            }]
+                    })
+                +section.section_margin
+                    +block-title({
+                        title: 'Остались вопросы?',
+                        description: 'Здесь ответы на&nbsp;самые популярные из&nbsp;них'
+                    })
+                    +questions-list
+                +section
+                    +prop-block({
+                        title: 'Попробовать бесплатно',
+                        description: 'Записаться на&nbsp;пробный урок',
+                        img: {
+                            src: '../../components/prop-block/images/van.jpg',
+                            alt: ''
+                        },
+                        btn: {
+                            title: 'Оставить заявку',
+                            href: '#'
+                        },
+                        subtitle: 'Два занятия в&nbsp;подарок!',
+                        subdescription: 'При покупке абонемента в&nbsp;день пробного занятия',
+                        mobileImg: '../../components/prop-block/images/van-mobile.jpg',
+                        tabletImg: '../../components/prop-block/images/van-tablet.jpg'
+                    })(id='Записаться')
+            +footer

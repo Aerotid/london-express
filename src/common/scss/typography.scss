@@ -1,0 +1,474 @@
+@import "./fonts.scss";
+
+//@mixin font-1 {
+//    $fhd-base-size: 60px;
+//    $tablet-base-size: $fhd-base-size * 0.6;
+//    font-family: Gilroy, sans-serif;
+//    font-size: calc(
+//            #{xsooth-value(
+//                $tablet-base-size / 2,
+//                $fhd-base-size / 2,
+//                $screen-xs-min,
+//                $fhd-width,
+//                "w"
+//              )} + #{xsooth-value(
+//        $tablet-base-size / 2,
+//        $fhd-base-size / 2,
+//        $mobile-min-height,
+//        $fhd-height,
+//        "h"
+//      )}
+//    );
+//    @include media-breakpoint-up(fhd) {
+//        font-size: $fhd-base-size;
+//    }
+//    @include media-breakpoint-down(sm) {
+//        font-size: 38px;
+//    }
+//}
+//.tp_cnt {}
+//.tp_h-1 {}
+//.tp__p-1 {}
+//.tp-link {}
+
+@mixin font-1 {
+    font-weight: 900;
+    font-size: 8rem;
+    line-height: 1.4;
+
+    @include media-breakpoint-down(lg) {
+        font-size: 6rem;
+
+        @include media-breakpoint-down(sm) {
+            font-size: 2rem;
+            line-height: 1.6;
+        }
+    }
+}
+
+@mixin font-2 {
+    font-weight: 900;
+    font-size: 6rem;
+    line-height: 1.2;
+
+    @include media-breakpoint-down(sm) {
+        font-size: 2rem;
+        line-height: 1.6;
+    }
+}
+
+@mixin font-3 {
+    font-size: 2.4rem;
+    line-height: 1.6;
+
+    @include media-breakpoint-down(sm) {
+        font-size: 1.4rem;
+        line-height: 1.6;
+    }
+}
+
+@mixin font-4 {
+    font-size: 1.8rem;
+    line-height: 1.8;
+
+    @include media-breakpoint-down(sm) {
+        font-size: 1.4rem;
+        line-height: 1.8;
+    }
+}
+
+@mixin font-5 {
+    font-size: 1.8rem;
+    line-height: 1.8;
+
+    @include media-breakpoint-down(sm) {
+        font-size: 1.4rem;
+        line-height: 2.5;
+    }
+}
+
+@mixin font-6 {
+    font-weight: 900;
+    font-size: 3.5rem;
+    line-height: 1.6;
+
+    @include media-breakpoint-down(sm) {
+        font-size: 2rem;
+        line-height: 1.6;
+    }
+}
+
+@mixin font-7 {
+    font-size: 1.8rem;
+    line-height: 3.5rem;
+
+    @include media-breakpoint-down(sm) {
+        font-size: 1.6rem;
+        line-height: 3.5rem;
+    }
+}
+
+@mixin font-8 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    line-height: 1.6;
+
+    @include media-breakpoint-down(sm) {
+        font-size: 2rem;
+        line-height: 1.6;
+    }
+}
+
+@mixin font-9 {
+    font-size: 1.6rem;
+    line-height: 3.5rem;
+
+    @include media-breakpoint-down(sm) {
+        font-size: 1.2rem;
+        line-height: 2.92;
+    }
+}
+
+@mixin font-10 {
+    font-size: 1.8rem;
+    line-height: 1.6;
+
+    @include media-breakpoint-down(sm) {
+        font-size: 1.4rem;
+        line-height: 2.5;
+    }
+}
+
+@mixin font-11 {
+    font-size: 2.4rem;
+    line-height: 1.6;
+
+    @include media-breakpoint-down(sm) {
+        font-size: 1.4rem;
+        line-height: 1.6;
+    }
+}
+
+@mixin font-12 {
+    font-weight: 900;
+    font-size: 6rem;
+    line-height: 1.2;
+
+    @include media-breakpoint-down(sm) {
+        font-size: 2rem;
+        line-height: 1.6;
+    }
+}
+
+@mixin font-13 {
+    font-size: 1.8rem;
+    line-height: 1.6;
+
+    @include media-breakpoint-down(sm) {
+        font-size: 1.4rem;
+        line-height: 1.6;
+    }
+}
+
+@mixin font-14 {
+    font-size: 1.6rem;
+    line-height: 1.6;
+
+    @include media-breakpoint-down(sm) {
+        font-size: 1.4rem;
+    }
+}
+
+@mixin font-15 {
+    font-size: 1.4rem;
+    line-height: 2.5;
+
+    @include media-breakpoint-down(sm) {
+        font-size: 1.2rem;
+    }
+}
+
+@mixin font-17 {
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+@mixin font-18 {
+    font-size: 1.4rem;
+    line-height: 1.4;
+}
+
+@mixin font-19 {
+    font-size: 1.4rem;
+    line-height: 2;
+}
+
+@mixin font-20 {
+    font-weight: 900;
+    font-size: 15rem;
+    line-height: 1.2;
+    letter-spacing: 0.08em;
+
+    @include media-breakpoint-down(sm) {
+        font-size: 6rem;
+        line-height: 1.2;
+    }
+}
+
+@mixin font-21 {
+    font-weight: 900;
+    font-size: 2rem;
+    line-height: 1.6;
+}
+
+@mixin font-22 {
+    font-size: 1.6rem;
+    line-height: 1.8;
+
+    @include media-breakpoint-down(sm) {
+        font-size: 1.4rem;
+        line-height: 1.8;
+    }
+}
+
+@mixin font-23 {
+    font-size: 1.4rem;
+    line-height: 1.6;
+}
+
+@mixin font-24 {
+    font-weight: 900;
+    font-size: 3.5rem;
+    line-height: 1.6;
+
+    @include media-breakpoint-down(sm) {
+        font-size: 1.6rem;
+        line-height: 1.6;
+    }
+}
+
+@mixin font-25 {
+    font-weight: 900;
+    font-size: 3.5rem;
+    line-height: 1.6;
+
+    @include media-breakpoint-down(sm) {
+        font-size: 1.8rem;
+        line-height: 1.6;
+    }
+}
+
+@mixin font-26 {
+    font-size: 1.8rem;
+    line-height: 1.8;
+
+    @include media-breakpoint-down(sm) {
+        font-size: 1.4rem;
+        line-height: 1.6;
+    }
+}
+
+@mixin font-27 {
+    font-size: 2.4rem;
+    line-height: 1.6;
+
+    @include media-breakpoint-down(sm) {
+        font-size: 1.4rem;
+        line-height: 1.4;
+    }
+}
+
+@mixin font-28 {
+    font-size: 1.8rem;
+    line-height: 1.8;
+
+    @include media-breakpoint-down(sm) {
+        font-size: 1.4rem;
+        line-height: 1.4;
+    }
+}
+
+@mixin font-29 {
+    font-weight: 900;
+    font-size: 6rem;
+    line-height: 1.2;
+
+    @include media-breakpoint-down(sm) {
+        font-size: 3.5rem;
+        line-height: 1.6;
+    }
+}
+
+@mixin font-30 {
+    font-weight: 900;
+    font-size: 15rem;
+    line-height: 1.2;
+    letter-spacing: 0.01em;
+
+    @include media-breakpoint-down(sm) {
+        font-size: 3.5rem;
+        line-height: 1.6;
+        letter-spacing: normal;
+    }
+}
+
+@mixin font-31 {
+    font-weight: 900;
+    font-size: 2rem;
+    line-height: 1.6;
+
+    @include media-breakpoint-down(sm) {
+        font-size: 1.4rem;
+        line-height: 1.2;
+    }
+}
+
+@mixin font-32 {
+    font-weight: 900;
+    font-size: 3.5rem;
+    line-height: 1.6;
+
+    @include media-breakpoint-down(sm) {
+        font-size: 1.6rem;
+    }
+}
+
+@mixin font-33 {
+    font-weight: 900;
+    font-size: 2rem;
+    line-height: 1.6;
+
+    @include media-breakpoint-down(sm) {
+        font-size: 1.6rem;
+        line-height: 1.6;
+    }
+}
+
+@mixin font-34 {
+    font-weight: 900;
+    font-size: 15rem;
+    line-height: 1.2;
+
+    @include media-breakpoint-down(sm) {
+        font-size: 3.5rem;
+        line-height: 1.6;
+    }
+}
+
+@mixin font-35 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    line-height: 1.6;
+
+    @include media-breakpoint-down(sm) {
+        font-size: 1.8rem;
+        line-height: 1.6;
+    }
+}
+
+@mixin font-36 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    line-height: 1.5;
+
+    @include media-breakpoint-down(sm) {
+        font-size: 1.4rem;
+        line-height: 1.6;
+    }
+}
+
+@mixin font-37 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    line-height: 1.5;
+
+    @include media-breakpoint-down(sm) {
+        font-size: 1.6rem;
+        line-height: 1.6;
+    }
+}
+
+@mixin font-38 {
+    font-weight: 900;
+    font-size: 2rem;
+    line-height: 1.6;
+
+    @include media-breakpoint-down(sm) {
+        font-size: 1.4rem;
+        line-height: 1.6;
+    }
+}
+
+@mixin font-39 {
+    font-weight: 900;
+    font-size: 2rem;
+    line-height: 1.6;
+
+    @include media-breakpoint-down(sm) {
+        font-size: 1.8rem;
+        line-height: 1.6;
+    }
+}
+
+@mixin font-40 {
+    font-size: 2.4rem;
+    line-height: 1.6;
+
+    @include media-breakpoint-down(sm) {
+        font-size: 1.8rem;
+        line-height: 1.8;
+    }
+}
+
+@mixin font-41 {
+    font-size: 1.4rem;
+    line-height: 1.8;
+
+    @include media-breakpoint-down(sm) {
+        font-size: 1.2rem;
+        line-height: 1.8;
+    }
+}
+
+@mixin font-42 {
+    font-size: 1.6rem;
+    line-height: 1.8;
+
+    @include media-breakpoint-down(sm) {
+        font-size: 1.4rem;
+        line-height: 1.6;
+    }
+}
+
+@mixin font-43 {
+    font-size: 1.8rem;
+    line-height: 1.6;
+
+    @include media-breakpoint-down(sm) {
+        font-size: 1.2rem;
+        line-height: 1.6;
+    }
+}
+
+@mixin font-44 {
+    font-weight: 900;
+    font-size: 3.5rem;
+    line-height: 1.6;
+}
+
+@mixin font-46 {
+    font-weight: 900;
+    font-size: 6rem;
+    line-height: 1.2;
+
+    @include media-breakpoint-down(sm) {
+        font-size: 2.6rem;
+        line-height: 1.6;
+    }
+}
+
+@mixin font-47 {
+    font-size: 1.6rem;
+    line-height: 1.6;
+}
+

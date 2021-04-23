@@ -1,0 +1,4 @@
+mixin pink-text(args)
+    .pink-text&attributes(attributes)
+        .pink-text__title(data-suffix!=args.suffix ? args.suffix : '+' )!= args.title
+        .pink-text__description!= args.description

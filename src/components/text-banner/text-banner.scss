@@ -1,0 +1,112 @@
+.text-banner {
+    $root: &;
+    display: flex;
+    align-items: center;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    min-height: 80rem;
+    @include mobile-offset;
+
+    @include ie-min-height-flex-fix;
+
+    @include media-breakpoint-down(lg) {
+        min-height: 60rem;
+
+        @include media-breakpoint-down(sm) {
+            min-height: auto;
+            padding-top: 4rem;
+            padding-bottom: 4rem;
+        }
+    }
+
+    &_no-fixed-height {
+        min-height: auto;
+        padding-top: 0;
+        padding-bottom: 0;
+
+        @include media-breakpoint-down(lg) {
+            min-height: auto;
+            padding-top: 0;
+            padding-bottom: 0;
+
+            @include media-breakpoint-down(sm) {
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+        }
+    }
+
+    &_pink {
+        color: white;
+        background-color: $color-18;
+    }
+
+    &_portage {
+        color: white;
+        background-color: $color-4;
+    }
+
+    .row {
+        flex-grow: 1;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__svg {
+        margin-bottom: 4rem;
+        width: 9rem;
+        height: auto;
+
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 3rem;
+            width: 8rem;
+        }
+
+        &_brain {
+            width: 9.9rem;
+
+            @include media-breakpoint-down(sm) {
+                width: 8.2rem;
+            }
+        }
+
+        &_rocket {
+            width: 8.5rem;
+
+            @include media-breakpoint-down(sm) {
+                width: 4.25rem;
+            }
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+    &__text {
+        width: 100%;
+
+        p {
+            margin-bottom: 2rem;
+            @include font-6;
+            text-align: center;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__btn {
+        margin-top: 9rem;
+
+        @include media-breakpoint-down(sm) {
+            margin-top: 3rem;
+        }
+    }
+}

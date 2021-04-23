@@ -1,0 +1,213 @@
+.individual-group-classes {
+    $root: &;
+    padding-top: 18.1rem;
+    padding-bottom: 24.3rem;
+    @include mobile-offset;
+
+    @include media-breakpoint-down(lg) {
+        padding-top: 10rem;
+        padding-bottom: 10rem;
+
+        @include media-breakpoint-down(sm) {
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+        }
+    }
+
+    &__row {
+        &:not(:last-child) {
+            margin-bottom: 14.5rem;
+
+            @include media-breakpoint-down(xl) {
+                margin-bottom: 8rem;
+
+                @include media-breakpoint-down(lg) {
+                    margin-bottom: 6rem;
+
+                    @include media-breakpoint-down(sm) {
+                        margin-bottom: 3rem;
+                    }
+                }
+            }
+        }
+    }
+
+    &__wrapper-even,
+    &__wrapper-odd {
+        display: flex;
+
+        @include media-breakpoint-down(sm) {
+            flex-direction: column;
+        }
+    }
+
+    &__wrapper-odd {
+
+        #{$root}__text-content {
+            padding-left: $col-width;
+
+            @include media-breakpoint-down(sm) {
+                padding: 0;
+            }
+        }
+
+        #{$root}__title {
+            margin-top: 5rem;
+
+            @include media-breakpoint-down(sm) {
+                margin-top: 0;
+            }
+        }
+
+        #{$root}__picture {
+            padding-left: calc(#{$col-width}*1.5);
+
+            @include media-breakpoint-down(sm) {
+                padding: 0;
+            }
+
+            &_circles-3 img {
+                width: 99%;
+
+                @include media-breakpoint-down(sm) {
+                    width: 78.57%;
+                }
+            }
+
+            &_circles-2 img {
+                width: 76.03%;
+
+                @include media-breakpoint-down(sm) {
+                    width: 75.357%;
+                }
+            }
+
+            &_circles-1 img {
+                margin-left: calc(#{$col-width}*(-1));
+                width: 66.17%;
+
+                @include media-breakpoint-down(lg) {
+                    margin-left: 0;
+
+                    @include media-breakpoint-down(sm) {
+                        width: 85.71%;
+                    }
+                }
+            }
+        }
+    }
+
+    &__wrapper-even {
+
+        #{$root}__text-content {
+            padding-left: calc(#{$col-width}*1.5);
+
+            @include media-breakpoint-down(sm) {
+                padding: 0;
+            }
+        }
+
+        #{$root}__title {
+            margin-top: 8rem;
+
+            @include media-breakpoint-down(lg) {
+                margin-top: 0;
+            }
+        }
+
+        #{$root}__picture {
+            padding-left: $col-width;
+            justify-content: flex-start;
+
+            @include media-breakpoint-down(sm) {
+                justify-content: center;
+                padding: 0;
+                order: 1;
+            }
+
+            &_circles-3 img {
+                width: 93.47%;
+
+                @include media-breakpoint-down(sm) {
+                    width: 78.57%;
+                }
+            }
+
+            &_circles-2 img {
+                width: 71.8%;
+
+                @include media-breakpoint-down(sm) {
+                    width: 75.357%;
+                }
+            }
+
+            &_circles-1 img {
+                width: 62.5%;
+
+                @include media-breakpoint-down(sm) {
+                    width: 85.71%;
+                }
+            }
+        }
+    }
+
+    &__picture,
+    &__text-content {
+        width: 50%;
+
+        @include media-breakpoint-down(sm) {
+            width: 100%;
+            padding: 0;
+        }
+    }
+
+    &__picture {
+        align-self: center;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+
+        img {
+            max-width: 100%;
+        }
+    }
+
+    &__title {
+        margin-bottom: 6rem;
+        @include font-8;
+
+        @include media-breakpoint-down(lg) {
+            margin-bottom: 4rem;
+
+            @include media-breakpoint-down(sm) {
+                margin-bottom: 2rem;
+            }
+        }
+    }
+
+    &__description {
+        margin-bottom: 6rem;
+        @include font-27;
+
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__text {
+        @include font-28;
+
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 3rem;
+        }
+    }
+
+    &__description,
+    &__text {
+        max-width: calc(#{$col-width}*7.5);
+
+        @include media-breakpoint-down(lg) {
+            max-width: 100%;
+        }
+    }
+}

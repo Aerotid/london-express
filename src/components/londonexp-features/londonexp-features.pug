@@ -1,0 +1,15 @@
+include ../../components/block-title/block-title
+
+mixin londonexp-features(args)
+    .londonexp-features&attributes(attributes)
+        if (args.title)
+            +block-title({title: args.title, description: args.description ? args.description: ''}).block-title_no-margin.londonexp-features__block-title
+        .londonexp-features__col
+            .londonexp-features__list
+                  each feature in args.features
+                      .londonexp-features__feature(data-anim="anim-3")
+                        .londonexp-features__feature-svg
+                            //+svg({name: feature.svg})
+                            +img({path: `../../common/images/${feature.svg}.svg`, lazy: true})
+                        h3.londonexp-features__feature-title!= feature.title
+                        .londonexp-features__feature-text!= feature.text

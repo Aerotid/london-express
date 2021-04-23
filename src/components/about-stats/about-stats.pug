@@ -1,0 +1,14 @@
+include ../../components/pink-text/pink-text
+
+mixin about-stats(args)
+    .about-stats&attributes(attributes)(data-anim="anim-1")
+        .row
+            .col-md-18.col-xxl-16.offset-md-3.offset-xxl-4
+                .about-stats__wrapper
+                    each stat, index in data.schoolStats
+                        if (index === 0)
+                            .about-stats__content
+                                +pink-text(stat).pink-text_big.about-stats__pink-text
+                        else
+                            .about-stats__content
+                                +pink-text(stat).about-stats__pink-text

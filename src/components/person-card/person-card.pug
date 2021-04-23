@@ -1,0 +1,36 @@
+include ../picture/picture
+include ../content-area/content-area
+include ../grid-list/grid-list
+
+mixin person-card(args, i)
+    .person-card&attributes(attributes)
+        if (args.background == '1')
+            .person-card__background.d-none.d-xl-block
+                +img({path: '../../components/person-card/images/triangle.png'}).person-card__triangle.person-card__triangle_left-bottom
+                +img({path: '../../components/person-card/images/top-left-arrow.png'}).person-card__arrow
+        else if (args.background == '2')
+            .person-card__background.d-none.d-xl-block
+                +img({path: '../../components/person-card/images/circle.png'}).person-card__circle
+                +img({path: '../../components/person-card/images/triangle.png'}).person-card__triangle.person-card__triangle_right-center
+        +grid-list({"class": "person-card__wrapper grid-list_no-mb" + (i % 2 !== 0 ? ' grid-list_offset-lr-reverse' : ' grid-list_offset-lr')})
+            .grid-list__item.person-card__item(class=(i === 1)?'person-card__item_mb14':'')
+                .person-card__image
+                    +picture({
+                        sources: [],
+                        img: args.img,
+                        lazy: true
+                    })
+            .grid-list__item.person-card__item(class=(i === 1)?'person-card__item_mb14':'')
+                .person-card__title!= args.title
+                .person-card__bottom
+                    .person-card__description!= args.description
+                    +content-area.person-card__content
+                        != args.content
+                        if (args.list)
+                            ul
+                                each item in args.list
+                                    li!= item
+            if (args.quote)
+                .person-card__quote
+                    +svg({name:'quotes'})
+                    .person-card__quote-text!= args.quote

@@ -1,0 +1,164 @@
+.right-list {
+    $root: &;
+    color: white;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    position: relative;
+
+    @include media-breakpoint-down(sm) {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+
+    &_pink {
+        background-color: $color-18;
+    }
+
+    &_blue {
+        background-color: $color-6;
+    }
+
+    &_vacancies {
+        padding-top: 9.3rem;
+        padding-bottom: 21.6rem;
+
+        @include media-breakpoint-down(sm) {
+            padding-top: 4rem;
+            padding-bottom: 4rem;
+        }
+
+        #{$root}__image {
+            @include media-breakpoint-down(sm) {
+                width: 100%;
+            }
+        }
+    }
+
+    &_image-bottom  {
+        @include media-breakpoint-down(lg) {
+            padding-bottom: 0;
+        }
+
+        #{$root}__image img {
+            object-position: bottom;
+        }
+    }
+
+    &__main-title {
+        position: relative;
+        z-index: 2;
+        margin-bottom: 8rem;
+
+        @include media-breakpoint-down(md) {
+            @include media-breakpoint-down(sm) {
+                margin-bottom: 4rem;
+            }
+        }
+    }
+
+    &__btn {
+        position: relative;
+        z-index: 2;
+        margin-top: 10rem;
+
+        @include media-breakpoint-down(lg) {
+            margin-top: 6rem;
+
+            @include media-breakpoint-down(sm) {
+                margin-top: 4rem;
+            }
+        }
+    }
+
+    &__image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        overflow: hidden;
+
+        @include media-breakpoint-down(lg) {
+            position: static;
+            margin-top: 6rem;
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+
+            @include media-breakpoint-down(sm) {
+                margin-top: 3.2rem;
+
+                @include media-breakpoint-down(xxs) {
+                    width: 100%;
+                }
+            }
+        }
+
+        picture {
+            width: 100%;
+            height: 100%;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    &__wrapper {
+        position: relative;
+        z-index: 2;
+        margin-left: calc(#{$col-width}*12.5);
+        width: calc(#{$col-width}*9.5);
+        @include mobile-offset;
+
+        @include media-breakpoint-down(xl) {
+            margin-left: calc(#{$col-width}*10.5);
+            width: calc(#{$col-width}*12.5);
+
+            @include media-breakpoint-down(lg) {
+                margin-left: calc(#{$col-width}*1);
+                width: calc(#{$col-width}*22);
+
+                @include media-breakpoint-down(sm) {
+                    margin-left: 0;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    &__title {
+        @include font-24;
+        margin-bottom: 6rem;
+
+        @include media-breakpoint-down(lg) {
+            text-align: center;
+
+            @include media-breakpoint-down(sm) {
+                text-align: left;
+                margin-bottom: 1.6rem;
+            }
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+
+    &__item {
+        width: calc(50% - 2rem);
+
+        @include media-breakpoint-down(lg) {
+            width: 100%;
+
+            &:not(:last-child) {
+                margin-bottom: 4rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,103 @@
+.contacts-card {
+    $root: &;
+    margin-bottom: 5rem;
+    padding: 5rem;
+    width: calc(#{$col-width}*6);
+    min-height: 56rem;
+    color: $color-9;
+    background-color: white;
+    border-radius: 20px;
+
+    @include media-breakpoint-down(xl) {
+        width: calc(#{$col-width}*6.6);
+
+        @include media-breakpoint-down(lg) {
+            margin-bottom: 8rem;
+            min-height: 45rem;
+            width: 100%;
+
+            @include media-breakpoint-down(sm) {
+                margin-bottom: 3rem;
+                padding: 4rem 2rem;
+                width: 100%;
+                min-height: initial;
+                border-radius: 10px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    &:not(:nth-child(3n)) {
+        margin-right: $col-width;
+
+        @include media-breakpoint-down(lg) {
+            margin-right: 0;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    &__top {
+        margin-bottom: 3rem;
+        flex: 0 1 100%;
+        display: flex;
+        margin: 0;
+        flex-direction: column;
+        padding-bottom: 60px;
+
+        @include media-breakpoint-down(xxl) {
+            padding-bottom: 40px;
+
+            @include media-breakpoint-down(lg) {
+                padding-bottom: 30px;
+            }
+        }
+    }
+
+    &__title {
+        flex: 0 1 100%;
+        margin-bottom: 3rem;
+        @include font-35;
+
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__description {
+        flex: 0 1 100%;
+        margin-bottom: 4rem;
+        @include font-11;
+
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__email,
+    &__phone {
+        display: block;
+        @include font-36;
+        color: $color-9;
+
+        @include states {
+            color: $color-9;
+        }
+    }
+
+    &__email {
+        margin-bottom: 1rem;
+
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 2rem;
+        }
+    }
+}

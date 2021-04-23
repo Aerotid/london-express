@@ -1,0 +1,78 @@
+{
+    "cards": [
+        {
+            "title": "PR-отдел",
+            "description": "Будем рады обсудить вопросы рекламного сотрудничества",
+            "email": "pr@londonexpress-online.ru",
+            "phone": {
+                "href": "88005006674",
+                "text": "8 800 500 66 74, доб. 111"
+            },
+            "btn": {
+                "dataPopup": "pr-popup",
+                "text": "Связаться"
+            }
+        },
+        {
+            "title": "Карьера",
+            "description": "Хотите к&nbsp;нам в&nbsp;команду? Наши сотрудники учат английский бесплатно",
+            "email": "hr@londonexpress-online.ru",
+            "phone": {
+                "href": "88005006674",
+                "text": "8 800 500 66 74"
+            },
+            "btn": {
+                "dataPopup": "questionnaire-popup",
+                "text": "Отправить резюме"
+            }
+        },
+        {
+            "title": "Корпоративным клиентам",
+            "description": "Эффективное корпоративное обучение для вашей команды",
+            "email": "school@londonexpress-online.ru",
+            "phone": {
+                "href": "88005006674",
+                "text": "8 800 500 66 74"
+            },
+            "btn": {
+                "href": "#",
+                "text": "Связаться"
+            }
+        }
+    ],
+    "form": {
+        "inputs": [
+            {
+                "id": "contacts-name",
+                "name": "name",
+                "label": "Имя",
+                "type": "text",
+                "required": true,
+                "notification": "Поле должно содержать не менее 3-х символов"
+            },
+            {
+                "id": "contacts-phone",
+                "name": "phone",
+                "label": "Телефон",
+                "type": "tel",
+                "required": true,
+                "notification": "Поле не заполнено"
+            },
+            {
+                "id": "contacts-email",
+                "name": "email",
+                "label": "Email",
+                "type": "email",
+                "required": true,
+                "notification": "В формате: primer@email.ru"
+            },
+            {
+                "tagName": "textarea",
+                "id": "contacts-message",
+                "name": "message",
+                "label": "Сообщение"
+            }
+        ]
+    }
+
+}

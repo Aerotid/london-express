@@ -1,0 +1,228 @@
+.article-blog {
+    $root: &;
+
+    &__description {
+        margin-bottom: 6rem;
+        @include font-11;
+
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 4.6rem;
+        }
+
+        p {
+            margin-bottom: 2rem;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__section {
+        &:not(:last-child) {
+            margin-bottom: 6.5rem;
+
+            @include media-breakpoint-down(sm) {
+                margin-bottom: 4rem;
+            }
+        }
+    }
+
+    &__h3-title {
+        margin: 0 0 2rem;
+        @include font-35;
+
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 3rem;
+        }
+    }
+
+    &__text {
+        @include font-26;
+        color: $color-8;
+
+        h4 {
+            @include font-3;
+            margin: 0 0 3rem;
+        }
+
+        p {
+            margin: 0 0 3rem;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        em {
+            position: relative;
+            display: block;
+            margin: 6rem 0 6rem 2.5rem;
+            padding: 1.4rem 0 1.4rem calc(4rem + 5px);
+            @include font-40;
+            font-style: normal;
+
+            @include media-breakpoint-down(sm) {
+                margin: 3rem 0;
+                padding: 1.5rem 0 1.5rem calc(2rem + 5px);
+            }
+
+            &:first-child {
+                margin-top: 0;
+                margin-bottom: 6rem;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 5px;
+                height: 100%;
+                background-color: $color-4;
+            }
+        }
+
+        a {
+            color: $color-4;
+            border-bottom: solid 1px;
+
+            &:hover,
+            &:focus {
+                color: rgba($color-4, 0.8);
+            }
+
+            &:active {
+                color: rgba($color-4, 0.6);
+            }
+        }
+
+        ol, ul {
+            margin: 4rem 0 4rem;
+            padding: 0;
+            @include font-26;
+            list-style-position: inside;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        ol {
+            list-style-type: decimal-leading-zero;
+
+            li {
+                &:not(:last-child) {
+                    margin-bottom: 3rem;
+                }
+            }
+        }
+    }
+
+    &__figure {
+        margin-bottom: 0;
+
+        &:not(:first-child) {
+            margin-top: 6rem;
+
+            @include media-breakpoint-down(sm) {
+                margin-top: 3rem;
+            }
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 6rem;
+
+            @include media-breakpoint-down(sm) {
+                margin-bottom: 3rem;
+            }
+        }
+
+        &_video {
+            &:not(:first-child) {
+                margin-top: 7.2rem;
+
+                @include media-breakpoint-down(sm) {
+                    margin-top: 4rem;
+                }
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 7.2rem;
+
+                @include media-breakpoint-down(sm) {
+                    margin-bottom: 4rem;
+                }
+            }
+        }
+    }
+
+    &__img-wrapper {
+        position: relative;
+        height:  29.167vw;
+        background-color: rgba($color-9, 0.1);
+
+        @include media-breakpoint-down(lg) {
+            height:  42vw;
+
+            @include media-breakpoint-down(sm) {
+                height: 49.1vw;
+            }
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__figure-caption {
+        margin-top: 3.5rem;
+        @include font-4;
+        color: $color-8;
+
+        @include media-breakpoint-down(sm) {
+            margin-top: 2rem;
+        }
+
+        a {
+            color: $color-8;
+            border-bottom: none;
+
+            &:hover,
+            &:focus {
+                color: rgba($color-8, 0.8);
+            }
+
+            &:active {
+                color: rgba($color-8, 0.6);
+            }
+        }
+    }
+
+    &__comments {
+        margin-top: 11rem;
+
+        @include media-breakpoint-down(sm) {
+            margin-top: 5.5rem;
+        }
+    }
+
+
+    &__subscription {
+        margin-bottom: 14rem;
+
+        @include media-breakpoint-down(lg) {
+            margin-bottom: 10rem;
+
+            @include media-breakpoint-down(sm) {
+                margin-bottom: 4rem;
+            }
+        }
+    }
+}

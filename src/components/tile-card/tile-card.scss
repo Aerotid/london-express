@@ -1,0 +1,73 @@
+.tile-card {
+    $root: &;
+    @include mobile-offset;
+
+    &__container {
+        padding: 12.5rem 0;
+        //border-radius: 2rem;
+
+        @include media-breakpoint-down(sm) {
+            padding-top: 3.2rem;
+            padding-bottom: 4rem;
+        }
+    }
+
+    &__title {
+        margin-bottom: 6.5rem;
+        @include font-2;
+
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 3rem;
+        }
+    }
+
+    &__subtitle {
+        margin-bottom: 3rem;
+        @include font-25;
+
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__row {
+        display: flex;
+
+        @include media-breakpoint-down(sm) {
+            flex-direction: column;
+        }
+    }
+
+    &__case {
+        //width: calc(#{$col-width} * 5);
+
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 3rem;
+            width: 100%;
+        }
+
+        &:not(:last-child) {
+            margin-right: calc(#{$col-width} * 2.1625);
+        }
+
+        &:last-child {
+            //width: calc(#{$col-width} * 6);
+
+            @include media-breakpoint-down(sm) {
+                width: 100%;
+            }
+        }
+
+        &:nth-child(2) {
+            @include media-breakpoint-down(sm) {
+                order: 3;
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    a {
+        @include font-4;
+        color: #fff;
+    }
+}

@@ -1,0 +1,64 @@
+.news-card {
+    $root: &;
+    $width: calc(#{$col-width}*6);
+    $widthXl: calc(#{$col-width}*10.5);
+
+    display: block;
+    width: $width;
+    color: $color-7;
+    cursor: pointer;
+
+    @include media-breakpoint-down(xl) {
+        width: $widthXl;
+
+        @include media-breakpoint-down(sm) {
+            width: 100%;
+        }
+    }
+
+    &:hover {
+        color: $color-7;
+
+        #{$root} {
+            &__picture img {
+                transform: scale(1.035);
+            }
+        }
+    }
+
+    &__picture {
+        position: relative;
+        margin-bottom: 3rem;
+        width: 100%;
+        height: calc(#{$width} * 0.64583); // percent of card width
+        background-color: rgba($color-9, 0.1);
+        overflow: hidden;
+
+        @include media-breakpoint-down(xl) {
+            height: calc(#{$widthXl} * 0.7);
+
+            @include media-breakpoint-down(sm) {
+                height: calc(100vw * 0.4921875);
+            }
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.25s ease-in-out;
+        }
+    }
+
+    &__date {
+        display: block;
+        margin-bottom: 2rem;
+        font-family: $font-gotham;
+        @include font-22;
+        opacity: 0.5;
+    }
+
+    &__title {
+        @include font-33;
+    }
+}

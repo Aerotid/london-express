@@ -1,0 +1,21 @@
+include ../../components/picture/picture
+
+mixin individual-group-classes(args)
+    .individual-group-classes&attributes(attributes)
+        each block, index in args.blocks
+            if((index + 1) %2 != 0)
+                .row.individual-group-classes__row(data-anim="anim-1" data-hook=0.8)
+                    .col-md-22.offset-md-1.col-xxl-20.offset-xxl-2.individual-group-classes__wrapper-odd
+                        .individual-group-classes__text-content
+                            h3.individual-group-classes__title!= block.title
+                            p.individual-group-classes__description!= block.description
+                            p.individual-group-classes__text!= block.text
+                        +picture(block.picture).individual-group-classes__picture(class=block.circlesNum?`individual-group-classes__picture_circles-${block.circlesNum}`:'')
+            else
+                .row.individual-group-classes__row(data-anim="anim-1" data-hook=0.8)
+                    .col-md-22.offset-md-1.col-xxl-20.offset-xxl-2.individual-group-classes__wrapper-even
+                        +picture(block.picture).individual-group-classes__picture(class=block.circlesNum?`individual-group-classes__picture_circles-${block.circlesNum}`:'')
+                        .individual-group-classes__text-content
+                            h3.individual-group-classes__title!= block.title
+                            p.individual-group-classes__description!= block.description
+                            p.individual-group-classes__text!= block.text

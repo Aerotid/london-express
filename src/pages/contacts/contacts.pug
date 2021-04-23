@@ -1,0 +1,71 @@
+extends ../../layout/layout
+include ../../components/main/main
+include ../../components/footer/footer
+include ../../components/section/section
+include ../../components/lead-contacts/lead-contacts
+include ../../components/contacts-card/contacts-card
+include ../../components/prop-block/prop-block
+include ../../components/contact-form/contact-form
+include ../../components/popup-pr/popup-pr
+include ../../components/popup-callback/popup-callback
+include ../../components/popup-vacancy-questionnaire/popup-vacancy-questionnaire
+
+block content
+    div#barba-wrapper
+        .barba-container(data-namespace='contacts')
+            +main
+                +section.section_portage
+                    +lead-contacts
+                +section.section_pt.section_whisper2
+                    .row(data-anim='anim-3')
+                        .offset-md-7.col-md-10
+                            p.contacts__cooperation-description Школа London Express Online всегда открыта для новых плодотворных партнерский отношений
+                    .contacts__card-wrapper(data-anim='trigger')
+                        each card in data.contacts.cards
+                            +contacts-card(card)(data-anim='anim-2')
+                +section.section_pt
+                    +prop-block({
+                        title: 'Попробовать бесплатно',
+                        description: 'Записаться на&nbsp;пробный урок',
+                        img: {
+                            src: '../../components/prop-block/images/van-front.jpg',
+                            alt: ''
+                        },
+                        btn: {
+                            title: 'Оставить заявку',
+                            href: '#'
+                        },
+                        subtitle: 'Два занятия в&nbsp;подарок!',
+                        subdescription: 'При покупке абонемента в&nbsp;день пробного занятия',
+                        mobileImg: '../../components/prop-block/images/van-front-mobile.jpg',
+                        tabletImg: '../../components/prop-block/images/van-front-tablet.jpg'
+                    })
+                +section.section_pb.contacts__care
+                    .row
+                        .col-md-22.offset-md-1.col-xl-12.offset-xl-6.contacts__care-wrapper
+                            h2.contacts__care-title(data-anim='anim-1') Отдел заботы о клиентах
+                            p.contacts__care-description(data-anim='anim-3') Мы внимательно относимся к пожеланиям каждого студента. Отправьте ваш вопрос на email или заполните форму ниже.
+                            a(href='mailto:care@londonexpress-online.ru').contacts__care-email(data-anim='anim-3') care@londonexpress-online.ru
+                    .row
+                        .offset-md-2.col-md-20
+                            +contact-form({
+                                title: 'Ваши предложения',
+                                text: '<p>Если у Вас есть вопросы, пожелания<br>или отзыв о работе нашей онлайн-школы, оставьте свое сообщение.</p><p>Обязательно ответим на него в&nbsp;ближайшее время.</p>',
+                                data: data.contacts.form,
+                                bottomHand: true,
+                                notification: {
+                                    title: 'Спасибо! Мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время.',
+                                    svg: 'smile',
+                                    purple: true
+                                }
+                            }).contact-form_pink.contact-form_contacts
+                +popup-pr
+                +popup-callback
+                +popup-vacancy-questionnaire({
+                    notification: {
+                        title: 'Спасибо! Мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время.',
+                        svg: 'smile',
+                        purple: true
+                    }
+                })
+            +footer

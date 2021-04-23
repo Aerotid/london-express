@@ -1,0 +1,18 @@
+[data-namespace="learning-process"] {
+    .learning-process {
+        &__text-banner {
+            padding-top: 14rem;
+            padding-bottom: 14rem;
+
+            @include media-breakpoint-down(lg) {
+                padding-top: 10rem;
+                padding-bottom: 10rem;
+
+                @include media-breakpoint-down(sm) {
+                    padding-top: 4rem;
+                    padding-bottom: 4rem;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,101 @@
+.price-slider {
+    $root: &;
+
+    &__tabs {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 100vw / 24 * 5.5;
+        width: 100vw / 24 * 13;
+        padding-top: 1rem;
+
+        @include media-breakpoint-down(lg) {
+            width: 100vw / 24 * 22;
+            margin-left: $col-width;
+
+            @include media-breakpoint-down(sm) {
+                margin-left: 2rem;
+                width: auto;
+                flex-wrap: wrap;
+            }
+        }
+    }
+
+    &__tab {
+        @include media-breakpoint-down(sm) {
+            &:not(:last-child) {
+                margin-bottom: 5rem;
+            }
+        }
+        &-title {
+            margin-bottom: 6rem;
+            @include font-14;
+            font-weight: 700;
+            position: relative;
+            padding-left: 20px;
+
+            @include media-breakpoint-down(sm) {
+                margin-bottom: 4rem;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 0;
+                width: 1rem;
+                height: 1rem;
+                border-radius: 50%;
+                background-color: $color-18;
+                transform: translateY(-50%);
+            }
+        }
+
+        &-btn {
+            border-color: white;
+            background-color: transparent;
+            color: $color-9;
+
+            @include states {
+                border-color: white;
+                background: white;
+                color: $color-9;
+            }
+            &.active,
+            &:hover {
+                background-color: #fff;
+            }
+        }
+    }
+
+    &__container {
+        display: none;
+        padding-left: 100vw / 24 * 1.5;
+        padding-bottom: 14rem;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity .3s ease-out, visibility .3s ease-out;
+
+        @include media-breakpoint-down(lg) {
+            padding-left: $col-width;
+
+            @include media-breakpoint-down(sm) {
+                padding-left: 2rem;
+                padding-bottom: 4.5rem;
+            }
+        }
+
+        &.active {
+            display: block;
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    &__wrapper {
+        padding-top: 8rem;
+
+        @include media-breakpoint-down(sm) {
+            padding-top: 4.5rem;
+        }
+    }
+}

@@ -1,0 +1,13 @@
+mixin list-circle(args)
+    .list-circle&attributes(attributes)(data-anim="anim-1" data-hook=0.8)
+        .row.align-items-center
+            .col-md-20.offset-md-2.col-lg-11.offset-lg-1.col-xl-8.offset-xl-4.col-xxl-7.offset-xxl-6
+                .list-circle__swiper-container
+                    ol.list-circle__swiper-wrapper
+                        li.list-circle__swiper-slide Систематизация и&nbsp;улучшение грамматических навыков учащегося
+                        li.list-circle__swiper-slide Знакомство с&nbsp;форматом экзамена с&nbsp;помощью онлайн-тренажера
+                        li.list-circle__swiper-slide В&nbsp;результате&nbsp;&mdash; меньше стресса, высокий экзаменационный балл для поступления в&nbsp;самые престижные вузы.
+                    .swiper-custom-scrollbar.d-md-none
+            .col-lg-10.col-xl-8.col-xxl-6.offset-lg-1
+                .list-circle__circle
+                    +img({path: '../../components/list-circle/images/ege-oge-circle.png', lazy:true})

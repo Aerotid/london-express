@@ -1,0 +1,6 @@
+mixin submenu(args)
+    .submenu&attributes(attributes)
+        .submenu__list.swiper-wrapper
+            each item,index in args.data
+                div(class = `submenu__item swiper-slide ${(index === args.active) ? 'active': ''}`)
+                    a(href=item.link)!=item.title

@@ -1,0 +1,12 @@
+mixin btn-arrow(args)
+    if (args && args.type)
+        - attributes.class = 'btn-arrow_' + args.type;
+        if (args.type === 'prev')
+            - args.svg = 'arrow-left'
+        else if (args.type === 'next')
+            - args.svg = 'arrow-right'
+
+    .btn-arrow&attributes(attributes)
+        +svg({
+            name: args.svg
+        })

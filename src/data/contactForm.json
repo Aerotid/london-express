@@ -1,0 +1,30 @@
+{
+  "inputs": [
+    {
+      "id": "vacancy-name",
+      "label": "ФИО",
+      "type": "text",
+      "required": true,
+      "notification": "Не менее 3-х символов"
+    },
+    {
+      "id": "vacancy-phone",
+      "label": "Телефон",
+      "type": "tel",
+      "required": true,
+      "notification": "Телефон не заполнен"
+    },
+    {
+      "id": "vacancy-email",
+      "label": "Email",
+      "type": "email",
+      "required": true,
+      "notification": "В формате: primer@email.ru"
+    }
+  ],
+  "attach": {
+      "text": "Приложить резюме, сертификаты",
+      "type": "imagesAndTextDocs"
+  },
+  "questionnaire": "Заполнить анкету"
+}

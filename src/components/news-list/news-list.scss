@@ -1,0 +1,65 @@
+.news-list {
+    $root: &;
+
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc(#{$col-width}*2);
+    margin-bottom: 14rem;
+    width: calc(#{$col-width}*20);
+
+    @include media-breakpoint-down(xl) {
+        margin-bottom: 10rem;
+        margin-left: calc(#{$col-width}*1);
+        width: calc(#{$col-width}*22);
+
+        @include media-breakpoint-down(sm) {
+            @include mobile-offset;
+            margin-left: 0;
+            margin-bottom: 4.05rem;
+            width: 100%;
+        }
+    }
+
+    &__card {
+        &:not(:nth-last-child(-n+4)) {
+            margin-bottom: 10rem;
+
+            @include media-breakpoint-down(xl) {
+                margin-bottom: 0;
+            }
+        }
+
+        &:not(:nth-child(3n)) {
+            margin-right: #{$col-width};
+
+            @include media-breakpoint-down(xl) {
+                margin-right: 0;
+            }
+        }
+
+        @include media-breakpoint-down(xl) {
+            &:not(:nth-last-child(-n+2)) {
+                margin-bottom: 8rem;
+
+                @include media-breakpoint-down(sm) {
+                    margin-bottom: 0;
+                }
+            }
+
+            &:not(:nth-child(2n)) {
+                margin-right: #{$col-width};
+
+                @include media-breakpoint-down(sm) {
+                    margin-right: 0;
+                }
+            }
+
+            @include media-breakpoint-down(sm) {
+                &:not(:last-child) {
+                    margin-bottom: 4.05rem;
+                }
+            }
+        }
+    }
+
+}

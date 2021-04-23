@@ -1,0 +1,49 @@
+include ../input/input
+include ../notification/notification
+include ../contact-button/contact-button
+
+mixin subscription-form-side(args)
+    .subscription-form-side.collapsed&attributes(attributes)
+        .subscription-form-side__bg
+            +img({path: '../../components/subscription-form-side/images/hand-form.png', lazy: true})
+        .subscription-form-side__wrapper
+            .subscription-form-side__close
+            h4.subscription-form-side__title Бесплатный пробный урок
+            form(action='/' method='POST').subscription-form-side__form
+                input(type='hidden' name='WEB_FORM_ID')
+                input(type='hidden' name='web_form_submit')
+                input(type='hidden' name='sessid')
+                +input({
+                    id: 'sub-name',
+                    type: 'text',
+                    required: true,
+                    label: 'Имя',
+                    notification: 'Мин. 3 символа',
+                    notificationTop: true
+                }).subscription-form-side__input
+                +input({
+                    id: 'sub-email',
+                    type: 'email',
+                    required: true,
+                    label: 'E-mail',
+                    notification: 'primer@email.ru',
+                    notificationTop: true
+                }).subscription-form-side__input
+                +input({
+                    id: 'sub-phone',
+                    type: 'tel',
+                    required: true,
+                    label: 'Телефон',
+                    notification: 'Не заполнен',
+                    notificationTop: true
+                }).subscription-form-side__input
+                .subscription-form-side__errors.error-block
+                    p.subscription-form-side__error_email
+                    p.subscription-form-side__error_phone
+                +contact-button({ title: 'Записаться' }).contact-button_white.contact-button_smaller.subscription-form-side__submit
+                a(href='/privacy-policy.html' target='_blank').subscription-form-side__privacy Политика конфиденциальности
+            +notification({
+                title: 'Cool! Регистрация пройдена успешно.',
+                svg: 'check-bubble'
+            })
+

@@ -1,0 +1,17 @@
+include ../btn/btn
+
+mixin exercise-card(args)
+    .exercise-card&attributes(attributes)
+        .exercise-card__img
+            +picture(args.picture)
+            block
+        .exercise-card__wrapper
+            .exercise-card__title!= args.title
+            .exercise-card__content!= args.content || ''
+            .exercise-card__footer
+                +btn({
+                    tagName: 'a'
+                }).btn_link(href=args.detailsHref).exercise-card__footer-link Подробнее
+                +btn({
+                    tagName: 'a'
+                }).btn_pink(href='#' data='free-popup').exercise-card__footer-free Пробное занятие

@@ -1,0 +1,5 @@
+mixin btn(args)
+    if args && args.class
+        - attributes.class = args.class;
+    #{args.tagName || 'button'}.btn&attributes(attributes)
+        block

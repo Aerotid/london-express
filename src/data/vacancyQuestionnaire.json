@@ -1,0 +1,187 @@
+[
+    {
+        "title": "Личная информация",
+        "inputs": [
+            {
+                "id": "questionnaire-name",
+                "label": "ФИО",
+                "type": "text",
+                "required": "true",
+                "notification": "Не менее 3-х символов",
+                "notificationTop": "true"
+            },
+            {
+                "id": "questionnaire-birthdate",
+                "label": "Дата рождения",
+                "type": "date",
+                "required": "true",
+                "notification": "Неверный формат даты",
+                "notificationTop": "true"
+            },
+            {
+                "id": "questionnaire-phone",
+                "label": "Телефон",
+                "type": "tel",
+                "required": "true",
+                "notification": "Телефон не заполнен",
+                "notificationTop": "true"
+            },
+            {
+                "id": "questionnaire-city",
+                "label": "Город",
+                "type": "text",
+                "required": "true",
+                "notification": "Не менее 3-х символов",
+                "notificationTop": "true"
+            },
+            {
+                "id": "questionnaire-email",
+                "label": "Email",
+                "type": "email",
+                "required": "true",
+                "notification": "В формате: primer@mail.ru",
+                "notificationTop": "true"
+            },
+            {
+                "id": "questionnaire-citizenship",
+                "label": "Гражданство",
+                "type": "text",
+                "required": "true",
+                "notification": "Не менее 3-х символов",
+                "notificationTop": "true"
+            }
+        ]
+    },
+    {
+        "title": "Пожелания к работе",
+        "inputs": [
+            {
+                "id": "questionnaire-position-salary",
+                "label": "Должность и ЗП",
+                "type": "text",
+                "notification": "Не менее 3-х символов",
+                "notificationTop": "true"
+            },
+            {
+                "id": "questionnaire-full-part-time",
+                "label": "Тип занятости",
+                "type": "text",
+                "notification": "Не менее 3-х символов",
+                "notificationTop": "true"
+            },
+            {
+                "id": "questionnaire-remote",
+                "label": "Удаленная работа/Офис",
+                "type": "text",
+                "notification": "Не менее 3-х символов",
+                "notificationTop": "true"
+            },
+            {
+                "id": "questionnaire-schedule",
+                "label": "График работы",
+                "type": "text",
+                "notification": "Не менее 3-х символов",
+                "notificationTop": "true"
+            }
+        ],
+        "collapsible": "true"
+    },
+    {
+        "title": "Образование",
+        "inputs": [
+            {
+                "id": "questionnaire-grad-year",
+                "label": "Год выпуска (ДД/ММ/ГГ)",
+                "type": "date",
+                "notification": "Неверный формат даты",
+                "notificationTop": "true"
+            },
+            {
+                "id": "questionnaire-university",
+                "label": "Название учебного заведения",
+                "type": "text",
+                "notification": "Не менее 3-х символов",
+                "notificationTop": "true"
+            },
+            {
+                "id": "questionnaire-specialty",
+                "label": "Специальность",
+                "type": "text",
+                "notification": "Не менее 3-х символов",
+                "notificationTop": "true"
+            },
+            {
+                "id": "questionnaire-level",
+                "label": "Уровень",
+                "type": "text",
+                "notification": "Не менее 3-х символов",
+                "notificationTop": "true"
+            }
+        ],
+        "attach": {
+            "text": "Приложить сертификат",
+            "name": "questionnaire-certificate-files",
+            "type": "imagesAndTextDocs",
+            "svg": "pink-plus"
+        },
+        "addButton": "Добавить место учебы",
+        "collapsible": "true"
+    },
+    {
+        "title": "Опыт работы",
+        "inputs": [
+            {
+                "id": "questionnaire-work-start",
+                "label": "Начало работы",
+                "type": "date",
+                "notification": "Неверный формат даты",
+                "notificationTop": "true"
+            },
+            {
+                "id": "questionnaire-work-company",
+                "label": "Название организации",
+                "type": "text",
+                "notification": "Не менее 3-х символов",
+                "notificationTop": "true"
+            },
+            {
+                "id": "questionnaire-work-finish",
+                "label": "Окончание работы",
+                "type": "date",
+                "notification": "Неверный формат даты",
+                "notificationTop": "true"
+            },
+            {
+                "id": "questionnaire-work-position",
+                "label": "Должность",
+                "type": "text",
+                "notification": "Не менее 3-х символов",
+                "notificationTop": "true"
+            },
+            {
+                "id": "questionnaire-work-responsibilities",
+                "label": "Обязанности",
+                "tagName": "textarea"
+            }
+        ],
+        "addButton": "Добавить место работы",
+        "collapsible": "true"
+    },
+    {
+        "title": "Дополнительная информация",
+        "inputs": [
+            {
+                "tagName": "textarea",
+                "id": "questionnaire-additional",
+                "label": "Подробная информация о вас"
+            }
+        ],
+        "attach": {
+            "text": "Приложить фотографию",
+            "name": "questionnaire-photo-files",
+            "type": "images",
+            "svg": "photo",
+            "required": "true"
+        }
+    }
+]

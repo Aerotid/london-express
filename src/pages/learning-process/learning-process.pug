@@ -1,0 +1,88 @@
+extends ../../layout/layout
+include ../../components/main/main
+include ../../components/footer/footer
+include ../../components/lead-2/lead-2
+include ../../components/section/section
+include ../../components/block-title/block-title
+include ../../components/educational-methodology/educational-methodology
+include ../../components/londonexp-features/londonexp-features
+include ../../components/text-banner/text-banner
+include ../../components/lessons-gift-banner/lessons-gift-banner
+include ../../components/prop-block/prop-block
+include ../../components/learning-process-specifics/learning-process-specifics
+
+block content
+    div#barba-wrapper
+        .barba-container(data-namespace='learning-process')
+            +main
+                +section.section_portage.section_margin
+                    +lead-2({
+                        title: 'Процесс обучения в онлайн-школе',
+                        description: 'Гибкая методика адаптируется под задачи каждого студента',
+                        smallTitle: 'true',
+                        figure: {
+                            img: '../learning-process/images/learning-process-lead-figure.jpg',
+                            sources: [
+                                {
+                                    srcset: '../learning-process/images/learning-process-lead-figure-mob.png',
+                                    media: '(max-width: 767.9px)'
+                                }
+                            ],
+                            objectFit: 'contain',
+                            objPos: ['right', 'bottom']
+                        },
+                        bottom: true,
+                        btn: {
+                            text: 'Записаться',
+                            href: '#',
+                            trigger: true
+                        }
+                    }).lead-2_stick-bottom.lead-2_learning-process
+                        +leadSvg8.lead-2__svg
+                +section
+                    +block-title({title:'Образовательная методика', description: 'Программа London Express Online составлена на&nbsp;основе лучших мировых методик, каждая из&nbsp;которых по-своему развивает языковые навыки, вовлекая в&nbsp;процесс обучения, как ребенка, так и&nbsp;взрослого'})
+                    each item, index in data.educationalMethodology
+                        +educational-methodology(item)(class= index % 2 ? 'bg_hint-of-red' : 'bg_white')
+                +section
+                    +londonexp-features(data.platformFeatures).londonexp-features_pink.londonexp-features_straight
+                +section.section_pt.section_pb
+                    +text-banner({
+                        svg: {
+                            name: 'rocket',
+                        },
+                        text: '<p>Программа London Express Online легко адаптируется под персональные учебные задачи студента и&nbsp;разные форматы обучения: индивидуальные, групповые, корпоративные.</p>',
+                    }).text-banner_no-fixed-height
+                +section.section_pb
+                    +lessons-gift-banner({
+                        picture: {
+                            sources: [{
+                              srcset: '../../components/lessons-gift-banner/images/lessons-gift-cups-mobile.png',
+                              media: '(max-width: 1199.98px)'
+                            }],
+                            img: '../../components/lessons-gift-banner/images/lessons-gift-cups.png',
+                            lazy: true,
+                            objectFit: 'cover',
+                            objPos: ['center']
+                        },
+                         href: '#'
+                    }).lessons-gift-banner_cups
+                +section.section_pt.section_whisper2
+                    +learning-process-specifics(data.learningProcess)
+                +section.section_pt
+                    +prop-block({
+                        title: 'Попробовать <br>бесплатно',
+                        description: 'Записаться на&nbsp;пробный урок',
+                        img: {
+                            src: '../../components/prop-block/images/van.jpg',
+                            alt: ''
+                        },
+                        btn: {
+                            title: 'Оставить заявку',
+                            href: '#'
+                        },
+                        subtitle: 'Два занятия в&nbsp;подарок!',
+                        subdescription: 'При покупке абонемента в&nbsp;день пробного занятия',
+                        mobileImg: '../../components/prop-block/images/van-mobile.jpg',
+                        tabletImg: '../../components/prop-block/images/van-tablet.jpg'
+                    })(id='Записаться')
+            +footer

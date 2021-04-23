@@ -1,0 +1,8 @@
+mixin course-modules(args)
+    .course-modules&attributes(attributes)
+        .row.course-modules__container
+            .offset-md-1.col-md-22.offset-xxl-2.col-xxl-20.course-modules__wrapper
+                each courseModule in args
+                    .course-modules__module(data-anim="anim-3")
+                        +svg({name: courseModule.svg}).course-modules__svg(class=`course-modules__svg_${courseModule.svg}`)
+                        .course-modules__text!= courseModule.text

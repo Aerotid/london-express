@@ -1,0 +1,78 @@
+.upcoming-lesson {
+    $root: &;
+
+    padding: 3rem;
+    background-color: white;
+    box-shadow: 1rem 1rem 1rem rgba(55, 84, 170, 0.1);
+    border-radius: 2rem;
+
+    @include media-breakpoint-down(xl) {
+        padding: 2rem;
+    }
+
+    &__container {
+        padding: 0 1rem;
+
+        @include media-breakpoint-down(xl) {
+            padding: 0;
+        }
+    }
+
+    &__title {
+        @include font-15;
+        color: rgba($color-11, .5);
+        line-height: 1.6;
+        margin-bottom: 1rem;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1rem;
+
+        &-day {
+            @include font-6;
+            color: $color-1;
+            font-weight: 700;
+        }
+
+        &-time {
+            display: flex;
+            align-items: baseline;
+            font-size: 1.6rem;
+            color: $color-1;
+            line-height: 1.6;
+
+            &-icon {
+                width: 1.2rem;
+                height: 1.2rem;
+                margin-right: 0.6rem;
+            }
+        }
+    }
+
+    &__type {
+        margin-bottom: 1rem;
+        font-size: 1.4rem;
+        line-height: 1.6;
+        font-weight: 500;
+        color: rgba($color-11, .5);
+    }
+
+    &__text {
+        font-size: 1.6rem;
+        line-height: 1.6;
+        font-weight: normal;
+        color: $color-9;
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+
+        @include media-breakpoint-down(xl) {
+            margin-top: 0.5rem;
+        }
+    }
+
+    &_popup {
+        width: 27.4rem;
+    }
+}

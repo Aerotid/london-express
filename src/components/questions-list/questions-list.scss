@@ -1,0 +1,44 @@
+.questions-list {
+    $root: &;
+
+    &__list {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+    }
+
+    &__item {
+        &:nth-child(even) {
+            background-color: $color-13;
+        }
+    }
+
+    &__question {
+        margin-left: 100vw / 24 * 6;
+        width: 100vw / 24 * 12;
+        animation: appearFromOpacity 0.8s forwards;
+
+        @include media-breakpoint-down(lg) {
+            width: 100vw / 24 * 20;
+            margin-left: 100vw / 24 * 2;
+
+            @include media-breakpoint-down(sm) {
+                width: auto;
+                margin: 0 2rem;
+            }
+        }
+    }
+
+    .endless-btn {
+        margin-top: 4rem;
+
+        @include media-breakpoint-down(sm) {
+            margin-top: 2rem;
+        }
+    }
+}
+
+@keyframes appearFromOpacity {
+    from { opacity: 0 }
+    to { opacity: 1 }
+}

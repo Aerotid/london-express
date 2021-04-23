@@ -1,0 +1,22 @@
+[
+    {
+        "title": "Одноклассники",
+        "icon": "ok"
+    },
+    {
+        "title": "Telegram",
+        "icon": "telegram"
+    },
+    {
+        "title": "Вконтакте",
+        "icon": "vk"
+    },
+    {
+        "title": "Twitter",
+        "icon": "twitter"
+    },
+    {
+        "title": "Facebook",
+        "icon": "facebook"
+    }
+]

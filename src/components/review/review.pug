@@ -1,0 +1,30 @@
+include ../btn-expand/btn-expand
+include ../post-stats/post-stats
+
+mixin review(args)
+    .review&attributes(attributes)
+        if (args.background)
+            .review__background
+                +#{args.background}
+        .row
+            .col-md-20.offset-md-2.col-xl-12.offset-xl-6
+                .review__top-content
+                    .review__img
+                        +img({path: args.img, lazy: true})
+                    .review__info
+                        .review__title!= args.name + ', ' + args.course
+                        .review__social
+                            +svg({ name: 'iconInstagram' }).review__insta-icon
+                            a(href=`https://www.instagram.com/${args.instagram}`).review__username!= args.instagram
+                .review__text
+                    .review__text-preview!= args.text.preview
+                    if args.text.detail
+                        .review__text-detail!= args.text.detail
+                .review__more-less
+                    .review__more-less-hline
+                    .review__bottom-wrapper
+                        +btn-expand.review__expand-button
+                        +post-stats({likes: args.likes}).post-stats_review
+
+
+

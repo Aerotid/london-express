@@ -1,0 +1,35 @@
+mixin exam-results-circle(args)
+    .exam-results-circle&attributes(attributes)
+        .row.justify-content-center
+            .col-md-22.col-xl-20
+                .exam-results-circle__flex-container(data-anim='anim-3')
+                    .exam-results-circle__mark-outer-wrapper.d-none.d-md-flex
+                        .exam-results-circle__mark
+                            .exam-results-circle__mark-percentage
+                                svg(width='492' height='492' viewbox='0 0 492 492' fill='none' xmlns='http://www.w3.org/2000/svg').exam-results-circle__circle-base
+                                  circle(cx='246' cy='246' r='240' stroke='#F7F6FB' stroke-width='12')
+                                svg(width='508' height='508' viewBox='0 0 508 508').exam-results-circle__circle-dynamic
+                                    circle(fill='none' cx='254' cy='254' r='240')
+                            .exam-results-circle__mark-inner-wrapper
+                                span.exam-results-circle__points
+                                span.exam-results-circle__points-text Баллов по ЕГЭ
+                    .exam-results-circle__list-outer-wrapper
+                        .exam-results-circle__list
+                            .swiper-container-students
+                                .swiper-wrapper-students
+                                    each achievement in data.achievements
+                                        .exam-results-circle__student(data-points= achievement.points).swiper-student
+                                            .exam-results-circle__avatar
+                                                .exam-results-circle__points-wrapper
+                                                    .exam-results-circle__svg
+                                                        svg(width='62' height='62' viewbox='0 0 62 62' fill='none' xmlns='http://www.w3.org/2000/svg').exam-results-circle__sm-circle-base
+                                                            circle(cx='31' cy='31' r='30' stroke='#F7F6FB')
+                                                        svg(width='64' height='64' viewBox='0 0 64 64').exam-results-circle__sm-circle-dynamic
+                                                            circle(fill='none' cx='32' cy='32' r='30')
+                                                    .exam-results-circle__points-inner-wrapper.d-md-none
+                                                        span.exam-results-circle__points!= achievement.points
+                                                        span.exam-results-circle__points-text Баллов по ЕГЭ
+                                                .exam-results-circle__img
+                                                    +img({path: achievement.img, lazy: true})
+                                            .exam-results-circle__title!= achievement.student + ', ' + achievement.course
+

@@ -1,0 +1,49 @@
+.blog-statistics {
+    $root: &;
+    display: flex;
+    margin-top: auto;
+
+    &__item {
+        display: flex;
+        align-items: center;
+        margin-right: 34px;
+        opacity: .5;
+        transition: opacity 0.3s;
+
+        @include media-breakpoint-down(sm) {
+            margin-right: 20px;
+        }
+
+        &:last-child {
+            margin-right: 0;
+
+            #{$root} {
+                &__item {
+                    &-icon {
+                        width: 21px;
+                    }
+                }
+            }
+        }
+
+        &-icon {
+            width: 18px;
+            height: 30px;
+            margin-right: 10px;
+
+
+
+            svg {
+                width: 100%;
+                height: 100%;
+                fill: $color-8;
+            }
+        }
+
+        &-count {
+            @include font-9;
+            line-height: 1;
+            color: $color-9;
+        }
+    }
+}

@@ -1,0 +1,14 @@
+include ../share/share
+
+mixin article(args)
+    article.article&attributes(attributes)
+        .row
+            .offset-md-1.col-md-22.offset-xl-6.col-xl-12(data-anim='trigger')
+                header.article__header(data-anim='anim-2')
+                    if (args.blogSection)
+                        p.article__blog-section!= args.blogSection
+                    else if(args.date)
+                        time(datetime=args.date.datetime).article__date!= args.date.showDate
+                    +share
+                h1.article__title(data-anim='anim-2')!= args.title
+                block

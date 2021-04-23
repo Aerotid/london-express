@@ -1,0 +1,113 @@
+{
+    "main": {
+        "title": "London Express лучшая онлайн-школа английского языка",
+        "date": "8 часов назад",
+        "image": "../news/images/news-card-1.jpg",
+        "text": "Одно дело&nbsp;&mdash; три тысячи слов в&nbsp;год на&nbsp;родном языке. Их&nbsp;выучить проще, ведь вы&nbsp;в&nbsp;детстве постоянно слышали речь на&nbsp;русском языке, активно учили родной язык в&nbsp;школе и&nbsp;практиковали в&nbsp;жизни..."
+    },
+    "list": [
+        {
+            "mainItems": [
+                {
+                    "title": "Открытие школ London Express по&nbsp;всей России 14&nbsp;сентября",
+                    "date": "14 часов назад",
+                    "image": "../news/images/news-card-6.jpg",
+                    "text": "Одно дело&nbsp;&mdash; три тысячи слов в&nbsp;год на&nbsp;родном языке. Их&nbsp;выучить проще, ведь вы&nbsp;в&nbsp;детстве постоянно слышали речь на&nbsp;русском языке, активно учили родной язык в&nbsp;школе и&nbsp;практиковали в&nbsp;жизни...",
+                    "imageShow": true,
+                    "link": "/news-article.html"
+                },
+                {
+                    "title": "Открытие школ London Express по&nbsp;всей России 14&nbsp;сентября",
+                    "date": "14 часов назад",
+                    "text": "Одно дело&nbsp;&mdash; три тысячи слов в&nbsp;год на&nbsp;родном языке. Их&nbsp;выучить проще, ведь вы&nbsp;в&nbsp;детстве постоянно слышали речь на&nbsp;русском языке, активно учили родной язык в&nbsp;школе и&nbsp;практиковали в&nbsp;жизни...",
+                    "link": "/news-article.html"
+                },
+                {
+                    "title": "Открыта регистрация на&nbsp;олимпиаду &laquo;CAMBRIDGE ENGLISH FOR SCHOOLS&raquo;",
+                    "date": "8 часов назад",
+                    "image": "../news/images/news-card-8.jpg",
+                    "text": "Одно дело&nbsp;&mdash; три тысячи слов в&nbsp;год на&nbsp;родном языке. Их&nbsp;выучить проще, ведь вы&nbsp;в&nbsp;детстве постоянно слышали речь на&nbsp;русском языке, активно учили родной язык в&nbsp;школе и&nbsp;практиковали в&nbsp;жизни...",
+                    "imageShow": true,
+                    "imageBig": true,
+                    "link": "/news-article.html"
+                },
+                {
+                    "title": "Открытие школ London Express по&nbsp;всей России 14&nbsp;сентября",
+                    "date": "10 часов назад",
+                    "image": "../news/images/news-card-2.jpg",
+                    "text": "Вы&nbsp;когда-нибудь задумывались, сколько слов вы&nbsp;знаете на&nbsp;английском? А&nbsp;на&nbsp;русском? А&nbsp;какой словарный запас считается &laquo;нормальным&raquo;? Всё это так размыто...",
+                    "imageShow": true,
+                    "imageBig": true,
+                    "link": "/news-article.html"
+                }
+            ],
+            "items": [
+                {
+                    "title": "Объявляем дополнительный набор",
+                    "date": "28 ноября 2019",
+                    "link": "/news-article.html"
+                },
+                {
+                    "title": "Объявляем дополнительный набор",
+                    "date": "28 ноября 2019",
+                    "image": "../news/images/news-card-6.jpg",
+                    "imageShow": true,
+                    "link": "/news-article.html"
+                },
+                {
+                    "title": "Объявляем дополнительный набор",
+                    "date": "28 ноября 2019",
+                    "image": "../news/images/news-card-2.jpg",
+                    "imageShow": true,
+                    "link": "/news-article.html"
+                },
+                {
+                    "title": "London Express лучшая онлайн-школа английского языка",
+                    "date": "01 декабря 2019",
+                    "link": "/news-article.html"
+                },
+                {
+                    "title": "London Express лучшая онлайн-школа английского языка",
+                    "date": "01 декабря 2019",
+                    "link": "/news-article.html"
+                },
+                {
+                    "title": "London Express лучшая онлайн-школа английского языка",
+                    "date": "28 ноября 2019",
+                    "image": "../news/images/news-card-9.jpg",
+                    "imageShow": true,
+                    "link": "/news-article.html"
+                },
+                {
+                    "title": "Объявляем дополнительный набор",
+                    "date": "28 ноября 2019",
+                    "link": "/news-article.html"
+                },
+                {
+                    "title": "Объявляем дополнительный набор",
+                    "date": "28 ноября 2019",
+                    "image": "../news/images/news-card-1.jpg",
+                    "imageShow": true,
+                    "link": "/news-article.html"
+                },
+                {
+                    "title": "London Express лучшая онлайн-школа английского языка",
+                    "date": "28 ноября 2019",
+                    "image": "../news/images/news-card-4.jpg",
+                    "imageShow": true,
+                    "link": "/news-article.html"
+                },
+                {
+                    "title": "London Express лучшая онлайн-школа английского языка",
+                    "date": "01 декабря 2019",
+                    "link": "/news-article.html"
+                },
+                {
+                    "title": "Объявляем дополнительный набор",
+                    "date": "28 ноября 2019",
+                    "link": "/news-article.html"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,100 @@
+extends ../../layout/layout
+include ../../components/main/main
+include ../../components/footer/footer
+include ../../components/section/section
+include ../../components/lead-2/lead-2
+include ../../components/block-title/block-title
+include ../../components/big-text-with-subtitle/big-text-with-subtitle
+include ../../components/text-banner/text-banner
+include ../../components/btn/btn
+include ../../components/teachers-list/teachers-list
+include ../../components/teachers-work/teachers-work
+include ../../components/teachers-qualifications/teachers-qualifications
+include ../../components/prop-block/prop-block
+include ../../components/content-area/content-area
+
+block content
+    div#barba-wrapper
+        .barba-container(data-namespace='teachers')
+            +main
+                +section.section_portage.section_margin
+                    +lead-2({
+                        title: 'Наши преподаватели',
+                        description: 'London Express Online&nbsp;&mdash; слаженная команда неравнодушных к&nbsp;своему делу профессионалов.',
+                        smallTitle: 'true',
+                        href: '#',
+                        figure: {
+                            img: '../teachers/images/teachers-lead-figure.jpg',
+                            sources: [
+                                {
+                                    srcset: '../teachers/images/teachers-lead-figure-mob.png',
+                                    media: '(max-width: 767.9px)'
+                                }
+                            ],
+                            objectFit: 'contain',
+                            objPos: ['right', 'center']
+                        },
+                        btn: {
+                            text: 'Пробное занятие',
+                            href: '#',
+                            trigger: true
+                        }
+                    }).lead-2_teachers
+                        +leadSvg6.lead-2__svg
+                +section.about-team
+                    .row(data-anim="trigger")
+                        .col-md-11.offset-md-1.col-xl-8.offset-xl-4.about-team__team-col(data-anim="anim-2")
+                            span.about-team__top-span Наши преподаватели
+                            +big-text-with-subtitle({big: '150', subtitle: 'Супер-сотрудников в&nbsp;команде'}).big-text-with-subtitle_portage.big-text-with-subtitle_bigger
+                        .col-md-11.col-xl-8.about-team__team-col(data-anim="anim-2")
+                            .about-team__top-text
+                                p Успешное достижение целей наших учеников&nbsp;&mdash; заслуга слаженной команды профессионалов.
+                            .about-team__bottom-text
+                                p Наш подход к&nbsp;работе&nbsp;&mdash; ответственность, эффективность, взаимодополнение и&nbsp;поддержка, нацеленность на&nbsp;результат, постоянное развитие коллектива онлайн-школы.
+                    .row
+                        .col-md-22.offset-md-1.col-xl-20.offset-xl-2
+                            +content-area
+                                +picture({
+                                    lazy: true,
+                                    sources: [],
+                                    img: '../teachers/images/male-teacher.jpg'
+                                })(data-anim="anim-scale")
+                +section.section_pt16
+                    +block-title({title: 'Работа на&nbsp;супер-результат'}).block-title_mobile-title-left.teachers__work-title
+                    +teachers-work(data.teachers.work)
+                +section.section_pt
+                    +text-banner({
+                        svg: {
+                            name: 'rocket-white'
+                        },
+                        text:'<p>Мы&nbsp;знаем, как сложно найти &laquo;своего преподавателя&raquo;, любящего английский язык и&nbsp;по-настоящему заинтересованного в&nbsp;развитии студента. Преподаватель подает информацию увлекательно, с&nbsp;учетом возрастных особенностей и&nbsp;темперамента учащегося. Учит не&nbsp;&laquo;зубрить&raquo;, а&nbsp;применять знания и&nbsp;навыки в&nbsp;различных ситуациях.</p>',
+                    }).text-banner_portage
+                +section.section_pt16.qualification
+                    +block-title({
+                        title: 'Квалификация',
+                        description: 'В&nbsp;составе команды&nbsp;&mdash; российские и&nbsp;зарубежные специалисты с&nbsp;высшим лингвистическим образованием и&nbsp;обязательным стажем преподавания.'
+                    }).teachers__qualification-title
+                    +teachers-qualifications(data.teachers.qualifications)
+                +section.teachers__list-section
+                    +teachers-list({
+                        description: 'Используем самые современные образовательные решения в&nbsp;профессиональной деятельности. Поощряем и&nbsp;всячески мотивируем развитие персонала. Никогда не&nbsp;стоим на&nbsp;месте, постоянно развиваемся сами и&nbsp;стараемся привить эти&nbsp;же ценности и&nbsp;нашим студентам.',
+                        teachers: data.teachers.teachersList
+                    })
+                +section
+                    +prop-block({
+                        title: 'Попробовать <br>бесплатно',
+                        description: 'Записаться на&nbsp;пробный урок',
+                        img: {
+                            src: '../../components/prop-block/images/van-side.jpg',
+                            alt: ''
+                        },
+                        btn: {
+                            title: 'Оставить заявку',
+                            href: '#'
+                        },
+                        subtitle: 'Два занятия в&nbsp;подарок!',
+                        subdescription: 'При покупке абонемента в&nbsp;день пробного занятия',
+                        mobileImg: '../../components/prop-block/images/van-mobile.jpg',
+                        tabletImg: '../../components/prop-block/images/van-tablet.jpg'
+                    })
+            +footer

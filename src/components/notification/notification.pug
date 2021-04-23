@@ -1,0 +1,6 @@
+mixin notification(args)
+    .notification&attributes(attributes)
+        .notification__container
+            .notification__svg(class=`notification__svg_${args.svg}`)
+                +svg({name: args.svg})
+            h3.notification__title!=args.title

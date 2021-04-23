@@ -1,0 +1,9 @@
+mixin video-block(args)
+    .video-block&attributes(attributes)(data-anim="anim-scale")
+        .video-block__bg-wrapper
+            .video-block__button
+                +svg({name: 'play'})
+        if(args.path)
+            +autoplay-video({path: `${args.path}#t=1.0`}).video-block__item.video-block__item_inner
+        if(args.embed)
+            .video-block__item.video-block__item_youtube(data-embed=args.embed)

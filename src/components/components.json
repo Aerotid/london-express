@@ -1,0 +1,356 @@
+[
+  {
+    "name": "header"
+  },
+  {
+    "name": "footer"
+  },
+  {
+    "name": "sandwich-menu"
+  },
+  {
+    "name": "preloader"
+  },
+  {
+    "name": "callbacks"
+  },
+  {
+    "name": "two-cols"
+  },
+  {
+    "name": "square-card"
+  },
+  {
+    "name": "section"
+  },
+  {
+    "name": "lead"
+  },
+  {
+    "name": "exercise-card"
+  },
+  {
+    "name": "btn"
+  },
+  {
+    "name": "two-col-title"
+  },
+  {
+    "name": "grid-list"
+  },
+  {
+    "name": "picture"
+  },
+  {
+    "name": "register-proposal"
+  },
+  {
+    "name": "block-title"
+  },
+  {
+    "name": "course-card"
+  },
+  {
+    "name": "prop-block"
+  },
+  {
+    "name": "logo"
+  },
+  {
+    "name": "header-menu"
+  },
+  {
+    "name": "content-area"
+  },
+  {
+    "name": "mobile-fixed-overlay"
+  },
+  {
+    "name": "upcoming-lesson"
+  },
+  {
+    "name": "last-work"
+  },
+  {
+    "name": "btn-group"
+  },
+  {
+    "name": "message-popup"
+  },
+  {
+    "name": "not-found"
+  },
+  {
+    "name": "main"
+  },
+  {
+    "name": "lead-2"
+  },
+  {
+    "name": "tile-card"
+  },
+  {
+    "name": "slider"
+  },
+  {
+    "name": "pink-text"
+  },
+  {
+    "name": "two-cols-text"
+  },
+  {
+    "name": "three-cols-row"
+  },
+  {
+    "name": "about-item"
+  },
+  {
+    "name": "person-card"
+  },
+  {
+    "name": "review"
+  },
+  {
+    "name": "reviews-section"
+  },
+  {
+    "name": "text-banner"
+  },
+  {
+    "name": "info-block-1"
+  },
+  {
+    "name": "block-title-2"
+  },
+  {
+    "name": "video-block"
+  },
+  {
+    "name": "attach-file"
+  },
+  {
+    "name": "popup-event"
+  },
+  {
+    "name": "endless-btn"
+  },
+  {
+    "name": "btn-arrow"
+  },
+  {
+    "name": "course-card-2"
+  },
+  {
+    "name": "subscription"
+  },
+  {
+    "name": "about-circles"
+  },
+  {
+    "name": "two-cols-with-picture"
+  },
+  {
+    "name": "londonexp-features"
+  },
+  {
+    "name": "lessons-gift-banner"
+  },
+  {
+    "name": "class-format"
+  },
+  {
+    "name": "list-circle"
+  },
+  {
+    "name": "individual-group-classes"
+  },
+  {
+    "name": "big-text-with-subtitle"
+  },
+  {
+    "name": "teacher"
+  },
+  {
+    "name": "slider-history"
+  },
+  {
+    "name": "slider-lead"
+  },
+  {
+    "name": "teachers-list"
+  },
+  {
+    "name": "notice"
+  },
+  {
+    "name": "news-card"
+  },
+  {
+    "name": "news-list"
+  },
+  {
+    "name": "pagination"
+  },
+  {
+    "name": "news-slider"
+  },
+  {
+    "name": "h1-title"
+  },
+  {
+    "name": "lead-contacts"
+  },
+  {
+    "name": "contacts-card"
+  },
+  {
+    "name": "educational-methodology"
+  },
+  {
+    "name": "content-picture"
+  },
+  {
+    "name": "learning-process-specifics"
+  },
+  {
+    "name": "share"
+  },
+  {
+    "name": "article"
+  },
+  {
+    "name": "table-of-contents"
+  },
+  {
+    "name": "post-stats"
+  },
+  {
+    "name": "comments"
+  },
+  {
+    "name": "submenu"
+  },
+  {
+    "name": "blog-previews"
+  },
+  {
+    "name": "blog-popular"
+  },
+  {
+    "name": "blog-statistics"
+  },
+  {
+    "name": "blog-new"
+  },
+  {
+    "name": "sandwich-menu-btn"
+  },
+  {
+    "name": "chat"
+  },
+  {
+    "name": "fixed-content"
+  },
+  {
+    "name": "subscription-form-side"
+  },
+  {
+    "name": "blog-recommendations"
+  },
+  {
+    "name": "popup-free"
+  },
+  {
+    "name": "article-blog"
+  },
+  {
+    "name": "popup-comment"
+  },
+  {
+    "name": "popup-vacancy-questionnaire"
+  },
+  {
+    "name": "btn-expand"
+  },
+  {
+    "name": "price-banner"
+  },
+  {
+    "name": "price-advantages"
+  },
+  {
+    "name": "partners"
+  },
+  {
+    "name": "great-offers"
+  },
+  {
+    "name": "language-selector"
+  },
+  {
+    "name": "questions-list"
+  },
+  {
+    "name": "question"
+  },
+  {
+    "name": "price-slider"
+  },
+  {
+    "name": "price-item"
+  },
+  {
+    "name": "popup-subscription"
+  },
+  {
+    "name": "popup-base"
+  },
+  {
+    "name": "teachers-work"
+  },
+  {
+    "name": "teachers-qualifications"
+  },
+  {
+    "name": "news-main"
+  },
+  {
+    "name": "london-logos"
+  },
+  {
+    "name": "about-stats"
+  },
+  {
+    "name": "block-text"
+  },
+  {
+    "name": "lead-course"
+  },
+  {
+    "name": "right-list"
+  },
+  {
+    "name": "course-modules"
+  },
+  {
+    "name": "slider-levels"
+  },
+  {
+    "name": "slider-achievements"
+  },
+  {
+    "name": "exam-results-circle"
+  },
+  {
+    "name": "popup-pr"
+  },
+  {
+    "name": "popup-callback"
+  },
+  {
+    "name": "subscription-free-course"
+  },
+  {
+    "name": "site-awards"
+  }
+]

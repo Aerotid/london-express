@@ -1,0 +1,170 @@
+.slider-lead {
+    $root: &;
+    position: relative;
+    overflow: hidden;
+
+    &__shadow {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        &_second {
+            transition: opacity 1.5s ease-out;
+            opacity: 1;
+
+            .preloading & {
+                opacity: 0;
+            }
+        }
+
+        &_mobile {
+            display: none;
+            transition: opacity 1.5s ease-out;
+            opacity: 1;
+
+            @include media-breakpoint-down(sm) {
+                display: block;
+            }
+
+            .preloading & {
+                opacity: 0;
+            }
+        }
+    }
+
+    &__images {
+        position: absolute;
+        //top: -2%;
+        //left: -1%;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        will-change: opacity, transform;
+        transform-style: preserve-3d;
+        transition: opacity 2s ease-out, transform 1s linear;;
+        opacity: 1;
+        pointer-events: none;
+        //animation: float-down 3s cubic-bezier(.645, .045, .355, 1) both infinite;
+
+        @include media-breakpoint-down(sm) {
+            display: none;
+        }
+
+        .preloading & {
+            //animation: none;
+            opacity: 0;
+        }
+    }
+
+    &__person {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        display: block;
+        width: 100%;
+        height: 100%;
+        will-change: transform;
+        transform-style: preserve-3d;
+        //transition: transform 1s linear;
+        //animation: float-down 5s cubic-bezier(.645, .045, .355, 1) both;
+        pointer-events: none;
+
+        .preloading & {
+            animation: none;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            will-change: transform;
+
+            .change-slide & {
+                animation: float-up 5s cubic-bezier(.645, .045, .355, 1) both;
+            }
+
+
+            @include media-breakpoint-down(sm) {
+                object-fit: cover;
+            }
+        }
+    }
+
+    &__mustache {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        opacity: 0;
+        will-change: transform;
+        transition: opacity .3s ease-out;
+        //animation: float-down 5s cubic-bezier(.645, .045, .355, 1) both;
+        pointer-events: none;
+
+        .preloading & {
+            animation: none;
+        }
+
+        .mustache & {
+            opacity: 1;
+        }
+
+        svg {
+            will-change: transform;
+
+            .change-slide & {
+                animation: float-up 5s cubic-bezier(.645, .045, .355, 1) both;
+            }
+        }
+    }
+}
+
+@keyframes float-down {
+    0% {
+        transform: translate3d(0, 0, 0)
+    }
+    25% {
+        transform: translate3d(0, -.5%, 0)
+    }
+    50% {
+        transform: translate3d(0, 2.5%, 0)
+    }
+    75% {
+        transform: translate3d(0, -1.5%, 0)
+    }
+    100% {
+        transform: translate3d(0, 0, 0)
+    }
+}
+
+@keyframes float-up {
+    0% {
+        transform: translate3d(0, 0, 0)
+    }
+    25% {
+        transform: translate3d(0, -3.5%, 0)
+    }
+    50% {
+        transform: translate3d(0, 2.5%, 0)
+    }
+    75% {
+        transform: translate3d(0, -1.5%, 0)
+    }
+    100% {
+        transform: translate3d(0, 0, 0)
+    }
+}

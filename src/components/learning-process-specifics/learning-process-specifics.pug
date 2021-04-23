@@ -1,0 +1,17 @@
+include ../block-title/block-title
+include ../btn/btn
+
+mixin learning-process-specifics(args)
+    .learning-process-specifics&attributes(attributes)
+        +block-title({title: args.title}).learning-process-specifics__main-title(data-anim='anim-1')
+        each item, index in args.list
+            .learning-process-specifics__item(class= index % 2 ? '' : 'learning-process-specifics__item_reverse')(data-anim='anim-1')
+                .learning-process-specifics__text-container
+                    .learning-process-specifics__text-content
+                        h3.learning-process-specifics__title!= item.title
+                        .learning-process-specifics__text!=item.text
+                        if(item.link)
+                            +btn({tagName: 'a'})(href= item.link.href, data=item.link.trigger?'free-popup':'').btn_grey-border.btn_mobile-padding38.learning-process-specifics__btn!= item.link.text
+                +picture(item.picture).learning-process-specifics__picture
+
+

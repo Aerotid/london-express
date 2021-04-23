@@ -1,0 +1,22 @@
+include ../btn/btn
+include ../picture/picture
+
+mixin register-proposal(args)
+    .register-proposal&attributes(attributes)
+        if (args.title)
+            .register-proposal__title.col-md-22.offset-md-1.col-xl-16.offset-xl-4(data-anim='anim-1')!= args.title
+        .register-proposal__bg.col-md-22.offset-md-1.col-xl-20.offset-xl-2
+            +picture(args.picture).register-proposal__img
+            .register-proposal__overlay
+                block
+            .register-proposal__circle-left
+                .register-proposal__circle-element
+            .register-proposal__circle-right
+                .register-proposal__circle-element
+            .register-proposal__video.d-none.d-lg-block
+        .register-proposal__description.col-md-22.offset-md-1.col-xl-10.offset-xl-7(data-anim='anim-1')!= args.description
+        if (args.link)
+            .register-proposal__footer.d-none.d-md-block
+                +btn({
+                    tagName: 'button'
+                })(data='free-popup').btn_pink!= args.link.title

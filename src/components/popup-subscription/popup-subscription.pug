@@ -1,0 +1,21 @@
+include ../../components/popup-base/popup-base
+include ../../components/subscription/subscription
+
+mixin popup-subscription(args)
+    .popup-subscription&attributes(attributes)
+        +popup-base
+            +subscription({
+                title: 'Подписка на&nbsp;блог',
+                subtitle: 'Читайте первыми наши полезные статьи про английский и&nbsp;не&nbsp;только',
+                picture: {
+                    sources: [{
+                        srcset: '../blog/images/bg-mobile.png',
+                        media: '(max-width: 1199.98px)'
+                    }],
+                    img: '../blog/images/bg.png',
+                    objectFit: 'contain',
+                    objectPosition: 'bottom',
+                    lazy: true
+                },
+                popup: true
+            }).subscription_popup-blog

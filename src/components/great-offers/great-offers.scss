@@ -1,0 +1,52 @@
+.great-offers {
+    $root: &;
+    position: relative;
+    margin-left: 100vw / 24 * 2;
+    width: 100vw / 24 * 20;
+
+    @include media-breakpoint-down(sm) {
+        width: auto;
+        margin-left: 0;
+    }
+
+    .lessons-gift-banner {
+        .offset-sm-2 {
+            margin-left: 0;
+        }
+        .col-sm-20 {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+        &__banner {
+            padding: 10rem calc(#{$col-width} * 2) 9.1rem;
+
+            @include media-breakpoint-down(lg) {
+                padding: 7rem 1rem 25rem;
+
+                @include media-breakpoint-down(sm) {
+                    padding: 7rem 1rem 16.1rem;
+                }
+            }
+        }
+    }
+
+    &__navigation {
+        @include media-breakpoint-down(sm) {
+            display: none;
+        }
+    }
+
+    .btn-arrow {
+        width: $col-width;
+        height: $col-width;
+
+        &_prev {
+            left: calc(0 - (#{$col-width} * 2));
+            transform: translate(50%, -50%);
+        }
+        &_next {
+            right: calc(0 - (#{$col-width} * 2));
+            transform: translate(-50%, -50%);
+        }
+    }
+}

@@ -1,0 +1,19 @@
+mixin about-circles(args)
+    .about-circles&attributes(attributes).hide(data-anim='anim-circle')
+        .row
+            .col-md-22.offset-md-1.col-xl-12.offset-xl-6
+                .about-circles__image
+                    +picture({
+                        sources: [{
+                            srcset: '../about/images/circles-mobile.png',
+                            media: '(max-width: 1200px)'
+                        }],
+                        img: '../about/images/circles.png',
+                        objectFit: 'cover'
+                    })
+                    .about-circles__item.about-circles__item_1
+                    .about-circles__item.about-circles__item_2
+                    .about-circles__item.about-circles__item_3
+                    .about-circles__item.about-circles__item_4
+                    .about-circles__item.about-circles__item_5
+                    .about-circles__item.about-circles__item_6

@@ -1,0 +1,14 @@
+mixin blog-previews(args)
+    .blog-previews&attributes(attributes)
+        .blog-previews__head
+            h3.blog-previews__title(data-anim='anim-1')
+                a(href='/blog-section.html')!=args.title
+        ul.blog-previews__list(data-anim='anim-3')
+            each item in args.items
+                li.blog-previews__item
+                    a(href='/blog-article.html').blog-previews__item-link
+                        .blog-previews__item-date!=item.date
+                        .blog-previews__item-image
+                            +img({path: item.image})
+                        h4.blog-previews__item-title!=item.title
+    block

@@ -1,0 +1,21 @@
+include ../picture/picture
+
+mixin two-cols(args)
+    .two-cols&attributes(attributes)(class= `${args.reverse ? 'two-cols_reverse' : ''} ${args.bigTitle ? 'two-cols_has-title' : ''}`)
+        .row.two-cols__wrapper(class= args.reverse ? '': '')
+            if (args.bigTitle)
+                .col-md-22.offset-md-1.col-lg-20.offset-lg-2.two-cols__head
+                    .two-cols__big-title(data-anim='anim-1')!= args.bigTitle
+            //- fix для разворота блоков
+            .col-md-11.offset-md-1.col-lg-10.offset-lg-1.col-xxl-8.offset-xxl-2
+                block
+            .col-md-11.offset-md-1.col-lg-10.offset-lg-1.col-xxl-7.offset-xxl-3.two-cols__content
+                .two-cols__title!= args.title
+                .two-cols__description!= args.description
+                if (args.link)
+                    .two-cols__btn-wrapper
+                        +btn({
+                            tagName: 'a'
+                        })(href= args.link.href).btn_link.two-cols__btn!= args.link.title
+            .two-cols__image(class=args.pictureBottom?'two-cols__image_bottom':'')
+                +picture(args.picture)

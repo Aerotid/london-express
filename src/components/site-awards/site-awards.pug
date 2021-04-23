@@ -1,0 +1,21 @@
+mixin site-awards(args)
+    .site-awards&attributes(attributes)
+        +svg({name: 'question'}).site-awards__more
+        each award, i in args.slideAwards
+            .site-awards__award
+                +svg({name: award.svg}).site-awards__icon
+                .site-awards__text
+                    .site-awards__place
+                        span.site-awards__place-mob!=award.place
+                        span.site-awards__place-full
+                            |
+                            | в номинации
+                    .site-awards__nomination!=award.nomination
+        .site-awards__all
+            each award in args.allAwards
+                .site-awards__row
+                    if (award.svg)
+                        +svg({name: award.svg}).site-awards__icon
+                    .site-awards__text
+                        .site-awards__place!=award.place
+                        .site-awards__nomination!=award.nomination

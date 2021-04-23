@@ -1,0 +1,15 @@
+include ../btn/btn
+include ../picture/picture
+
+mixin lessons-gift-banner(args)
+    .lessons-gift-banner&attributes(attributes)(data-anim="anim-1" data-hook=0.8)
+        .row
+            .col-sm-20.offset-sm-2
+                .lessons-gift-banner__banner
+                    .lessons-gift-banner__bg
+                        +picture(args.picture)(data-anim="anim-parallax" data-hook=1 data-duration="150%")
+                    .lessons-gift-banner__content
+                        h2.lessons-gift-banner__title 2&nbsp;занятия в&nbsp;подарок
+                        p.lessons-gift-banner__subtitle Запишитесь на&nbsp;обучение и&nbsp;получите<br>2&nbsp;занятия бесплатно
+                        +btn({ tagName: 'a' })(href=args.href data='free-popup').btn_white-border.btn_mobile-padding21.lessons-gift-banner__btn Получить
+

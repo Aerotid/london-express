@@ -1,0 +1,17 @@
+include ../../components/contact-form/contact-form
+include ../../components/popup-base/popup-base
+
+mixin popup-callback(args)
+    .popup-callback&attributes(attributes)
+        +popup-base.popup-base_callback
+            +contact-form({
+                title: 'Заказать звонок',
+                data: data.callbackForm,
+                bottomHand: true,
+                buttonStyle: 'white',
+                notification: {
+                    title: 'Спасибо! Мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время.',
+                    svg: 'smile',
+                    purple: true
+                }
+            }).contact-form_pink.contact-form_callback

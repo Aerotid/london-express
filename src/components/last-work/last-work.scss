@@ -1,0 +1,45 @@
+.last-work {
+    $root: &;
+
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    padding: 3rem 2rem 2rem;
+    min-height: 17rem;
+    color: #fff;
+    background-color: $color-18;
+    border: none;
+    box-shadow: 0 3rem 8rem rgba(55, 84, 170, 0.1);
+    border-radius: 1.6rem;
+
+    @include media-breakpoint-down(xl) {
+        padding: 2rem;
+        min-height: 16rem;
+    }
+
+    &__container {
+        padding: 0 1rem;
+        margin-bottom: 1.5rem;
+
+        @include media-breakpoint-down(xl) {
+            padding: 0;
+        }
+    }
+
+    &__title {
+        margin-bottom: 1rem;
+        font-size: 2rem;
+        font-weight: 500;
+        line-height: 1.6;
+    }
+
+    &__name {
+        @include font-14;
+        font-weight: normal;
+        line-height: 1.6;
+    }
+
+    &_popup {
+        width: 27.4rem;
+    }
+}

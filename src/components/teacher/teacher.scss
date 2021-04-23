@@ -1,0 +1,64 @@
+.teacher {
+    $root: &;
+
+    &:hover {
+        #{$root}__name {
+            opacity: 1;
+            transform: scaleY(1);
+        }
+    }
+
+    &__photo {
+        position: relative;
+        width: 20rem;
+        height: 20rem;
+        border-radius: 50%;
+        background-color: rgba($color-9, 0.1);
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+    }
+
+    &__name {
+        position: relative;
+        margin-bottom: 2.9rem;
+        padding: 1.4rem 2.5rem;
+        @include font-23;
+        text-align: center;
+        border-radius: 2rem;
+        background-color: white;
+        box-shadow: 0 3rem 8rem rgba(55, 84, 170, 0.1);
+        opacity: 0;
+        transform: scaleY(0);
+        transition: transform 0.2s;
+
+        @include media-breakpoint-down(sm) {
+            padding-top: 2rem;
+            padding-bottom: 0;
+            margin-bottom: 1.5rem;
+            opacity: 1;
+            transform: scaleY(1);
+            box-shadow: none;
+        }
+
+        &::after {
+            background-color: white;
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 0.85rem;
+            height: 0.85rem;
+            transform: translate(-50%, -50%) rotate(45deg);
+
+            @include media-breakpoint-down(sm) {
+                display: none;
+            }
+        }
+    }
+}

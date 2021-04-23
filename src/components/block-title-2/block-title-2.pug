@@ -1,0 +1,14 @@
+mixin block-title-2(args)
+    .block-title-2&attributes(attributes)
+        .row
+            .col-md-22.offset-md-1.col-xl-14.offset-xl-5
+                if (args.subtitle)
+                    .block-title-2__subtitle(data-anim="anim-1")!= args.subtitle
+                h3.block-title-2__title(data-anim="anim-1")!= args.title
+                if (args.description)
+                    .block-title-2__description(data-anim="anim-1")!= args.description
+                if (args.btn)
+                    .block-title-2__btn-wrapper
+                        +btn({
+                            tagName: 'a'
+                        })(href= args.link.href).btn_link.block-title-2__btn!= args.link.title

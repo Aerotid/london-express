@@ -1,0 +1,166 @@
+.slider-levels {
+    $root: &;
+    position: relative;
+    background-color: $color-13;
+    padding-top: 10rem;
+    padding-bottom: 12.3rem;
+    overflow: hidden;
+
+    @include media-breakpoint-down(sm) {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+
+    &__bg {
+        svg {
+            position: absolute;
+            max-width: calc(#{$col-width}*4);
+            max-height: 100%;
+            height: auto;
+
+            @include media-breakpoint-down(xxl) {
+                max-width: calc(#{$col-width}*3);
+
+                @include media-breakpoint-down(lg) {
+                    display: none;
+                }
+            }
+
+            &:first-child {
+                top: 27%;
+                right: 0;
+            }
+
+            &:nth-child(2) {
+                bottom: 0;
+                left: 4%;
+
+                max-width: calc(#{$col-width}*4 - 4%);
+
+                @include media-breakpoint-down(xxl) {
+                    max-width: calc(#{$col-width}*3 - 4%);
+                }
+            }
+        }
+    }
+
+    &__levels {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 4rem;
+
+        @include media-breakpoint-down(lg) {
+            justify-content: flex-start;
+
+            @include media-breakpoint-down(sm) {
+                margin-bottom: 2.6rem;
+            }
+        }
+    }
+
+    &__level {
+        @include font-26;
+        margin-right: 15px;
+
+        @include media-breakpoint-down(lg) {
+            margin-right: 5%;
+            width: 25%;
+
+            @include media-breakpoint-down(sm) {
+                margin-right: 10%;
+                width: 35%;
+            }
+        }
+    }
+
+    &__scrollbar {
+        position: relative;
+        margin-bottom: 7rem;
+        height: 2.8rem;
+        background-color: transparent;
+        cursor: grab;
+
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 4rem;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            z-index: -1;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 1.2rem;
+            transform: translateY(-50%);
+            border-radius: 20px;
+            background-color: white;
+
+            @include media-breakpoint-down(lg) {
+                border-radius: 0;
+            }
+        }
+    }
+
+    &__drag {
+        height: 100%;
+        width: 100%;
+
+        @include media-breakpoint-down(lg) {
+            margin-right: auto;
+            margin-left: auto;
+            width: 30%;
+
+            @include media-breakpoint-down(sm) {
+                width: 45%;
+            }
+        }
+
+        img {
+            height: 100%;
+            width: auto;
+            max-width: 100%;
+        }
+    }
+
+    &__slide {
+        @include mobile-offset;
+    }
+
+    &__level-title {
+        margin: 0 auto 5.9rem;
+        @include font-6;
+        text-align: center;
+
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 4rem;
+        }
+    }
+
+    &__level-list {
+        columns: 2;
+        column-gap: $col-width;
+
+        @include media-breakpoint-down(sm) {
+            columns: initial;
+        }
+
+        li {
+            display: inline-block;
+            width: 100%;
+        }
+    }
+
+    &_single-slide {
+        min-height: 40rem;
+
+        @include media-breakpoint-down(lg) {
+            min-height: auto;
+        }
+
+        #{$root}__levels-container,
+        #{$root}__scrollbar {
+            display: none;
+        }
+    }
+}

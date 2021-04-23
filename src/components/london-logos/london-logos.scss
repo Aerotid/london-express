@@ -1,0 +1,67 @@
+.london-logos {
+    $root: &;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8.2rem;
+    margin-left: calc(#{$col-width}*6);
+    width: calc(#{$col-width}*12);
+
+    @include media-breakpoint-down(xl) {
+        margin-left: calc(#{$col-width}*5);
+        width: calc(#{$col-width}*14);
+
+        @include media-breakpoint-down(lg) {
+            margin-left: calc(#{$col-width}*3);
+            width: calc(#{$col-width}*18);
+
+            @include media-breakpoint-down(sm) {
+                flex-wrap: nowrap;
+                justify-content: center;
+                margin-top: -1.2rem;
+                margin-left: 0;
+                padding-left: 1.2rem;
+                padding-right: 1.2rem;
+                width: 100%;
+            }
+        }
+    }
+
+    &__circle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 28.3%;
+        background-color: $color-15;
+        border-radius: 50%;
+
+        &::before {
+            content: '';
+            padding-top: 100%;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        svg, img {
+            width: 68%;
+            max-height: 100%;
+        }
+
+        @include media-breakpoint-down(sm) {
+            flex-shrink: 0;
+            width: 9.4rem;
+            height: 9.4rem;
+
+            &::before {
+                padding-top: 0;
+            }
+
+            &:not(:last-child) {
+                margin-right: 0.7rem;
+            }
+        }
+    }
+}

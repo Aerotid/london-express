@@ -1,0 +1,60 @@
+.submenu {
+    $root: &;
+    display: flex;
+    position: relative;
+    margin-top: -3rem;
+    margin-left: calc(#{$col-width} * 5);
+    width: 100vw / 24 * 14;
+    overflow: hidden;
+
+    @include media-breakpoint-down(lg) {
+        width: 100vw / 24 * 23;
+        margin-left: $col-width;
+
+        @include media-breakpoint-down(sm) {
+            width: calc(100vw - 20px);
+            margin-top: 0;
+            margin-left: 20px;
+        }
+    }
+
+    &__list {
+        //justify-content: center;
+        transition-timing-function: ease-in-out;
+
+        @include media-breakpoint-down(lg) {
+            justify-content: flex-start;
+        }
+    }
+
+    &__item {
+        width: auto;
+        padding-right: 50px;
+
+        &:last-child {
+            padding-right: 0;
+        }
+
+        @include media-breakpoint-down(lg) {
+            padding-right: 30px;
+        }
+
+        a {
+            @include font-14;
+            color: rgba($color-9, .5);
+            transition: color .3s ease-out;
+
+            @include states {
+                outline: none;
+                color: $color-9;
+                text-decoration: none;
+            }
+        }
+
+        &.active {
+            a {
+                color: $color-9;
+            }
+        }
+    }
+}

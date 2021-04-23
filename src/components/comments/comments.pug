@@ -1,0 +1,20 @@
+include ../../components/btn/btn
+include ../../components/endless-btn/endless-btn
+include ../../components/input/input
+include ../../components/popup-comment/popup-comment
+
+mixin comments(args)
+    section.comments&attributes(attributes)
+        header.comments__header
+            h2.comments__title Комментарии (<span class='comments__total'>25</span>)
+            +btn({tagName: 'button'})(href='#').btn_grey-border.btn_mobile-padding21.comments__add-btn Добавить комментарий
+        .comments__wrapper
+            each comment in args
+                article.comments__comment(data-anim='anim-3')
+                    header.comments__comment-header
+                        .comments__user!= comment.user
+                        .comments__time!= comment.time
+                    .comments__text!= comment.text
+        .comments__hline
+        +endless-btn({ tagName: 'button'}).endless-btn_with-hline.comments__endless-btn Загрузить еще
+        +popup-comment

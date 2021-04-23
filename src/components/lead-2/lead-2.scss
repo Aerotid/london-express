@@ -1,0 +1,303 @@
+.lead-2 {
+    $root: &;
+
+    position: relative;
+    color: currentColor;
+
+    @include mobile-offset;
+
+    @include media-breakpoint-down(sm) {
+        padding-bottom: 0;
+    }
+
+    &_stick-bottom {
+        #{$root}__shadow,
+        #{$root}__figure {
+            img {
+                object-position: right bottom;
+
+                @include  media-breakpoint-down(sm) {
+                    object-position: center bottom;
+                }
+            }
+        }
+
+        #{$root}__wrapper {
+            @include media-breakpoint-down(sm) {
+                justify-content: flex-start;
+                padding-top: 21.1vh;
+                padding-top: calc(var(--vh, 1vh) * 21.1);
+            }
+        }
+    }
+
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        overflow: hidden;
+
+        .picture {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__gradient,
+    &__figure,
+    &__shadow {
+        opacity: 0;
+        transition: opacity 1s linear;
+
+        @include media-breakpoint-down(sm) {
+            transition: opacity 0.4s linear;
+        }
+    }
+
+    &__gradient {
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__shadow {
+        mix-blend-mode: multiply;
+    }
+
+    &__shadow,
+    &__figure {
+        will-change: transform;
+        transform-style: preserve-3d;
+        transition: transform 1s ease-out, opacity 0.5s linear;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: right;
+
+            @include media-breakpoint-down(sm) {
+                object-position: center;
+            }
+        }
+    }
+
+    &__svg,
+    .svg-text {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+    }
+
+    .svg,
+    .svg-text {
+        will-change: transform;
+        transform-style: preserve-3d;
+        transition: transform 1s ease-out;
+    }
+
+    .fly-lines {
+        transition: none;
+    }
+
+    .svg-text {
+        opacity: 0; //
+        will-change: opacity;
+        transition: transform 1s ease-out, opacity .3s ease-out 1.3s;
+    }
+
+    &__bg {
+        @include min-aspect-ratio(1300, 660) {
+            top: 5vh;
+        }
+    }
+
+    &__wrapper {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: stretch;
+        min-height: 100vh;
+
+        @include media-breakpoint-down(sm) {
+            text-align: center;
+            min-height: auto;
+            height: 100vh;
+            height: calc(var(--vh, 1vh) * 100);
+            justify-content: flex-end;
+            transition: opacity .3s;
+
+            .preloading & {
+                opacity: 0;
+            }
+        }
+    }
+
+
+    &__title {
+        margin-top: 27.7vh;
+        margin-bottom: 8rem;
+        font-family: $font-gilroy;
+        @include font-2;
+        opacity: 0;
+
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 2rem;
+            margin-top: 0;
+            opacity: 1;
+        }
+    }
+
+    &__description {
+        margin: 0 0 8rem;
+        font-style: normal;
+        font-weight: normal;
+        @include font-3;
+        opacity: 0;
+
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 2rem;
+            opacity: 1;
+        }
+    }
+
+    .btn {
+        opacity: 0;
+
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 2.6rem;
+            opacity: 1;
+        }
+    }
+
+    &.figure-appear {
+        #{$root}__gradient,
+        #{$root}__figure,
+        #{$root}__shadow {
+            opacity: 1;
+        }
+    }
+
+    &.animation {
+        #{$root}__title {
+            opacity: 1;
+
+            .letter {
+                opacity: 1;
+                animation: jump-title-in 1.3s ease-in-out both;
+            }
+        }
+
+        #{$root}__description,
+        .btn {
+            animation: slide-in-fwd-bottom 1s ease-out both;
+        }
+
+        .svg-text {
+            opacity: 1;
+        }
+
+        .fly-lines {
+            transition: transform 1s ease-out;
+        }
+    }
+
+
+    &.visible {
+        #{$root}__title,
+        #{$root}__description,
+        .btn,
+        .letter {
+            opacity: 1;
+        }
+    }
+
+    @mixin tablet-figure-shift($amount) {
+        #{$root}__shadow,
+        #{$root}__figure,
+        #{$root}__svg,
+        .svg-text {
+            @include media-breakpoint-down(lg) {
+                left: $amount;
+
+                @include media-breakpoint-down(sm) {
+                    left: 0;
+                }
+            }
+        }
+    }
+
+    &_courses,
+    &_adult {
+        @include tablet-figure-shift(10rem);
+    }
+
+    &_about {
+        @include tablet-figure-shift(4rem);
+    }
+
+    &_teachers {
+        @include tablet-figure-shift(8rem);
+    }
+
+    &_child {
+        @include tablet-figure-shift(4rem);
+
+        #{$root}__description {
+            @include media-breakpoint-down(lg) {
+                width: 80%;
+
+                @include media-breakpoint-down(sm) {
+                    width: 100%;
+                }
+            }
+        }
+
+        #{$root}__figure {
+            img {
+                @include media-breakpoint-down(sm) {
+                    transform: translateX(-18%);
+                    width: 165%;
+                }
+            }
+        }
+    }
+
+    &_courses {
+
+        #{$root}__figure {
+            img {
+                @include media-breakpoint-down(sm) {
+                    transform: translateX(-14%);
+                    width: 141%;
+                }
+            }
+        }
+    }
+
+    &_about {
+        .btn {
+            @include media-breakpoint-up(md) {
+                border: 1px solid #FFFFFF;
+                box-shadow: 0 0.4rem 1.5rem rgba(55, 84, 170, 0.08);
+            }
+        }
+    }
+
+}
+
+

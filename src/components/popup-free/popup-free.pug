@@ -1,0 +1,25 @@
+include ../../components/contact-form/contact-form
+include ../../components/popup-base/popup-base
+
+mixin popup-free(args)
+    .popup-free&attributes(attributes)
+        +popup-base.popup-base_free
+            +contact-form({
+                title: 'Попробовать бесплатно',
+                text: 'Оцените качественно новый уровень дистанционного обучения! Бесплатно определим ваш уровень владения языком. Дадим рекомендации по&nbsp;курсу и&nbsp;формату занятий.',
+                data: data.freeForm,
+                buttonStyle: 'white',
+                freePopup: true,
+                background: {
+                    sources: [],
+                    img: '../../components/popup-free/images/bg-hand.jpg',
+                    objectFit: 'contain',
+                    objectPosition: 'right',
+                    lazy: true
+                },
+                notification: {
+                    title: 'Cool! Регистрация пройдена успешно.',
+                    svg: 'check-bubble',
+                    purple: true
+                }
+            }).contact-form_free-popup.contact-form_pink

@@ -1,0 +1,21 @@
+[data-namespace="vacancies"] {
+    .vacancies {
+        &__lead {
+            @include media-breakpoint-down(sm) {
+                margin-bottom: 2.4rem;
+            }
+        }
+
+        &__bonuses {
+            @include media-breakpoint-down(sm) {
+                margin-bottom: 2rem;
+            }
+        }
+
+        &__form-section {
+            @include media-breakpoint-down(sm) {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,37 @@
+include ../../components/h1-title/h1-title
+include ../../components/btn/btn
+
+mixin lead-contacts(args)
+    .lead-contacts&attributes(attributes)
+        .row.lead-contacts__row
+            .offset-md-1.col-md-22.offset-xl-4.col-xl-16.lead-contacts__outer-wrapper
+                .lead-contacts__top
+                    +h1-title({title:'Контакты', main: true}).lead-contacts__title
+                    p.lead-contacts__call-receiver Служба поддержки
+                    a.lead-contacts__phone(href='tel:88005006674') 8 800 500 66 74
+                    .lead-contacts__wrapper
+                        p.lead-contacts__description Если у&nbsp;Вас возникли вопросы, свяжитесь с&nbsp;нами по&nbsp;бесплатному номеру или&nbsp;любым другим удобным способом
+                        .lead-contacts__contacts
+                            a(href='mailto:school@londonexpress-online.ru').lead-contacts__email school@londonexpress-online.ru
+                            ul.lead-contacts__messengers
+                                li.lead-contacts__messenger
+                                    a(href='https://web.whatsapp.com/send?phone=89064618637' target='_blank' title='WhatsApp')
+                                        +svg({name: 'whatsapp'})
+                                li.lead-contacts__messenger
+                                    a(href='#' target='_blank' title='Skype')
+                                        +svg({name: 'skype'})
+                                li.lead-contacts__messenger
+                                    a(href='https://t.me/londonexpressonline' target='_blank' title='Telegram')
+                                        +svg({name: 'telegram'})
+                                li.lead-contacts__messenger.lead-contacts__messenger_desktop
+                                    a(href='viber://chat?number=89064618637' target='_blank' title="Должен быть установлен Viber")
+                                        +svg({name: 'viber'})
+                                li.lead-contacts__messenger.lead-contacts__messenger_mobile
+                                    a(href='viber://add?number=89064618637' target='_blank' title="Viber")
+                                        +svg({ name: 'viber' })
+                .lead-contacts__bottom
+                    +btn({tagName: 'button'})(data='callback-popup').btn_white-border.btn_mobile-padding21.lead-contacts__call Обратный звонок
+                    .lead-contacts__schedule
+                        p График работы службы поддержки (по МСК):<br> ПН-ПТ 09:00-21:00, СБ-ВС 10:00-18:00;
+                        p Занятия с преподавателями 24/7
+

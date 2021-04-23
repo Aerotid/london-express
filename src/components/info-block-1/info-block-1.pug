@@ -1,0 +1,11 @@
+include ../content-area/content-area
+
+mixin info-block-1(args)
+    .info-block-1&attributes(attributes)
+        if (args.title)
+            .info-block-1__title!=args.title
+        +content-area
+            if (args.description)
+                !=args.description
+            if (args.list)
+                ul!=args.list

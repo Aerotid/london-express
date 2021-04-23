@@ -1,0 +1,185 @@
+extends ../../layout/layout
+include ../../components/main/main
+include ../../components/footer/footer
+include ../../components/section/section
+include ../../components/content-area/content-area
+
+block content
+    div#barba-wrapper
+        .barba-container(data-namespace='about-the-organisation')
+            +main
+                +section.section_pb
+                    .row
+                        .col-md-22.offset-md-1.col-xl-12.offset-xl-6
+                            +content-area.content-area_about-the-organisation.content-area_wrapped
+                                .content-area__group(data-anim="anim-3")
+                                    h2 Основные сведения
+                                    h3.content-area_no-margin Полное наименование:
+                                    p Индивидуальный предприниматель Пильгуев Глеб Авинирович.
+                                    h3.content-area_no-margin Дата создания учреждения
+                                    p.content-area_no-margin (дата регистрации в качестве индивидуального предпринимателя):
+                                    p 24.07.13.
+                                    h3.content-area_no-margin Фактический адрес:
+                                    p 357560, Ставропольский край,<br> г. Пятигорск, пос. Горячеводский,<br> пр-кт Советской Армии, дом 17, квартира 109.
+                                    h3.content-area_no-margin Режим работы:
+                                    p понедельник - пятница с 9:00 до 21:00;<br> суббота - воскресенье с 10:00 до 18:00;<br> без перерыва и выходных.
+                                    h3.content-area_no-margin Контакты:
+                                    p тел.: <a href='tel:8 800 500 66 74'>8 800 500 66 74</a>,<br>  e-mail: <a href='mailto:school@londonexpress-online.com'>school@londonexpress-online.com</a>.
+                                .content-area__group(data-anim="anim-3")
+                                    h2 Структура и органы управления образовательной организацией
+                                    p Структурные подразделения отсутствуют. Руководителем организации является Индивидуальный предприниматель Пильгуев Глеб Авинирович.
+                                .content-area__group(data-anim="anim-3")
+                                    h3.content-area_no-margin Документы:
+                                    ol
+                                        li
+                                            a(href='#') Устав образовательной организации
+                                        li
+                                            a(href='http://dev.londonback.only.com.ru/upload/documents/Лицензия_на_осуществление_образовательной_деятельности.pdf' target='_blank') Лицензия на осуществление образовательной деятельности
+                                        li
+                                            span Локальные нормативные акты, предусмотренные ч.2 ст. 30 Федерального закона «Об образовании в Российской Федерации»:
+                                            ul.content-area__ul_dashed
+                                                li
+                                                    a(href='#') Правила приема обучающихся, режим занятий обучающихся, формы, периодичность и порядок текущего контроля успеваемости и промежуточной аттестации обучающихся.
+                                                li
+                                                    a(href='#') Порядок и основания перевода, отчисления и восстановления обучающихся, порядок оформления приостановления и прекращения отношений между образовательной организацией и обучающимися и (или) родителями (законными представителями) несовершеннолетних обучающихся
+                                        li
+                                            a(href='#') Отчет о результатах самообследования
+                                        li
+                                            a(href='#') Документ о порядке образовательных услуг, в том числе образец договора об оказании платных образовательных услуг, документ об утверждении стоимости обучения по каждой образовательной программе.
+                                        li
+                                            span Договор-оферта <a href='http://dev.londonback.only.com.ru/upload/documents/Договор-оферта.pdf' target='_blank'>русский</a>, <a href='http://dev.londonback.only.com.ru/upload/documents/Contract_offer.pdf' target='_blank'>английский</a>
+                                        li
+                                            a(href='http://dev.londonback.only.com.ru/upload/documents/Политика_в_отношении_обработки_персональных_данных_клиентов.pdf' target='_blank') Политика в отношении обработки персональных данных клиентов
+                                .content-area__group(data-anim="anim-3")
+                                    h2 Образование
+                                    h3.content-area_no-margin Реализуемый уровень образования:
+                                    p Дополнительное образование детей и взрослых.
+                                    h3.content-area_no-margin Формы обучения:
+                                    p Очная, с использованием электронного обучения и дистанционных образовательных технологий.
+                                    h3.content-area_no-margin Нормативные сроки обучения:
+                                    p Сроки обучения зависят от уровня обучения иностранным языкам, продолжительность которого определяется Европейской Шкалой Уровней Владения иностранными языками (CEFR). Обучение осуществляется на английском языке.
+                                    h3.content-area_no-margin Описание образовательной программы с приложением ее копии:
+                                    ol
+                                        li
+                                            a(href='http://dev.londonback.only.com.ru/upload/documents/Программа_Общий_курс_английского_для_взрослых.pdf' target='_blank') Общий курс английского для взрослых
+                                        li
+                                            a(href='#') Английский для путешествий
+                                        li
+                                            a(href='#') Разговорный английский
+                                        li
+                                            a(href='#') Деловой английский
+                                        li
+                                            a(href='#') Английский для профессиональных целей
+                                        li
+                                            a(href='#') Обучение грамматике
+                                        li
+                                            a(href='#') Английский для детей 9-12 лет
+                                        li
+                                            a(href='#') Английский для детей 13-17 лет
+                                        li
+                                            a(href='#') Подготовка к ЕГЭ и ОГЭ
+                                        li
+                                            a(href='#') Подготовка к IELTS, TOEFL, BULATS, CAMBRIDGE EXAMS
+                                .content-area__group(data-anim="anim-3")
+                                    h2 Учебный план:
+                                    ol
+                                        li
+                                            a(href='http://dev.londonback.only.com.ru/upload/documents/Учебный план_Общий_куср_фнглийского_для_взрослых.pdf' target='_blank') Учебный план: Общий курс английского для взрослых
+                                        li
+                                            a(href='#') Учебный план: Английский для путешествий
+                                        li
+                                            a(href='#') Учебный план: Разговорный английский
+                                        li
+                                            a(href='#') Учебный план: Деловой английский
+                                        li
+                                            a(href='#') Учебный план: Английский для профессиональных целей
+                                        li
+                                            a(href='#') Учебный план: Обучение грамматике
+                                        li
+                                            a(href='#') Учебный план: Английский для детей 9-12 лет
+                                        li
+                                            a(href='#') Учебный план: Английский для детей 13-17 лет
+                                        li
+                                            a(href='#') Учебный план: Подготовка к ЕГЭ и ОГЭ
+                                        li
+                                            a(href='#') Учебный план: Подготовка к IELTS, TOEFL, BULATS, CAMBRIDGE EXAMS
+                                    p
+                                        a(href='/methodology-documents.html') Методические и иные документы
+                                    ol
+                                        li
+                                            a(href='#') Аннотации к рабочим программам дисциплин с приложением их копий
+                                        li
+                                            a(href='#') Календарный учебный график
+                                        li
+                                            a(href='#') Реализуемые образовательные программы
+                                .content-area__group(data-anim="anim-3")
+                                    h3.content-area_no-margin Реализуемые образовательные программы:
+                                    p Общий курс английского языка для взрослых, Английский для путешествий, Разговорный английский, Деловой английский, Профессиональный английский, Обучение грамматике, Английский для детей 9-12 лет, Английский для детей 13-17 лет, Подготовка к ЕГЭ и ОГЭ, Подготовка к IELTS, TOEFL, BULATS, CAMBRIDGE EXAMS
+                                    h3.content-area_no-margin Численность обучающихся:
+                                    p 15.07.2020 г. - 100 человек
+                                    h3.content-area_no-margin Нормативные сроки обучения:
+                                    p Сроки обучения зависят от уровня обучения иностранным языкам, продолжительность которого определяется Европейской Шкалой Уровней Владения иностранными языками (CEFR). Обучение осуществляется на английском языке.
+                                    p
+                                        a(href='#') Материально-техническое обеспечение и оснащенность образовательного процесса
+                                    ol
+                                        li
+                                            a(href='#') Порядок оказания платных образовательных услуг
+                                        li
+                                            a(href='#') Финансово-хозяйственная деятельность
+                                        li
+                                            a(href='#') Вакантные места для приема (перевода)
+                                .content-area__group(data-anim="anim-3")
+                                    h2 Руководство
+                                    h3.content-area_no-margin Пильгуев Глеб Авинирович 
+                                    p Индивидуальный предприниматель<br><a href='tel:88005006674'>8 800 500 66 74</a>,<br><a href='mailto:school@londonexpress-online.com.'>school@londonexpress-online.com.</a>
+                                .content-area__group(data-anim="anim-3")
+                                    h2 Преподаватели
+                                    .content-area__group(data-anim="anim-3")
+                                        h3 Анна Неркарарян
+                                        p Окончила Одесский национальный университет имени И.И. Мечникова, факультет «Романо-германской филологии», по специальности «Филолог-преподаватель испанского и английского языков и литератур».
+                                        p
+                                            | DELE (Diploma espanol como lengua extranjera) университета Cervantez;<br>
+                                            | Сертификат CELTA (Certificate in English Language Teaching to Adults) университета Cambridge ESOL Examinations;<br>
+                                            | Сертификат TKT (Teaching Knowledge Test) университета Cambridge English Language Assessment;<br>
+                                            | Сертификат «Lesson planning and classroom management» Cambridge English Teacher;<br>
+                                            | Сертификат «Grammar for Teachers: Language awareness» Cambridge English Teacher;<br>
+                                            | Сертификат TKT (Teaching Knowledge Test) университета Cambridge, подразделения Cambridge English Language Assessment. Modul CLIL.
+                                    .content-area__group(data-anim="anim-3")
+                                        h3 Анна Арутюнян
+                                        p Окончила Пятигорский государственный лингвистический университет, факультет английского и немецкого языков по специальности «Лингвист, преподаватель иностранных языков и культур», квалификация «Методика преподавания иностранных языков».
+                                        p Окончила магистратуру по специальности «Лингводидактика (теория и методика преподавания иностранных языков). Аспирантура по специальности «Теория и методика обучения и воспитания».
+                                        p Опубликовала более 20 научных работ.
+                                        p
+                                            | Сертификат CELTA (Certificate in English Language Teaching to Adults) университета Cambridge Assessment English;<br>
+                                            | Сертификат CAE (Certificate in Advanced English) университета Cambridge English Language Assessment;<br>
+                                            | Сертификат «Teaching Young Learners» международного языкового центра Language Link;<br>
+                                            | Сертификат «How to Teach Grammar and Vocabulary Better» by Hugh Delalr;<br>
+                                            | Сертификат "Teaching English to VYL & YL";<br>
+                                            | Сертификат "New Ideas in methodology" by Thomas Wiseman;<br>
+                                            | Cертификат участника международного научно-методического симпозиума «Лемпертовские чтения», (ПГЛУ:2016-2017 гг.).
+                                    .content-area__group(data-anim="anim-3")
+                                        h3 Елена Егорова
+                                        p
+                                            | Окончила Пятигорский государственный лингвистический университет, факультет английского и немецкого языков по специальности «Теория и методика преподавания иностранных языков и культур», квалификация «Лингвист, преподаватель английского и немецкого языков».<br>
+                                            | Дополнительная специальность «Перевод в сфере профессиональной деятельности».
+                                        p
+                                            | Сертификат «Teaching Towards The Young Learners», Katie Foufotie Macmillan Education;<br>
+                                            | Сертификат участника семинара «Повышаем интерес к грамматике» издательства Oxford University Press, Chris Graham;<br>
+                                            | Сертификат TKT (Teaching Knowledge Test) университета Cambridge, подразделения Cambridge English Language Assessment;<br>
+                                            | Сертификат CAE (Certificate in Advanced English) университета Cambridge English Language Assessment;<br>
+                                            | Сертификат CELTA (Certificate in English Language Teaching to Adults) университета Cambridge ESOL Examinations.
+                                    .content-area__group(data-anim="anim-3")
+                                        h3 Роман Керкис
+                                        p
+                                            | Окончил Пятигорский государственный лингвистический университет по специальности «Лингвист, преподаватель английского и немецкого языков».<br>
+                                            | Окончил магистратуру и аспирантуру по специальности «Лингвистика».
+                                        p
+                                            | Сертификат CELTA (Certificate in English Language Teaching to Adults) университета Cambridge ESOL Examinations;<br>
+                                            | Сертификат TKT (Teaching Knowledge Test) университета Cambridge, подразделения Cambridge English Language Assessment;<br>
+                                            | Сертификат CAE (Certificate in Advanced English) университета Cambridge English Language Assessment.<br>
+                                            | Сертификат «How to teach Cambridge English: Preliminary (PET)» Cambridge English Teacher;<br>
+                                            | Сертификат «How to teach IELTS» Cambridge English Teacher;<br>
+                                            | Сертификат участника семинара «How to teach Grammar and Vocabulary Better», Hugh Dellar.
+                                            | Сертификат участника семинара «How to teach Grammar and Vocabulary Better», Hugh Dellar.
+
+            +footer

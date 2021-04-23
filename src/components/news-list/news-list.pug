@@ -1,0 +1,6 @@
+include ../news-card/news-card
+
+mixin news-list(args)
+    .news-list&attributes(attributes)
+        each card in args.news
+            +news-card(card).news-list__card

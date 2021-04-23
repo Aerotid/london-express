@@ -1,0 +1,18 @@
+include ../picture/picture
+
+mixin lead-2(args)
+    .lead-2&attributes(attributes)
+        .lead-2__bg
+            if(args.gradient)
+                +picture(args.gradient).lead-2__gradient
+            if(args.shadow)
+                +picture(args.shadow).lead-2__shadow(data-speed='-2')
+            +picture(args.figure).lead-2__figure(data-speed='-2' data-bottom=args.bottom)
+            block
+        .lead-2__wrapper
+            .row.mobile-gutter.mobile-align
+                .col-24.col-md-12.offset-md-1.col-xl-7.offset-xxl-2
+                    h1.lead-2__title!= args.title
+                    .lead-2__description!= args.description
+                    if (args.btn)
+                        +btn({ tagName: 'a', "class": (args.btn.color === 'pink' ? 'btn_pink d-inline-block btn_mobile-padding28' : 'btn_white-border d-inline-block btn_mobile-padding28') })(href=args.btn.href data=args.btn.trigger?'free-popup':'')!=args.btn.text

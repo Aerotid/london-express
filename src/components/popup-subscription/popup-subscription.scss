@@ -1,0 +1,11 @@
+.popup-subscription {
+    $root: &;
+
+    .subscription {
+        margin: 0;
+
+        &__wrapper {
+            margin-left: 0;
+        }
+    }
+}

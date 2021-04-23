@@ -1,0 +1,29 @@
+{
+  "inputs": [
+    {
+      "id": "name",
+      "label": "Имя",
+      "type": "text",
+      "required": "true",
+        "notification": "Не менее 3-х символов",
+        "topNotification": "true"
+    },
+    {
+      "id": "phone",
+      "label": "Телефон",
+      "type": "tel",
+      "required": "true",
+        "notification": "Телефон не заполнен",
+        "topNotification": "true"
+    },
+    {
+      "id": "email",
+      "label": "Email",
+      "type": "email",
+      "required": "true",
+        "notification": "primer@email.ru",
+        "topNotification": "true"
+    }
+  ],
+    "buttonTitle": "Записаться"
+}

@@ -1,0 +1,12 @@
+[data-namespace="404"] {
+    background-color: $color-15;
+    background-image: radial-gradient(36.64% 74.37% at 70.99% 51.81%, rgba(31,32,48, 0.1) 0%, rgba(58, 59, 85, 0) 100%);
+
+    @include media-breakpoint-down(sm) {
+        background-image: radial-gradient(51.55% 80.28% at 65.21% 105.28%, rgba(215,208,237, 0.6) 0%, rgba(255, 255, 255, 0) 100%);
+    }
+
+    .footer {
+        display: none;
+    }
+}

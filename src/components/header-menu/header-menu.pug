@@ -1,0 +1,5 @@
+mixin header-menu(args)
+    ul.header-menu&attributes(attributes)
+        each item in args
+            li.header-menu__item
+                a.header-menu__link(href!= item.href)!= item.title

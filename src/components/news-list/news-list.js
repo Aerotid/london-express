@@ -1,0 +1,67 @@
+import Component from '../../common/js/component';
+import { getDeviceType, listen, unlisten, nFindComponent, Resize } from '../../common/js/helpers';
+import { commonComponents } from '../../common/js/commonComponents';
+
+class NewsList extends Component {
+    constructor(nRoot) {
+        super(nRoot, 'news-list');
+        this.currentDevice = getDeviceType();
+        this.afterResize = this.afterResize.bind(this);
+
+        if (getDeviceType() === 'mobile') {
+            this.initMobile();
+        } else {
+            this.initDesktop();
+        }
+        this.resize = new Resize(this);
+        listen('deviceType:after-resize', this.afterResize);
+
+        this.getData = this.getData.bind(this);
+
+        listen('news-list:get-data', this.getData);
+    }
+
+    getData(e) {
+
+    }
+
+    initDesktop() {
+
+    }
+
+    initMobile() {
+
+    }
+
+    afterResize() {
+        if (getDeviceType() !== this.currentDevice) {
+            if (getDeviceType() === 'mobile') {
+                this.destroyDesktop();
+                this.initMobile();
+            } else if (this.currentDevice === 'mobile') {
+                this.destroyMobile();
+                this.initDesktop();
+            }
+            this.currentDevice = getDeviceType();
+        }
+    }
+
+    destroyDesktop() {
+
+    }
+
+    destroyMobile() {
+
+    }
+
+    destroy() {
+        unlisten('deviceType:after-resize', this.afterResize);
+        if (getDeviceType() === 'mobile') {
+            this.destroyMobile();
+        } else {
+            this.destroyDesktop();
+        }
+    }
+}
+
+export default NewsList;

@@ -1,0 +1,5 @@
+[data-namespace="contract-offer"] {
+    .contract-offer__content {
+        @include mobile-offset;
+    }
+}

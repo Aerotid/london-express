@@ -1,0 +1,19 @@
+mixin slider-history(args)
+    .slider-history&attributes(attributes)
+        .slider-history__bg
+            include ../../pages/about/images/timeline.svg
+        h2.slider-history__title История
+        .row
+            .col-md-22.offset-md-2
+                .swiper-container.slider-history__container
+                    .swiper-wrapper
+                        each slide in args.slides
+                            .swiper-slide.slider-history__slide
+                                .slider-history__date!=slide.date
+                                .slider-history__image
+                                    +img({path: slide.img, lazy: true})(data-object-fit='cover')
+                                .slider-history__text!=slide.text
+                    .slider-history__swiper-fade.d-none.d-md-block
+                .slider-history__wrapper
+                    .swiper-custom-scrollbar.slider-history__scrollbar
+                    p.slider-history__description.d-none.d-md-flex Тяните для просмотра

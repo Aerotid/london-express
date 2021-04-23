@@ -1,0 +1,13 @@
+extends ../../layout/layout
+include ../../components/main/main
+include ../../components/footer/footer
+include ../../components/section/section
+include ../../components/not-found/not-found
+
+block content
+    div#barba-wrapper
+        .barba-container(data-namespace='404')
+            +main
+                +section
+                    +not-found
+            +footer

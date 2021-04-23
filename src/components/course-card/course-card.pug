@@ -1,0 +1,13 @@
+include ../../components/btn/btn
+
+mixin course-card(args)
+    .course-card&attributes(
+        attributes)
+        .course-card__img
+            +picture(args.picture)
+        .course-card__wrapper
+            .course-card__title!= args.title
+            .course-card__description!= args.description
+            .course-card__footer
+                //a.course-card__link(href=args.link.href)!= args.link.title
+                +btn({ tagName: 'a'})(href= args.link.href).btn_link.course-card__link!= args.link.title

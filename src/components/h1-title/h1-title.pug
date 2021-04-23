@@ -1,0 +1,7 @@
+mixin h1-title(args)
+    .h1-title&attributes(attributes)
+        .row
+            .col-md-22.offset-md-1.col-xl-12.offset-xl-6
+                h1.h1-title__title(data-anim=args.main?'':'anim-3')!= args.title
+                if(args.description)
+                    p.h1-title__description(data-anim='anim-3')!= args.description

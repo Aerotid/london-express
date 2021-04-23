@@ -1,0 +1,97 @@
+{
+    "menu": [
+        {
+            "title": "Детям",
+            "href": "/child-courses.html"
+        },
+        {
+            "title": "Стоимость",
+            "href": "/price.html"
+        },
+        {
+            "title": "Процесс обучения",
+            "href": "/learning-process.html"
+        },
+        {
+            "title": "Новости",
+            "href": "/news.html"
+        },
+        {
+            "title": "Отзывы",
+            "href": "/reviews.html"
+        },
+        {
+            "title": "Взрослым",
+            "href": "/adult-courses.html"
+        },
+        {
+            "title": "Преподаватели",
+            "href": "/teachers.html"
+        },
+        {
+            "title": "Преподавателям",
+            "href": "/vacancies.html"
+        },
+        {
+            "title": "Блог",
+            "href": "/blog.html"
+        },
+        {
+            "title": "Контакты",
+            "href": "/contacts.html"
+        },
+        {
+            "title": "Курсы",
+            "href": "/courses.html"
+        },
+        {
+            "title": "О школе",
+            "href": "/about.html"
+        },
+        {
+            "title": "Вакансии",
+            "href": "https://stavropol.hh.ru/employer/4588785"
+        },
+        {
+            "title": "Сведения об организации",
+            "href": "/about-the-organisation.html"
+        }
+    ],
+    "socials": [
+        {
+            "title": "Одноклассники",
+            "href": "https://ok.ru/group/58475380605161",
+            "icon": "ok"
+        },
+        {
+            "title": "Telegram",
+            "href": "https://t.me/londonexpressonline",
+            "icon": "telegram"
+        },
+        {
+            "title": "Вконтакте",
+            "href": "https://vk.com/londonexpressonline",
+            "icon": "vk"
+        },
+        {
+            "title": "Twitter",
+            "href": "https://twitter.com/_LE_Online",
+            "icon": "twitter"
+        },
+        {
+            "title": "Instagram",
+            "href": "https://instagram.com/london_express_online?igshid=1vyx9m96drrfe",
+            "icon": "instagram"
+        },
+        {
+            "title": "Youtube",
+            "href": "https://www.youtube.com/channel/UCdZpMCr9aclUEx3fbZa8W_w",
+            "icon": "youtube"
+        },
+        {
+            "title": "Facebook",
+            "href": "#",
+            "icon": "facebook"
+        }
+    ]
+}

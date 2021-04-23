@@ -1,0 +1,174 @@
+.class-format {
+    $root: &;
+    margin-bottom: 30rem;
+
+    @include media-breakpoint-down(xl) {
+        margin-bottom: 10rem;
+
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 4rem;
+        }
+    }
+
+    &__slider {
+        position: relative;
+        margin-bottom: 5rem;
+        @include mobile-offset;
+
+        @include media-breakpoint-down(sm) {
+            background-color: $color-13;
+            background-clip: padding-box;
+            margin-bottom: 3rem;
+        }
+    }
+
+    .swiper-wrapper {
+        transition-timing-function: $animation-timing;
+    }
+
+    .swiper-slide {
+        display: flex;
+
+        @include media-breakpoint-down(sm) {
+            flex-direction: column;
+        }
+
+        &__img {
+            display: flex;
+            align-items: center;
+            margin-right: calc(#{$col-width} * 0.6875);
+            width: 49%;
+
+            @include media-breakpoint-down(xxl) {
+                margin-left: calc(#{$col-width} * 0.5);
+
+                @include media-breakpoint-down(sm) {
+                    margin: 0;
+                    margin-top: 2.3rem;
+                    margin-bottom: 2.5rem;
+                    width: 100%;
+                }
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        &__text-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-right: $col-width;
+            width: 47.56%;
+
+            @include media-breakpoint-down(xxl) {
+                padding-right: calc(#{$col-width} * 0.5);
+
+                @include media-breakpoint-down(sm) {
+                    padding: 0;
+                    width: 100%;
+                }
+            }
+        }
+
+        &__title {
+            @include font-24;
+            margin-bottom: 4rem;
+
+            @include media-breakpoint-down(sm) {
+                margin-bottom: 3rem;
+                text-align: center;
+            }
+        }
+
+        &__description {
+            @include font-3;
+
+            p {
+                margin-bottom: 2rem;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            @include media-breakpoint-down(sm) {
+                text-align: center;
+                margin-bottom: 3rem;
+            }
+        }
+    }
+
+    &__pagination {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 4.7rem;
+
+        &-bullet {
+            position: relative;
+            margin-right: 5px;
+            margin-left: 5px;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background-color: rgba($color-9, .2);
+            cursor: pointer;
+            outline: none;
+
+            &:first-child {
+                margin-right: 5px;
+            }
+
+            &:last-child {
+                margin-left: 5px;
+            }
+
+            &_active {
+                margin-right: 12.5px;
+                margin-left: 12.5px;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: -7.5px;
+                    width: 20px;
+                    height: 5px;
+                    border-radius: 5px;
+                    background-color: $color-14;
+                }
+
+                &:first-child {
+                    margin-right: 12.5px;
+                }
+
+                &:last-child {
+                    margin-left: 12.5px;
+                }
+            }
+        }
+    }
+
+    &__scrollbar {
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 4rem;
+        }
+    }
+
+    &__text {
+        @include mobile-offset;
+        @include font-3;
+        text-align: center;
+
+        p {
+            margin-bottom: 2rem;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

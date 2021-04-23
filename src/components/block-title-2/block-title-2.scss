@@ -1,0 +1,65 @@
+.block-title-2 {
+    $root: &;
+
+    text-align: center;
+    padding-top: 0.5rem;
+    margin-bottom: 2.3rem;
+    @include mobile-offset;
+
+    @include media-breakpoint-down(md) {
+        margin-bottom: 3rem;
+    }
+
+    &_mb {
+        margin-bottom: 10rem;
+    }
+
+    &_no-margin {
+        margin-bottom: 0;
+
+        @include media-breakpoint-down(md) {
+            margin-bottom: 0;
+        }
+    }
+
+    &__title {
+        @include font-6;
+        text-align: center;
+    }
+
+    &__subtitle {
+        margin-top: 3.3rem;
+        @include font-4;
+        text-align: center;
+
+        @include media-breakpoint-down(md) {
+            margin-top: 2.4rem;
+        }
+    }
+
+    &__description {
+        @include font-3;
+        text-align: center;
+        margin-top: 8rem;
+
+        @include media-breakpoint-down(md) {
+            margin-top: 2.4rem;
+        }
+
+        p {
+            margin-bottom: 3rem;
+
+            @include media-breakpoint-down(md) {
+                margin-bottom: 0.5rem;
+            }
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__btn {
+        margin-top: 4rem;
+    }
+}

@@ -1,0 +1,20 @@
+.picture {
+    $root: &;
+    display: block;
+
+    &_cover {
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &_right {
+        object-position: right;
+    }
+
+    &_mt {
+
+    }
+}

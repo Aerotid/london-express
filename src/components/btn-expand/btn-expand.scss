@@ -1,0 +1,60 @@
+.btn-expand {
+    $root: &;
+    padding: 0;
+    @include font-4;
+    background-color: transparent;
+    border: none;
+    transition: opacity 0.2s, visibility 0.2s;
+
+    &_hidden {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    &_no-text-mobile {
+        #{$root}__text {
+            @include media-breakpoint-down(sm) {
+                display: none;
+            }
+        }
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &__text {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 1rem;
+    }
+
+    &__arrow {
+        width: 14px;
+        height: 18px;
+        transform: rotate(-180deg);
+        transition: transform 0.3s;
+    }
+
+    &__collapse {
+        display: inline;
+    }
+
+    &__expand {
+        display: none;
+    }
+
+    &.collapsed {
+        #{$root}__arrow {
+            transform: rotate(0deg);
+        }
+
+        #{$root}__collapse {
+            display: none;
+        }
+
+        #{$root}__expand {
+            display: inline;
+        }
+    }
+}

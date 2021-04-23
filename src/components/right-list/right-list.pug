@@ -1,0 +1,19 @@
+include ../content-area/content-area
+include ../block-title/block-title
+include ../btn/btn
+
+mixin right-list(args)
+    .right-list&attributes(attributes)
+        +block-title({
+            title: args.title,
+            description: args.description
+        }).block-title_white.right-list__main-title
+        .right-list__wrapper
+            .right-list__title(data-anim='anim-1')!= args.listTitle
+            .right-list__list(data-anim='trigger')
+                each col in args.cols
+                    +content-area.content-area_colorful-bg.right-list__item(data-anim='anim-2')!= col.text
+        if (args.btn)
+            +btn({ tagName: args.btn.tagName })(href=args.btn.href data=args.btn.data).btn_white-border.btn_mobile-padding21.btn_centered.right-list__btn!= args.btn.text
+        .right-list__image
+            +picture(args.picture)

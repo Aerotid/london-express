@@ -1,0 +1,45 @@
+extends ../../layout/layout
+include ../../components/main/main
+include ../../components/footer/footer
+include ../../components/section/section
+include ../../components/h1-title/h1-title
+include ../../components/submenu/submenu
+include ../../components/blog-new/blog-new
+include ../../components/subscription/subscription
+
+block content
+    div#barba-wrapper
+        .barba-container(data-namespace='blog-section')
+            +main
+                +section.section_pb
+                    +h1-title({ title: 'Блог' })
+                    +submenu({
+                        data: data.blog.submenu,
+                        active: 8
+                    })
+                +section
+                    +blog-new({
+                        data: data.blogSection,
+                        type: 'section',
+                        part: 1,
+                        lessonPlace: 4
+                    })
+                        +subscription({
+                            title: 'Подписка на&nbsp;блог',
+                            subtitle: 'Читайте первыми наши полезные статьи про английский и&nbsp;не&nbsp;только',
+                            picture: {
+                                sources: [{
+                                    srcset: '../blog/images/bg-mobile.png',
+                                    media: '(max-width: 1199.98px)'
+                                }],
+                                img: '../blog/images/bg.png',
+                                objectFit: 'contain',
+                                objectPosition: 'bottom'
+                            }
+                        })(data-anim='anim-3')
+
+                //-+section.section_pb
+                    .row
+                        .offset-md-1.col-md-22.offset-xl-6.col-xl-12
+                            p.blog-section__empty-text Статей пока нет
+            +footer

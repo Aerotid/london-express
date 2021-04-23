@@ -1,0 +1,47 @@
+.big-text-with-subtitle {
+    $root: &;
+
+    &_pink {
+        #{$root}__big-text {
+            color: $color-3;
+        }
+    }
+
+    &_portage {
+        #{$root}__big-text {
+            color: $color-4;
+        }
+    }
+
+    &_bigger {
+        #{$root}__big-text {
+            font-family: $font-gotham;
+            @include font-20;
+            letter-spacing: 0.01em;
+
+            @include media-breakpoint-down(sm) {
+                font-family: $font-gilroy;
+                letter-spacing: normal;
+            }
+        }
+    }
+
+    &_text-align-center {
+        text-align: center;
+    }
+
+    &__big-text {
+        margin-bottom: 2rem;
+        @include font-29;
+
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 1.2rem;
+        }
+    }
+
+    &__subtitle {
+        @include font-4;
+        color: $color-9;
+        opacity: 0.5;
+    }
+}

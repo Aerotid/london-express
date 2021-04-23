@@ -1,0 +1,36 @@
+include ../picture/picture
+include ../../components/btn/btn
+include ../notification/notification
+include ../input/input
+include ../contact-button/contact-button
+
+mixin subscription(args)
+    .subscription&attributes(attributes)
+        .subscription__wrapper
+            if (args.picture)
+                .subscription__bg
+                    +picture(args.picture)
+            .subscription__content(data-anim="anim-1")
+                .subscription__title!=args.title
+                .subscription__subtitle!=args.subtitle
+                form.subscription__form(action='/', method='POST')
+                    input(type='hidden' name='WEB_FORM_ID')
+                    input(type='hidden' name='web_form_submit')
+                    input(type='hidden' name='sessid')
+                    +input({
+                        id: args.popup?'popup-subscription-email':'blog-subscription-email',
+                        name: 'email',
+                        type: 'email',
+                        required: true,
+                        label: 'Ваш email',
+                        notification: 'В формате: primer@email.ru'
+                    }).input_subscription
+                    +contact-button({ title: 'Подписаться' }).contact-button_subscription
+                    .subscription__bottom-info
+                        p
+                            | Нажимая кнопку &laquo;Подписаться&raquo;, вы&nbsp;принимаете условия Политики, и&nbsp;предоставляете согласие на&nbsp;обработку
+                            | своих персональных данных на&nbsp;условиях <a href='/privacy-policy.html' target='_blank'>Политики конфиденциальности</a>
+                +notification({
+                    svg: 'smile',
+                    title: 'Вы успешно подписаны на email-рассылку',
+                }).notification_bg-purple

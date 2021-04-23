@@ -1,0 +1,176 @@
+extends ../../layout/layout
+include ../../components/main/main
+include ../../components/footer/footer
+include ../../components/section/section
+include ../../components/block-title/block-title
+include ../../components/lead-2/lead-2
+include ../../components/two-cols-with-picture/two-cols-with-picture
+include ../../components/londonexp-features/londonexp-features
+include ../../components/text-banner/text-banner
+include ../../components/lessons-gift-banner/lessons-gift-banner
+include ../../components/class-format/class-format
+include ../../components/video-block/video-block
+include ../../components/prop-block/prop-block
+include ../../components/slider/slider
+include ../../components/individual-group-classes/individual-group-classes
+
+block content
+    div#barba-wrapper
+        .barba-container(data-namespace='adult-courses')
+            +main
+                +section.section_picton-blue.section_margin
+                    +lead-2({
+                        title: 'Онлайн-курсы английского<br>для взрослых',
+                        description: 'Видеть свой прогресс&nbsp;&mdash; лучшая мотивация на&nbsp;пути к&nbsp;совершенству.',
+                        smallTitle: 'true',
+                        figure: {
+                            img: '../adult-courses/images/adult-courses-lead-figure.jpg',
+                            sources: [
+                                {
+                                    srcset: '../adult-courses/images/adult-courses-lead-figure-mob.jpg',
+                                    media: '(max-width: 767.9px)'
+                                }
+                            ],
+                            objectFit: 'contain',
+                            objPos: ['right', 'center']
+                        },
+                        btn: {
+                            text: 'Записаться',
+                            href: '#',
+                            trigger: true
+                        }
+                    }).lead-2_adult
+                        +leadSvg5.lead-2__svg
+                +section.section_margin
+                    +two-cols-with-picture({
+                        firstCol: {
+                            title: 'Yes, I&nbsp;can!',
+                            subtitle: 'Забываем все прошлые неудачные попытки. Английский может выучить каждый!',
+                            text: 'Достаточно прикладывать умеренное количество усилий, не распылять внимание, держать темп. И&nbsp;вместе с&nbsp;преподавателем шаг за&nbsp;шагом вы&nbsp;будете продвигаться к&nbsp;поставленной цели.',
+                            img: '../adult-courses/images/text-bg-1.png'
+                        },
+                        secondCol: {
+                            title: 'Ленивее меня только мой кот',
+                            subtitle: 'Устали от&nbsp;прокрастинации, годы идут, а&nbsp;вы&nbsp;все еще &laquo;Ай&nbsp;донт спик инглиш&raquo;?',
+                            text: 'Наша методика пробуждает настоящий азарт к&nbsp;языку. Роль преподавателя&nbsp;&mdash; стать вашим «тренером», следить чтобы вы&nbsp;не&nbsp;заскучали, но&nbsp;и&nbsp;не&nbsp;расслаблялись.',
+                            img: '../adult-courses/images/text-bg-2.png'
+                        },
+                        pictureBig: {
+                            lazy: true,
+                            sources: [],
+                            img: '../adult-courses/images/studying.jpg',
+                        },
+                    })
+                +section.section_hint-of-red
+                    +londonexp-features({ title: data.featuresAdultCourses.title, features:data.featuresAdultCourses.features })
+                +section
+                    +text-banner({
+                        svg: {
+                            name: 'rocket-white',
+                        },
+                        text:'<p>Наш принципиальный подход&nbsp;&mdash; нет предела совершенству. Мы&nbsp;постоянно развиваемся сами и&nbsp;стараемся привить эти&nbsp;же ценности и&nbsp;нашим студентам.</p>',
+                        btn: {
+                            link: '/learning-process.html',
+                            text: 'Читать о нашем подходе'
+                        }
+                    }).text-banner_pink
+                +section.section_pt.adult-courses__gift-section
+                    .row(data-anim="anim-1")
+                        .col-sm-12.offset-sm-6
+                            p.adult-courses__text У&nbsp;наших студентов мало свободного времени и&nbsp;большое желание свободно общаться с&nbsp;иностранными коллегами, путешествовать без гида, слушать подкасты, смотреть фильмы в&nbsp;оригинале и&nbsp;прочие скромные хотелки.
+                    +lessons-gift-banner({
+                        picture: {
+                            sources: [{
+                              srcset: '../../components/lessons-gift-banner/images/lessons-gift-cups-mobile.jpg',
+                              media: '(max-width: 1199.98px)'
+                            }],
+                            img: '../../components/lessons-gift-banner/images/lessons-gift-cups.jpg',
+                            objectFit: 'cover',
+                            objPos: ['center']
+                        },
+                        href: '#'
+                    }).lessons-gift-banner_cups
+                +class-format({slides: [
+                       {
+                           title: 'Самостоятельное обучение',
+                           description: '<p>Выполняйте интересные интерактивные упражнения, запоминайте целые выражения из&nbsp;любимых фильмов и&nbsp;книг. Повторяйте пройденные темы в&nbsp;цифровых учебниках, просматривайте видео-уроки столько, сколько нужно.</p>',
+                           picture: {
+                               sources: [],
+                               img: '../adult-courses/images/class-format-1.png'
+                           }
+                       },
+                       {
+                           title: 'Занятия с преподавателем',
+                           description: '<p>В&nbsp;ходе видео-уроков проходите новый материал и&nbsp;закрепляйте пройденный, тренируйте все языковые навыки, разбирайте ошибки из&nbsp;домашних заданий.</p>',
+                           picture: {
+                               sources: [],
+                               img: '../adult-courses/images/class-format-1.png',
+                               lazy: true
+                           }
+                       }
+                   ], text: '<p>Отслеживайте свой прогресс и&nbsp;достижения в&nbsp;личном кабинете. Задавайте вопросы преподавателю в&nbsp;любое удобное время через личный чат.</p>'})
+                +section
+                    +block-title({
+                        title: 'Как проходят занятия'
+                    })
+                    +video-block({
+                        path: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4'
+                    }).video-block_mb
+                +section.section_hint-of-red
+                    +individual-group-classes({ blocks: [{
+                         title: 'Групповые занятия',
+                         description: 'Для групповых занятий мы&nbsp;набираем по&nbsp;4&nbsp;человека,<br>схожих по&nbsp;возрасту и&nbsp;уровню подготовки.',
+                         text: 'Формат лучше всего совершенствует коммуникативный навык, небольшой размер группы позволяет преподавателю ставить как коллективные, так и&nbsp;индивидуальные задачи',
+                         picture: {
+                             sources: [],
+                             img: '../adult-courses/images/group-adult.jpg',
+                             lazy: true
+                         },
+                         circlesNum: 3
+                     },
+                    {
+                        title: 'Индивидуально,<br>по&nbsp;свободному графику',
+                        description: 'Постройте обучение по&nbsp;своему личному графику.',
+                        text: 'Это одно из&nbsp;основных преимуществ онлайн-образования, изучайте английский в&nbsp;удобное время в&nbsp;любом месте.',
+                        picture: {
+                            sources: [],
+                            img: '../adult-courses/images/individual-adult.jpg',
+                            lazy: true
+                        },
+                        circlesNum: 2
+                    },
+                    {
+                        title: 'Бесплатные<br>спикинг-клабы',
+                        description: 'Расширяйте свои горизонты, участвуйте в&nbsp;разговорных клубах.',
+                        text: 'Актуальные темы каждую неделю, интересные собеседники, живая практика общения. Бесплатное посещение для наших студентов.',
+                        picture: {
+                            sources: [],
+                            img: '../adult-courses/images/speaking-club.jpg',
+                            lazy: true
+                        },
+                        circlesNum: 1
+                    }]
+                    })
+                +section.section_pt.section_pb
+                    +slider({
+                        type: 'reviews',
+                        slides: data.reviews
+                    })
+                +section
+                    +prop-block({
+                        title: 'Попробовать бесплатно',
+                        description: 'Записаться на&nbsp;пробный урок',
+                        img: {
+                            src: '../../components/prop-block/images/van-side.jpg',
+                            alt: ''
+                        },
+                        btn: {
+                            title: 'Оставить заявку',
+                            href: '#'
+                        },
+                        subtitle: 'Два занятия в&nbsp;подарок!',
+                        subdescription: 'При покупке абонемента в&nbsp;день пробного занятия',
+                        mobileImg: '../../components/prop-block/images/van-mobile.jpg',
+                        tabletImg: '../../components/prop-block/images/van-tablet.jpg'
+                    })(id='Записаться')
+            +footer

@@ -1,0 +1,17 @@
+include ../btn/btn
+
+mixin price-item(args)
+    .price-item&attributes(attributes)(class=`${args.sticker == 1 ? 'price-item_hot': ''}`)
+        if (args.sticker == 1)
+            .price-item__sticker Хит продаж
+        .price-item__lessons!=args.lessons
+        .price-item__cost
+            .price-item__cost-new!=args.costNew + '₽'
+            if (args.costOld)
+                .price-item__cost-old!=args.costOld + '₽'
+        .price-item__cost-one
+            span!=args.costOne + '₽/занятие'
+        if (args.speakingClub)
+            .price-item__speaking
+                span!='+ ' + args.speakingClub + ' занятия в Speaking Club в подарок'
+        +btn({ tagName: 'button' })(data='free-popup').btn_pink.price-item__buy Купить

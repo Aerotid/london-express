@@ -1,0 +1,566 @@
+.contact-form {
+    $root: &;
+    position: relative;
+    padding: 13.2rem 0;
+    background-color: $color-4;
+    color: white;
+    border-radius: 2rem;
+    @include mobile-offset;
+    overflow: hidden;
+
+    @include media-breakpoint-between(md, lg) {
+        padding: 8rem 6rem;
+    }
+
+    @include media-breakpoint-down(sm) {
+        border-radius: 0;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+
+    &_vacancy {
+        padding: 15rem 0 12.4rem;
+
+        #{$root}__left {
+            @include media-breakpoint-down(lg) {
+                margin-bottom: 5rem;
+
+                @include media-breakpoint-down(sm) {
+                    margin-bottom: 3rem;
+                }
+            }
+        }
+
+        #{$root}__left-top {
+            width: calc(#{$col-width} * 6.55);
+
+            @include media-breakpoint-down(lg) {
+                width: 100%;
+            }
+        }
+
+        #{$root}__title {
+            font-family: $font-gilroy;
+            @include font-12;
+        }
+    }
+
+    &_contacts {
+        padding-top: 18.9rem;
+        padding-bottom: 12rem;
+
+        #{$root}__inputs {
+            margin-bottom: 0;
+
+            @include media-breakpoint-down(sm) {
+                margin-bottom: 3rem;
+            }
+        }
+
+        #{$root}__bottom {
+            align-items: center;
+        }
+    }
+
+    &_free-popup {
+        padding: 8rem 0 8.6rem;
+
+        #{$root}__left {
+            margin-left: 100vw / 24 * 1;
+            width: 100vw / 24 * 4.5;
+
+            @include media-breakpoint-down(lg) {
+                margin-left: 0;
+                width: 100%;
+            }
+        }
+
+        #{$root}__form {
+            margin-left: calc(#{$col-width} * 1);
+            width: calc(#{$col-width} * 4.5);
+
+            @include media-breakpoint-down(lg) {
+                margin-left: 0;
+                width: 100%;
+            }
+        }
+
+        #{$root}__title-top {
+            margin-left: calc(#{$col-width} * 1);
+
+            @include media-breakpoint-down(lg) {
+                margin-left: 0;
+            }
+        }
+
+        #{$root}__text {
+            @include font-26;
+        }
+
+        #{$root}__left {
+            @include media-breakpoint-down(sm) {
+                position: static;
+            }
+        }
+
+        #{$root}__left-info {
+            @include media-breakpoint-down(sm) {
+                position: absolute;
+                bottom: 0;
+            }
+        }
+
+        #{$root}__container {
+            @include media-breakpoint-down(sm) {
+                padding-bottom: 8rem;
+            }
+        }
+
+        #{$root}__middle {
+            margin-bottom: 0;
+        }
+    }
+
+    &_pr {
+        padding-top: 19rem;
+        padding-bottom: 10.5rem;
+
+        #{$root}__inputs {
+            margin-bottom: 2rem;
+
+            @include media-breakpoint-down(sm) {
+                margin-bottom: 3rem;
+            }
+        }
+
+        #{$root}__hand {
+            left: calc(#{$col-width} * 3.2375);
+            width: calc(#{$col-width}*6.06);
+        }
+    }
+
+    &_callback {
+        padding-top: 8rem;
+        padding-bottom: 7.3rem;
+
+        #{$root}__container {
+            flex-direction: column;
+        }
+
+        #{$root}__left {
+            //margin-bottom: 4rem;
+            margin-left: calc(#{$col-width} * 1);
+            margin-right: calc(#{$col-width} * 1);
+            width: auto;
+        }
+
+        #{$root}__form {
+            margin-left: calc(#{$col-width} * 1);
+            margin-right: calc(#{$col-width} * 1);
+            width: auto;
+        }
+
+        #{$root}__bottom {
+            align-items: flex-end;
+
+            @include media-breakpoint-down(sm) {
+                align-items: flex-start;
+            }
+        }
+
+        #{$root}__title {
+            font-family: $font-gilroy;
+            @include font-8;
+            margin-bottom: 4.2rem;
+
+            @include media-breakpoint-down(sm) {
+                margin-bottom: 1rem;
+            }
+        }
+
+        #{$root}__hand {
+            left: auto;
+            right: -8rem;
+            bottom: 23%;
+            width: 45%;
+
+            @include media-breakpoint-down(lg) {
+                display: block;
+
+                @include media-breakpoint-down(sm) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &_comment {
+        padding-top: 19rem;
+
+        .input textarea {
+            margin-bottom: 0;
+            min-height: 20rem;
+        }
+
+        #{$root}__hand {
+            left: calc(#{$col-width} * 3.2);
+            bottom: -7rem;
+            transform: rotate(20deg);
+            width: calc(#{$col-width}*6);
+        }
+    }
+
+    &_pink {
+        background-color: $color-18;
+    }
+
+    &_whisper2 {
+        background-color: $color-15;
+    }
+
+    &__container {
+        position: relative;
+        z-index: 2;
+        display: flex;
+
+        @include media-breakpoint-down(lg) {
+            flex-direction: column;
+        }
+
+        &_dark {
+            color: $color-9;
+
+            #{$root}__bottom-info {
+                p {
+                    color: rgba($color-9, 0.6);
+                }
+
+                a {
+                    color: $color-9;
+                }
+            }
+        }
+    }
+
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+
+        picture {
+            width: 100%;
+            height: 100%;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        &_contain {
+            img {
+                object-fit: contain;
+                object-position: right;
+            }
+        }
+    }
+
+    &__hand {
+        position: absolute;
+        left: calc(#{$col-width} * 2.2);
+        bottom: -5rem;
+        width: calc(#{$col-width}*5.4);
+
+        @include media-breakpoint-down(lg) {
+            display: none;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__left {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: calc(#{$col-width} * 2);
+        width: calc(#{$col-width} * 7.5);
+
+        @include media-breakpoint-down(lg) {
+            margin-bottom: 4rem;
+            margin-left: 0;
+            width: 100%;
+
+            @include media-breakpoint-down(sm) {
+                margin-bottom: 3rem;
+            }
+        }
+    }
+
+    &__title {
+        font-family: $font-gotham;
+        font-size: 5.5rem;
+        font-weight: 900;
+        line-height: 1.2;
+        margin-bottom: 5rem;
+
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 2rem;
+            font-family: $font-gilroy;
+            font-size: 2rem;
+            line-height: 1.6;
+        }
+    }
+
+    &__title-top {
+        position: relative;
+        z-index: 2;
+        font-family: $font-gilroy;
+        @include font-8;
+        margin-bottom: 4rem;
+        margin-left: calc(#{$col-width} * 2);
+
+        @include media-breakpoint-down(lg) {
+            margin-left: 0;
+
+            @include media-breakpoint-down(sm) {
+                margin-bottom: 3rem;
+            }
+        }
+
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__text,
+    &__bottom-text {
+        p {
+            margin-bottom: 3rem;
+
+            @include media-breakpoint-down(sm) {
+                margin-bottom: 2rem;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__text {
+        @include font-3;
+    }
+
+    &__bottom-text {
+        margin-top: 3rem;
+        width: calc(#{$col-width} * 4.6);
+        @include font-26;
+        opacity: 0.6;
+
+        @include media-breakpoint-down(lg) {
+            margin-top: 2rem;
+            width: 100%;
+            opacity: 1;
+        }
+    }
+
+    &__form {
+        //padding-left: calc(#{$col-width} / 2);
+        margin-left: calc(#{$col-width} * 1);
+        width: calc(#{$col-width} * 7.5);
+
+        @include media-breakpoint-down(lg) {
+            margin-left: 0;
+            width: 100%;
+        }
+    }
+
+    &__inputs {
+        margin-bottom: 4rem;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 3rem;
+        }
+
+        &-item {
+            width: 100%;
+
+            &:not(:last-child) {
+                margin-bottom: 3.5rem;
+
+                @include media-breakpoint-down(sm) {
+                    margin-bottom: 2rem;
+                }
+            }
+        }
+
+        @include media-breakpoint-down(sm) {
+            justify-content: flex-start;
+            flex-direction: column;
+        }
+    }
+
+    &__middle {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+
+        &:empty {
+            margin-bottom: 0;
+        }
+
+        @include media-breakpoint-down(lg) {
+            justify-content: flex-start;
+
+            @include media-breakpoint-down(sm) {
+                flex-direction: column;
+            }
+        }
+    }
+
+    &__middle-item {
+        margin-bottom: 2rem;
+
+        &:not(:last-child) {
+            margin-right: 4rem;
+
+            @include media-breakpoint-down(sm) {
+                margin-right: 0;
+            }
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        &-info {
+            flex-basis: calc(#{$col-width} * 5);
+            margin-right: 10px;
+
+            @include media-breakpoint-down(xl) {
+                margin-right: 0;
+                margin-bottom: 3rem;
+                flex-basis: 100%;
+            }
+        }
+
+        @include media-breakpoint-down(xl) {
+            flex-wrap: wrap;
+
+            @include media-breakpoint-down(sm) {
+                flex-direction: column;
+            }
+        }
+    }
+
+    &__left-info {
+        margin-top: 2.6rem;
+        @include font-41;
+    }
+
+    &__bottom-info {
+        @include font-4;
+    }
+
+    &__left-info,
+    &__bottom-info {
+
+        p {
+            margin-bottom: 0;
+            color: rgba(#ffffff, 0.5);
+
+            @include media-breakpoint-down(sm) {
+                margin-bottom: 1rem;
+            }
+        }
+        a {
+            color: #fff;
+            white-space: nowrap;
+            @include linkHover(false, #ffffff);
+        }
+    }
+
+    &__button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include font-4;
+        color: white;
+        border: none;
+        background-color: $color-10;
+        padding: 16px 38px;
+        outline: none;
+        //text-transform: lowercase;
+
+        &-icon {
+            width: 20px;
+            height: 20px;
+            fill: $color-12;
+            margin-left: 20px;
+        }
+
+        &:focus {
+            outline: none;
+        }
+
+        @include media-breakpoint-down(sm) {
+            font-size: 18px;
+            text-transform: none
+        }
+    }
+
+    &__questionnaire-button {
+        display: flex;
+        align-items: center;
+        margin-right: calc(#{$col-width} * 1.25);
+        padding: 0;
+        background-color: transparent;
+        border: none;
+        outline: none;
+
+        @include media-breakpoint-down(lg) {
+            margin-right: 0;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__questionnaire-text {
+        @include font-4;
+        color: #ffffff;
+    }
+
+    &__questionnaire-icon {
+        width: 1.6rem;
+        height: 2.2rem;
+        margin-right: 1.8rem;
+
+        svg {
+            width: 100%;
+            height: 100%;
+        };
+    }
+
+    @include media-breakpoint-down(lg) {
+        flex-direction: column;
+    }
+}

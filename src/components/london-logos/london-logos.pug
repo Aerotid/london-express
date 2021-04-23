@@ -1,0 +1,8 @@
+mixin london-logos(args)
+    .london-logos&attributes(attributes)(data-anim='trigger')
+        .london-logos__circle(data-anim='anim-2')
+            +logoSchools
+        .london-logos__circle(data-anim='anim-2')
+            +svg({name:'logo'})
+        .london-logos__circle(data-anim='anim-2')
+            +img({path:'../../components/london-logos/images/logo-junior.png'})

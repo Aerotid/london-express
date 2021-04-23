@@ -1,0 +1,34 @@
+.h1-title {
+    $root: &;
+    margin-bottom: 10rem;
+    @include mobile-offset;
+
+    @include media-breakpoint-down(sm) {
+        margin-bottom: 4rem;
+    }
+
+    &__title {
+        margin-top: 30rem;
+        @include font-2;
+        text-align: center;
+
+        @include media-breakpoint-down(lg) {
+            margin-top: 16rem;
+
+            @include media-breakpoint-down(sm) {
+                margin-top: 8rem;
+            }
+        }
+    }
+
+    &__description {
+        margin-top: 6rem;
+        margin-bottom: 0;
+        @include font-11;
+        text-align: center;
+
+        @include media-breakpoint-down(sm) {
+            margin-top: 2rem;
+        }
+    }
+}

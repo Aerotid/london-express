@@ -1,0 +1,75 @@
+include ../btn/btn
+include ../picture/picture
+include ../contact-button/contact-button
+include ../notification/notification
+
+mixin prop-block(args)
+    .prop-block&attributes(attributes)(data-anim="anim-1" data-hook=0.8)
+        .row
+            .col-md-22.col-xxl-20.offset-md-1.offset-xxl-2
+                .prop-block__container
+                    +picture({
+                        sources: [],
+                        img: args.img.src,
+                        alt: args.img.alt,
+                        lazy: true
+                    }).d-none.d-xl-block.prop-block__bg
+                    .prop-block__wrapper
+                        .prop-block__title!=args.title
+                        .prop-block__description!= args.description
+                        form(action='/' method='POST').prop-block__form
+                            input(type='hidden' name='WEB_FORM_ID')
+                            input(type='hidden' name='web_form_submit')
+                            input(type='hidden' name='sessid')
+                            .prop-block__inputs
+                                +input({
+                                    id: 'prop-name',
+                                    type: 'text',
+                                    required: true,
+                                    label: 'Имя',
+                                    notification: 'Не менее 3-х символов'
+                                }).input_dark.prop-block__input
+                                +input({
+                                    id: 'prop-phone',
+                                    type: 'tel',
+                                    required: true,
+                                    label: 'Телефон',
+                                    notification: 'Телефон не заполнен'
+                                }).input_dark.prop-block__input
+                                +input({
+                                    id: 'prop-email',
+                                    type: 'email',
+                                    required: true,
+                                    label: 'E-mail',
+                                    notification: 'В формате: primer@email.ru'
+                                }).input_dark.prop-block__input
+                            .prop-block__errors.error-block
+                                p.prop-block__error_email
+                                p.prop-block__error_phone
+                            .prop-block__bottom
+                                +contact-button({ title: args.btn.title }).contact-button_pink.contact-button_prop
+                                .prop-block__bottom-info
+                                    p Заботимся о защите ваших данных
+                                    a(href='/privacy-policy.html' target='_blank') Политика конфиденциальности
+                        +notification({
+                            title: 'Спасибо! Мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время.',
+                            svg: 'smile',
+                            purple: true
+                        }).notification_bg-purple
+                        if args.mobileImg
+                            +picture({
+                                sources: [{
+                                    srcset: args.mobileImg,
+                                    media: '(max-width: 767.9px)'
+                                },
+                                {
+                                    srcset: args.tabletImg?args.tabletImg:args.mobileImg,
+                                    media: '(max-width: 1199.9px)'
+                                }],
+                                img: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7',
+                                objectFit: 'cover',
+                                lazy: true
+                            }).d-xl-none.prop-block__mobile-img
+                            //+img({path: args.mobile.img}).d-xl-none.prop-block__mobile-img
+                        .prop-block__subtitle!= args.subtitle
+                        .prop-block__subdescription!= args.subdescription

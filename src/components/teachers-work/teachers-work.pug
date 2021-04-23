@@ -1,0 +1,6 @@
+mixin teachers-work(args)
+    .teachers-work&attributes(attributes)(data-anim="trigger")
+        each col in args
+            .teachers-work__col(data-anim="anim-2")
+                h3!= col.title
+                .teachers-work__text!= col.text

@@ -1,0 +1,68 @@
+.price-banner {
+    $root: &;
+    position: relative;
+    padding: 23.5rem 0 12rem;
+    margin-top: 40rem;
+    color: white;
+    background-color: $color-18;
+
+    @include media-breakpoint-down(sm) {
+        margin-top: 16.5rem;
+        padding: 10rem 0 3.5rem;
+    }
+
+    &__picture {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 51rem;
+        transform: translate(-50%, -65%);
+
+        @include media-breakpoint-down(sm) {
+            width: 55%;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+    &__content {
+        margin-left: 100vw / 24 * 7;
+        width: 100vw / 24 * 10;
+        text-align: center;
+
+        @include media-breakpoint-down(lg) {
+            width: 100vw / 24 * 22;
+            margin-left: $col-width;
+
+            @include media-breakpoint-down(sm) {
+                width: auto;
+                margin: 0 2rem;
+            }
+        }
+    }
+
+    &__title {
+        margin-bottom: 6rem;
+        @include font-12;
+
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__text {
+        @include font-11;
+    }
+
+    &__btn {
+        margin-top: 5rem;
+
+        @include media-breakpoint-down(md) {
+            margin-top: 4rem;
+            padding: .6rem 3rem;
+        }
+    }
+}

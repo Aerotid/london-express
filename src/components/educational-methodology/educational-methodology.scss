@@ -1,0 +1,84 @@
+.educational-methodology {
+    $root: &;
+
+    &:first-of-type {
+        margin-top: 6rem;
+
+        @include media-breakpoint-down(sm) {
+            margin-top: 4.9rem;
+        }
+    }
+
+    &__title {
+        margin: 0;
+    }
+
+    &__text {
+        margin: 6rem 0 0;
+
+        @include media-breakpoint-down(sm) {
+            margin-top: 1.6rem;
+        }
+
+        p {
+            margin: 0 0 3rem;
+
+            &:last-child {
+                margin: 0;
+            }
+        }
+    }
+
+    &__small-text {
+        margin: 3rem 0 0;
+
+        @include media-breakpoint-down(sm) {
+            margin-top: 2rem;
+        }
+
+        p {
+            &:not(:last-child) {
+                margin: 0 0 3rem;
+            }
+        }
+    }
+
+    &__features {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 6rem;
+
+        @include media-breakpoint-down(sm) {
+            flex-direction: column;
+            margin-top: 3rem;
+        }
+    }
+
+    &__feature {
+        margin: 0 0 3rem;
+        width: calc(#{$col-width}*3.94);
+        @include font-26;
+        color: rgba($color-8, 0.5);
+
+        @include media-breakpoint-down(lg) {
+            width: calc(#{$col-width}*4.44);
+
+            @include media-breakpoint-down(sm) {
+                width: 100%;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        &:nth-child(odd) {
+            margin-right: calc(#{$col-width}*0.8);
+
+            @include media-breakpoint-down(sm) {
+                margin-right: 0;
+            }
+        }
+    }
+
+}

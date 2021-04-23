@@ -1,0 +1,9 @@
+mixin contact-button(args)
+    button.contact-button.disabled(disabled)&attributes(attributes)
+        .contact-button__title
+            span.contact-button__title-send!= args.title
+            span.contact-button__title-success Отправлено
+            span.contact-button__title-error Ошибка отправки
+        .contact-button__load
+            svg(width="65px" height="65px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg")
+                circle(fill="none" stroke-width="6" stroke-linecap="square" cx="33" cy="33" r="30")

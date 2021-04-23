@@ -1,0 +1,9 @@
+mixin price-advantages(args)
+    .price-advantages&attributes(attributes)
+        .price-advantages__list(data-anim='trigger')
+            each item in args
+                .price-advantages__item(data-anim='anim-2')
+                    //+svg({name: item.icon})
+                    +img({path: `../../common/images/${item.icon}.svg`, lazy: true})
+                    .price-advantages__title!=item.title
+                    .price-advantages__text!=item.text

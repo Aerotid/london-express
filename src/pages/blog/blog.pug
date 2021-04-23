@@ -1,0 +1,57 @@
+extends ../../layout/layout
+include ../../components/main/main
+include ../../components/footer/footer
+include ../../components/section/section
+include ../../components/h1-title/h1-title
+include ../../components/submenu/submenu
+include ../../components/blog-popular/blog-popular
+include ../../components/blog-new/blog-new
+include ../../components/subscription/subscription
+include ../../components/blog-previews/blog-previews
+
+block content
+    div#barba-wrapper
+        .barba-container(data-namespace='blog')
+            +main
+                +notification({
+                    title: 'Вы успешно подписаны',
+                    svg: 'check-bubble'
+                }).notification_subscribe
+                +notification({
+                    title: 'Вы отписались',
+                    svg: 'smile',
+                    purple: true
+                }).notification_bg-purple.notification_unsubscribe
+                +section.section_pb
+                    +h1-title({ title: 'Блог' })
+                    +submenu({
+                        data: data.blog.submenu,
+                        active: 0
+                    })
+                +section.section_margin
+                    +blog-popular({data: data.blog.popular})
+                +section
+                    +blog-new({
+                        data: data.blog.new,
+                        type: 'main',
+                        part: 0,
+                        lessonPlace: 2
+                    })
+                +section.section_margin
+                    each section, index in data.blog.previews
+                        +blog-previews(section)
+                        if (index === 1)
+                            +subscription({
+                                title: 'Подписка на&nbsp;блог',
+                                subtitle: 'Читайте первыми наши полезные статьи про английский и&nbsp;не&nbsp;только',
+                                picture: {
+                                    sources: [{
+                                        srcset: '../blog/images/bg-mobile.png',
+                                        media: '(max-width: 1199.98px)'
+                                    }],
+                                    img: '../blog/images/bg.jpg',
+                                    objectFit: 'contain',
+                                    objectPosition: 'bottom'
+                                }
+                            })(data-anim='anim-3')
+            +footer

@@ -1,0 +1,32 @@
+[
+    {
+        "student": "Карина Федоренко",
+        "img": "../reviews/images/photo-1.jpg",
+        "course": "Курс &laquo;Подготовка к&nbsp;ЕГЭ и&nbsp;ОГЭ&raquo;",
+        "points": "75"
+    },
+    {
+        "student": "Иван Селезнев",
+        "img": "../reviews/images/photo-2.jpg",
+        "course": "Курс &laquo;Подготовка к&nbsp;ЕГЭ и&nbsp;ОГЭ&raquo;",
+        "points": "100"
+    },
+    {
+        "student": "Маша Инякина",
+        "img": "../reviews/images/photo-1.jpg",
+        "course": "Курс &laquo;Подготовка к&nbsp;ЕГЭ и&nbsp;ОГЭ&raquo;",
+        "points": "85"
+    },
+    {
+        "student": "Иван Селезнев",
+        "img": "../reviews/images/photo-2.jpg",
+        "course": "Курс &laquo;Подготовка к&nbsp;ЕГЭ и&nbsp;ОГЭ&raquo;",
+        "points": "69"
+    },
+    {
+        "student": "Маша Инякина",
+        "img": "../reviews/images/photo-1.jpg",
+        "course": "Курс &laquo;Подготовка к&nbsp;ЕГЭ и&nbsp;ОГЭ&raquo;",
+        "points": "78"
+    }
+]

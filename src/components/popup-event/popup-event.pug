@@ -1,0 +1,13 @@
+mixin popup-event(args)
+    .popup-event&attributes(attributes)
+        .popup-event__container
+            .popup-event__info
+                .popup-event__info-day!= args.date
+                .popup-event__info-time!= args.time
+            .popup-event__role Ученик
+            .popup-event__name!=args.student
+            .popup-event__events!=args.count
+            .popup-event__text!= args.course
+            .popup-event__btn-wrapper
+                +btn({ tagName: 'button' }).btn_grey.btn_middle.popup-event__btn-reschedule Перенести
+                +btn({ tagName: 'button' }).btn.btn_gray-border.btn_middle Отменить

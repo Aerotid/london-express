@@ -1,0 +1,18 @@
+.three-cols-row {
+    $root: &;
+
+    &__row {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: flex-start;
+        justify-content: center;
+        margin-left: -4rem;
+        margin-right: -4rem;
+    }
+
+    &__col {
+        flex: 0 0 33.333%;
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+}

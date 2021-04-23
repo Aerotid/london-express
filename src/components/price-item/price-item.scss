@@ -1,0 +1,99 @@
+.price-item {
+    $root: &;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: flex-start;
+    width: 100vw / 24 * 5;
+    height: auto;
+    margin-right: $col-half-width;
+    padding: 5.2rem $col-half-width;
+    color: $color-9;
+    background-color: #fff;
+    box-shadow: 0 3rem 8rem rgba(55, 84, 170, 0.1);
+    border-radius: 20px;
+
+    @include media-breakpoint-down(lg) {
+        width: 100vw / 24 * 10;
+
+        @include media-breakpoint-down(sm) {
+            width: 100vw / 24 * 18;
+            margin-right: 2rem;
+            padding: 3.5rem 3rem 3rem;
+        }
+    }
+
+    &_hot {
+        position: relative;
+        color: white;
+        background-color: $color-6;
+        z-index: 2;
+    }
+
+    &__sticker {
+        position: absolute;
+        top: -7.25rem;
+        right: -7.25rem;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 14.5rem;
+        height: 14.5rem;
+        @include font-43;
+        color: $color-6;
+        background-color: #fff;
+        border-radius: 50%;
+        border: 1px solid $color-6;
+        box-shadow: 0 30px 80px rgba(55, 84, 170, 0.1);
+
+        @include media-breakpoint-down(sm) {
+            top: -4rem;
+            right: -4rem;
+            width: 8rem;
+            height: 8rem;
+        }
+    }
+
+    &__lessons {
+        margin-bottom: 2rem;
+        @include font-26;
+    }
+
+    &__cost {
+        &-new {
+            margin-bottom: 3rem;
+            @include font-46;
+        }
+        &-old {
+            position: relative;
+            display: inline-block;
+            @include font-3;
+            color: rgba($color-9, .5);
+            //text-decoration: line-through;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                width: 100%;
+                height: 1px;
+                background-color: rgba($color-9, .5);
+                transform: translateY(-50%);
+            }
+        }
+        &-one {
+            margin-top: 3rem;
+            @include font-3;
+        }
+    }
+
+    &__speaking {
+        margin: 3rem 0;
+        @include font-3;
+    }
+
+    &__buy {
+        padding: 1.4rem 6rem;
+        margin: auto auto 0;
+    }
+}

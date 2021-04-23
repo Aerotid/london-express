@@ -1,0 +1,14 @@
+include ../../components/content-picture/content-picture
+
+mixin educational-methodology(args)
+    .educational-methodology&attributes(attributes)(class= `${args.reverse ? 'educational-methodology_reverse' : ''}`)(data-anim='anim-1')
+        +content-picture({reverse: args.reverse, picture: args.picture})
+            h3.content-picture__h3-title.educational-methodology__title!= args.title
+            if (args.text)
+                .content-picture__text.educational-methodology__text!= args.text
+            if (args.smallText)
+                .content-picture__small-text.educational-methodology__small-text!= args.smallText
+            if (args.features)
+                .educational-methodology__features
+                    each item in args.features
+                        p.educational-methodology__feature!= item

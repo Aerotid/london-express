@@ -1,0 +1,70 @@
+.pink-text {
+    $root: &;
+
+    @include media-breakpoint-down(sm) {
+        width: auto;
+    }
+
+    &_reverse {
+        display: flex;
+        flex-flow: column-reverse nowrap;
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    &_text-center-mobile {
+        @include media-breakpoint-down(sm) {
+            text-align: center;
+        }
+    }
+
+    &__title {
+        padding-top: 5rem;
+        margin-bottom: 2rem;
+        @include font-29;
+        color: $color-3;
+
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 1rem;
+            padding-top: 0;
+        }
+
+        #{$root}_reverse & {
+            padding-top: 1rem;
+            margin-bottom: 0;
+        }
+    }
+
+    &__description {
+        @include font-4;
+        color: $color-9;
+        opacity: 0.5;
+
+        #{$root}_reverse & {
+            @include font-43;
+        }
+    }
+
+    &_big {
+        margin-top: -2rem;
+        margin-left: 0;
+
+        #{$root} {
+            &__title {
+                margin-bottom: 0.5rem;
+                font-family: $font-gotham;
+                @include font-30;
+
+                @include media-breakpoint-down(sm) {
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+    }
+
+    &_black-desc {
+        #{$root}__description {
+            opacity: 1;
+        }
+    }
+}

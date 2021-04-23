@@ -1,0 +1,162 @@
+extends ../../layout/layout
+include ../../components/main/main
+include ../../components/footer/footer
+include ../../components/lead/lead
+include ../../components/section/section
+include ../../components/grid-list/grid-list
+include ../../components/block-title/block-title
+include ../../components/two-cols/two-cols
+include ../../components/register-proposal/register-proposal
+include ../../components/square-card/square-card
+include ../../components/exercise-card/exercise-card
+include ../../components/course-card/course-card
+include ../../components/prop-block/prop-block
+include ../../components/last-work/last-work
+include ../../components/upcoming-lesson/upcoming-lesson
+include ../../components/upcoming-lesson/upcoming-lesson
+include ../../components/slider-lead/slider-lead
+include ../../components/notice/notice
+
+block content
+    div#barba-wrapper
+        .barba-container(data-namespace='index')
+            +main
+                +section().section_pink.section_margin
+                    +slider-lead({
+                        data: data.sliderLead,
+                        bg1: '../index/images/index-lead-bg-1.jpg',
+                        bg2: {
+                             sources: [{
+                                 srcset: '../index/images/index-lead-bg-2-mobile.jpg',
+                                 media: '(max-width: 767.9px)'
+                             }],
+                             img: '../index/images/index-lead-bg-2.jpg',
+                             objectFit: 'cover'
+                        },
+                        picture: {
+                            img: '../index/images/index-lead-alt.png',
+                            sources: [
+                                {
+                                    srcset: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7',
+                                    media: '(max-width: 767.9px)'
+                                }
+                            ],
+                            objectFit: 'contain'
+                        },
+                        awards: {
+                            slideAwards: [
+                                {
+                                    svg: 'awards-tag',
+                                    place: '1 место',
+                                    nomination: '&laquo;Лучший образовательный сайт&raquo;'
+                                },
+                                {
+                                    svg: 'awards-hand',
+                                    place: '1 место',
+                                    nomination: '&laquo;B2C (бизнес для потребителя)&raquo;'
+                                },
+                                {
+                                    svg: 'awards-hand',
+                                    place: '2 место',
+                                    nomination: '&laquo;Обучение&raquo;'
+                                }
+                            ],
+                            allAwards: [
+                               {
+                                   svg: 'awards-tag',
+                                   place: '1 место в номинации',
+                                   nomination: '&laquo;Лучший образовательный сайт&raquo;.<br> от&nbsp;премии Summer Tagline Awards 2020'
+                               },
+                               {
+                                   svg: 'awards-hand',
+                                   place: '1 место в номинации',
+                                   nomination: '&laquo;B2C (бизнес для потребителя)&raquo; в&nbsp;рейтинге Рунета'
+                               },
+                               {
+                                   svg: 'awards-hand',
+                                   place: '2 место в номинации',
+                                   nomination: '&laquo;Обучение&raquo; в&nbsp;рейтинге Рунета'
+                               }
+                           ],
+                        }
+                    })
+                +section().section_white
+                    +grid-list(data-anim="trigger")
+                        each item, i in data.indexLessons
+                            .grid-list__item(data-anim="anim-2")
+                                +square-card
+                                    +exercise-card(item).exercise-card_100
+                                        if (i === 0)
+                                            +caseSvg1.exercise-card__svg
+                                        else
+                                            +caseSvg2.exercise-card__svg
+                                            .exercise-card__svg-text
+                                                +svg({name: 'lesson-1'})
+                                            .exercise-card__svg-text
+                                                +svg({name: 'lesson-2'})
+                +section().section_margin
+                    each item, index in data.twoColsIndex
+                        +two-cols(item)(class= index % 2 ? 'bg_white' : 'bg_soft-peach')
+                +section().section_white
+                    +register-proposal({
+                        title: 'Английский язык&nbsp;<br>с&nbsp;доставкой на&nbsp;дом',
+                        description: '<p>&laquo;Девочка, живущая в&nbsp;сети&raquo;, оценила все плюсы дистанционного обучения. Затягивающие онлайн-тренажеры, интерактивные упражнения и&nbsp;игры. Занятия с&nbsp;преподавателем из&nbsp;любой точки мира.</p> <p>Выбирайте современный удобный формат образования.</p>',
+                        picture: {
+                            sources: [
+                                {
+                                    srcset: "../index/images/index-1-image-mobile.jpg",
+                                    media: "(max-width: 1199px)"
+                                },
+                                {
+                                    srcset: "../index/images/lk-rus-desktop-min.webp",
+                                    type: "image/webp"
+                                }
+                            ],
+                            img: "../index/images/lk-rus-desktop-min.png"
+                        },
+                        link: {
+                            title: 'Зарегистрироваться'
+                        }
+                    })
+                        .register-proposal__last-work
+                            +last-work({
+                                title: 'Последнее&nbsp;ДЗ',
+                                name: 'Общий курс<br>английского языка'
+                            }).last-work_popup
+                        .register-proposal__upcoming-lesson
+                            +upcoming-lesson({
+                                title: 'Предстоящее задание',
+                                date: 'Сегодня',
+                                time: '9:00 - 10:00',
+                                course: 'Общий курс английского языка для взрослых'
+                            }).upcoming-lesson_popup
+                        .register-proposal__notice
+                            +notice
+                +section().section_white
+                    +block-title({
+                        title: 'Маршрут построен',
+                        description: '<p>Выберите свой курс. Приготовьтесь думать, чувствовать, жить на&nbsp;английском. Следующая остановка &laquo;My&nbsp;English is&nbsp;cool!&raquo;</p>'
+                    })
+                    +grid-list.grid-list_downward-right
+                        each courseCard in data.courseCards
+                            +square-card.square-card_small.grid-list__item(data-anim="anim-3")
+                                +course-card(courseCard)
+
+                +section().section_white
+                    +prop-block({
+                        title: 'Попробовать <br>бесплатно',
+                        description: 'Записаться на&nbsp;пробный урок',
+                        img: {
+                            src: '../../components/prop-block/images/van.jpg',
+                            alt: ''
+                        },
+                        btn: {
+                            title: 'Оставить заявку',
+                            href: '#'
+                        },
+                        subtitle: 'Два занятия в&nbsp;подарок!',
+                        subdescription: 'При покупке абонемента в&nbsp;день пробного занятия',
+                        mobileImg: '../../components/prop-block/images/van-mobile.jpg',
+                        tabletImg: '../../components/prop-block/images/van-tablet.jpg'
+                    })
+            +footer

@@ -1,0 +1,35 @@
+mixin attach-file(args)
+    .attach-file&attributes(attributes)
+        -
+            var required = '';
+
+            if (args.required) {
+                required = '*';
+            }
+            var acceptExt;
+            switch(args.type) {
+                case 'images':
+                    acceptExt = 'image/*';
+                    break;
+                case 'imagesAndTextDocs':
+                    acceptExt = 'image/*,.doc,.docx,.pdf,.odt,.odf,.rtf,.tex';
+                    break;
+                default:
+                    acceptExt = '';
+            }
+        input.attach-file__input(name=args.name type='file' multiple id= args.id accept=acceptExt required= args.required ? 'required':false)
+        label(for= args.id)
+                    case args.svg
+                        when 'icon'
+                            .attach-file__icon.attach-file__icon_icon
+                                +svg({name: 'icon'})
+                        when 'photo'
+                            .attach-file__icon.attach-file__icon_photo
+                                +svg({name: 'photo'})
+                        when 'pink-plus'
+                            .attach-file__icon.attach-file__icon_pink-plus
+                                +svg({name: 'pink-plus'})
+                        default
+                            .attach-file__icon.attach-file__icon_icon
+                                +svg({name: 'icon'})
+                    .attach-file__text!= `${args.text}${required}`

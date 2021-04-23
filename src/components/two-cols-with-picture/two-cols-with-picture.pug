@@ -1,0 +1,26 @@
+mixin two-cols-with-picture(args)
+    .two-cols-with-picture&attributes(attributes)
+        .row(data-anim="trigger")
+            .col-md-22.offset-md-1.col-xl-20.offset-xl-2.two-cols-with-picture__text-row
+                .two-cols-with-picture__col(data-anim="anim-2")
+                    if (args.firstCol.img)
+                        +img({path: args.firstCol.img}).two-cols-with-picture__bg(class=args.firstCol.horizontalPic?'two-cols-with-picture__horizontal-pic':'')
+                    if (args.firstCol.title)
+                        h3.two-cols-with-picture__title!= args.firstCol.title
+                    if (args.firstCol.subtitle)
+                        p.two-cols-with-picture__subtitle!= args.firstCol.subtitle
+                    if (args.firstCol.text)
+                        p.two-cols-with-picture__text!= args.firstCol.text
+
+                .two-cols-with-picture__col(data-anim="anim-2")
+                    if (args.secondCol.img)
+                        +img({path: args.secondCol.img}).two-cols-with-picture__bg(class=args.secondCol.horizontalPic?'two-cols-with-picture__horizontal-pic':'')
+                    if (args.secondCol.title)
+                        h3.two-cols-with-picture__title!= args.secondCol.title
+                    if (args.secondCol.subtitle)
+                        p.two-cols-with-picture__subtitle!= args.secondCol.subtitle
+                    if (args.secondCol.text)
+                        p.two-cols-with-picture__text!= args.secondCol.text
+        .row
+            .col-md-22.offset-md-1.col-xl-20.offset-xl-2
+                +picture(args.pictureBig).two-cols-with-picture__picture(data-anim="anim-scale")

@@ -1,0 +1,24 @@
+include ../picture/picture
+
+mixin lead(args)
+    .lead&attributes(attributes)
+        .lead__bg
+            block
+            if (args.bubbleText1)
+                +svg({name: args.bubbleText1}).lead__svg.lead__svg-bubbleText1(data-speed='-2')
+            if (args.bubbleText2)
+                +svg({ name: args.bubbleText2 }).lead__svg.lead__svg-bubbleText2(data-speed='-4')
+            +picture({
+                sources: [{
+                    srcset: args.imageMobile,
+                    media: '(max-width: 767.9px)'
+                }],
+                img: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7',
+                objectFit: 'contain'
+            }).lead__image-mobile
+        .lead__wrapper
+            .row.mobile-gutter
+                .col-24.col-md-12.offset-md-1.col-xl-6.offset-xxl-2
+                    h1.lead__title!= args.title
+                    .lead__description!= args.description
+                    +btn({tagName: 'a'}).btn_white-border(href='#' data='free-popup') Записаться

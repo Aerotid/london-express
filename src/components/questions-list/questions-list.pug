@@ -1,0 +1,10 @@
+include ../question/question
+include ../endless-btn/endless-btn
+
+mixin questions-list(args)
+    .questions-list&attributes(attributes)
+        ul.questions-list__list.endless-btn__container(data-anim='trigger')
+            each item, index in data.price.questions
+                li.questions-list__item(data-anim='anim-2')
+                    +question({ item, index }).questions-list__question
+        +endless-btn({ tagName: 'button'}) Загрузить ещё

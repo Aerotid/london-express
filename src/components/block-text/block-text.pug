@@ -1,0 +1,5 @@
+mixin block-text(args)
+    .block-text&attributes(attributes)
+        .row
+            .col-md-22.offset-md-1.col-xl-12.offset-xl-6
+                .block-text__text(data-anim='anim-1')!= args.text

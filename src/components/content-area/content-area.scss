@@ -1,0 +1,344 @@
+.content-area {
+    $root: &;
+    @include font-26;
+
+    &_wrapped {
+        margin-top: 27.1rem;
+        @include mobile-offset;
+
+        @include media-breakpoint-down(lg) {
+            margin-top: 16rem;
+
+            @include media-breakpoint-down(sm) {
+                margin-top: 8rem;
+            }
+        }
+    }
+
+    &__group {
+        margin-bottom: 6rem;
+
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 4rem;
+        }
+    }
+
+    p {
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    h1 {
+        @include font-25;
+    }
+
+    h2 {
+        @include font-25;
+    }
+
+    h3 {
+        @include font-33;
+    }
+
+    & &_no-margin {
+        margin-bottom: 0;
+
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 0;
+        }
+    }
+
+    h2, h3, p, ul, ol {
+        margin-bottom: 3rem;
+
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 2rem;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+
+            @include media-breakpoint-down(sm) {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    a {
+        color: $color-4;
+        border-bottom: solid 1px;
+
+        &:hover,
+        &:focus {
+            color: rgba($color-4, 0.8);
+        }
+
+        &:active {
+            color: rgba($color-4, 0.6);
+        }
+    }
+
+    &__a {
+        &_inline-block {
+            display: inline-block;
+            margin-bottom: 3rem;
+
+            @include media-breakpoint-down(sm) {
+                margin-bottom: 2rem;
+            }
+        }
+    }
+
+    &__bold-text {
+        font-weight: 900;
+    }
+
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+
+        & > li {
+            position: relative;
+            padding-left: 2.7rem;//calc(#{$col-width} / 2.667);
+            @include font-26;
+            margin-bottom: 3rem;
+
+            @include media-breakpoint-down(sm) {
+                padding-left: 2rem;
+                margin-bottom: 2rem;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+
+                @include media-breakpoint-down(sm) {
+                    margin-bottom: 0;
+                }
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 1.3rem;
+                left: 0;
+                width: 0.8rem;
+                height: 0.8rem;
+                background-color: $color-4;
+                border-radius: 100%;
+
+                @include media-breakpoint-down(sm) {
+                    width: 5px;
+                    height: 5px;
+                }
+            }
+        }
+    }
+
+    & &__ul {
+        &_dashed {
+            & > li {
+                &::before {
+                    content: '- ';
+                    position: static;
+                    width: auto;
+                    height: auto;
+                    background-color: transparent;
+                    border-radius: 0%;
+                }
+            }
+        }
+    }
+
+    ol {
+        padding: 0;
+        list-style-position: inside;
+        list-style-type: decimal-leading-zero;
+
+        span, a {
+            color: currentColor;
+            border-bottom: solid currentColor 1px;
+        }
+
+        a {
+            &:hover,
+            &:focus {
+                color: currentColor;
+                opacity: 0.8;
+            }
+
+            &:active {
+                color: currentColor;
+                opacity: 0.6;
+            }
+        }
+    }
+
+    & &__ol {
+        &_with-h2-headers {
+            &>li {
+                &::before {
+                    @include font-25;
+                }
+            }
+        }
+
+        &_with-h3-headers {
+            &>li {
+                &::before {
+                    @include font-33;
+                }
+            }
+        }
+    }
+
+    &__li {
+        &_with-h2-header {
+            &::before {
+                @include font-25;
+            }
+        }
+
+        &_with-h3-header {
+            &::before {
+                @include font-33;
+            }
+        }
+    }
+
+    & &__ol,
+    & &__ul,
+    & &__p {
+        &_margin-top {
+            margin-top: 3rem;
+
+            @include media-breakpoint-down(sm) {
+                margin-top: 2rem;
+            }
+        }
+    }
+
+
+    picture {
+        width: 100%;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &_pink {
+        ul>li::before {
+            background-color: $color-18;
+        }
+    }
+
+    &_about-the-organisation {
+        h2 {
+            margin-bottom: 2rem;
+        }
+
+        ul, ol {
+            li {
+                position: relative;
+                margin-bottom: 0;
+
+                @include media-breakpoint-down(sm) {
+                    margin-bottom: 0;
+                }
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: -2px;
+                    width: auto;
+                    height: 1px;
+                    background-color: currentColor;
+                }
+
+
+                a, span {
+
+                    //&::after {
+                    //    content: '';
+                    //    position: absolute;
+                    //    bottom: -2px;
+                    //    width: auto;
+                    //    height: 1px;
+                    //    background-color: currentColor;
+                    //}
+                }
+            }
+        }
+    }
+
+    &_document {
+        ol {
+            padding: 0;
+            padding-left: 5vw;
+            margin: 0;
+            list-style: none;
+            counter-reset: item;
+
+            @include media-breakpoint-down(lg) {
+                padding: 0;
+            }
+
+            span {
+                border-bottom: none;
+            }
+
+            h2, h3, h4, h5, h6 {
+                display: inline;
+                margin-bottom: 3rem;
+
+                @include media-breakpoint-down(sm) {
+                    margin-bottom: 2rem;
+                }
+            }
+
+            h2, h3 {
+                & + p {
+                    margin-top: 3rem;
+
+                    @include media-breakpoint-down(sm) {
+                        margin-top: 2rem;
+                    }
+                }
+            }
+
+            & > li {
+                counter-increment: item;
+
+                &:not(:last-child) {
+                    margin-bottom: 3rem;
+
+                    @include media-breakpoint-down(sm) {
+                        margin-bottom: 2rem;
+                    }
+                }
+
+                &:before {
+                    margin-right: 2rem;
+                    content: counters(item, ".") ".";
+                    display: inline-block;
+
+                    @include media-breakpoint-down(sm) {
+                        margin-right: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+
+    &_colorful-bg {
+        a {
+            color: white;
+
+            @include states {
+                color: rgba(white, 0.8);
+            }
+        }
+    }
+}

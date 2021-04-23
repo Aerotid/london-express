@@ -1,0 +1,122 @@
+.sandwich-menu-btn {
+    $root: &;
+    display: inline-flex;
+    vertical-align: middle;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    @include font-9;
+    color: currentColor;
+
+    &:hover,
+    &:focus,
+    &:active {
+        outline: none;
+    }
+
+    &__text {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 1.6rem;
+        @include font-7;
+
+        @include media-breakpoint-down(sm) {
+            margin-right: 0;
+        }
+    }
+
+    &__burger {
+        position: relative;
+        width: 30px;
+        flex: 0 0 30px;
+        height: 22px;
+
+        @include media-breakpoint-down(sm) {
+            width: 17px;
+            flex: 0 0 17px;
+            height: 14px;
+        }
+    }
+
+    &__line {
+        position: absolute;
+        left: 0;
+        right: 0;
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: currentColor;
+
+        &_top {
+            top: 0;
+            transition: transform 0.4s cubic-bezier(.5, .2, .2, 1);
+        }
+
+        &_middle {
+            top: 50%;
+            transform: translateY(-50%);
+            transition: opacity 0.4s cubic-bezier(.1, .8, .1, 1);
+        }
+
+        &_bottom {
+            bottom: 0;
+            transition: transform 0.4s cubic-bezier(.5, .2, .2, 1);
+        }
+    }
+
+    .sandwich-open & {
+        #{$root}__line {
+            transform-origin: 50%;
+
+            &_top {
+                transform: translateY(10px) rotate(45deg);
+
+                @include media-breakpoint-down(sm) {
+                    transform: translateY(4px) rotate(45deg);
+                }
+            }
+
+            &_middle {
+                opacity: 0;
+            }
+
+            &_bottom {
+                transform: translateY(-10px) rotate(-45deg);
+
+                @include media-breakpoint-down(sm) {
+                    transform: translateY(-8px) rotate(-45deg);
+                }
+            }
+        }
+    }
+
+    @keyframes rotateRight {
+        from{
+            transform: translateY(0) rotate(0);
+        }
+        to {
+            transform: translateY(6px) rotate(45deg);
+        }
+    }
+
+    @keyframes rotateLeft {
+        from{
+            transform: translateY(0) rotate(0);
+        }
+        to {
+            transform: translateY(-6px) rotate(-45deg);
+        }
+    }
+
+    @keyframes fade {
+        from {
+            opacity: 1;
+        }
+        to {
+            opacity: 0;
+        }
+    }
+}

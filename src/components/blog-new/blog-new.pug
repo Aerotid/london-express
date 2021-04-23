@@ -1,0 +1,52 @@
+include ../../components/blog-statistics/blog-statistics
+include ../../components/lessons-gift-banner/lessons-gift-banner
+
+mixin blog-new(args)
+    .blog-new&attributes(attributes)
+        if(args.data.title)
+            .blog-new__head
+                h2.blog-new__title(data-anim="anim-1")
+                    if(args.type === 'main')
+                        a(href='/blog-section.html')!=args.data.title
+                    else if (args.type === 'section' || args.type === 'news')
+                        !=args.data.title
+        each list, i in args.data.list
+            if (i === 1)
+                block
+            .blog-new__content
+                ul.blog-new__list.blog-new__list_main
+                    each item in list.mainItems
+                        li.blog-new__item(class=item.imageShow?'blog-new__item_image-show':'')(class=item.imageBig?'blog-new__item_image-big':'')
+                            a(href=item.link).blog-new__item-link(data-anim="anim-3")
+                                if (item.image)
+                                    .blog-new__item-image
+                                        +img({ path: item.image })(data-object-fit='cover')
+                                        if(args.type !== 'news')
+                                            +blog-statistics
+                                .blog-new__item-date!=item.date
+                                h3.blog-new__item-title!=item.title
+                                if (item.text)
+                                    p.blog-new__item-text!=item.text
+                                if (!item.image && args.type !== 'news')
+                                    +blog-statistics
+                ul.blog-new__list.blog-new__list_masonry
+                    each item, index in list.items
+                        li.blog-new__item(class=item.imageShow?'blog-new__item_image-show':'')(class=item.imageRound?'blog-new__item_image-round':'')
+                            a(href=item.link).blog-new__item-link(data-anim="anim-3")
+                                if (item.image)
+                                    .blog-new__item-image
+                                        +img({ path: item.image })(data-object-fit='cover')
+                                .blog-new__item-date!=item.date
+                                h3.blog-new__item-title!=item.title
+                        if (i === args.part && index === args.lessonPlace)
+                            li.blog-new__item
+                                +lessons-gift-banner({
+                                    picture: {
+                                        sources: [{
+                                            srcset: '../blog/images/banner-mobile.jpg',
+                                            media: '(max-width: 1199.98px)'
+                                        }],
+                                        img: '../blog/images/banner.jpg'
+                                    }
+                                }).lessons-gift-banner_child
+

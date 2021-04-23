@@ -1,0 +1,15 @@
+include ../../components/review/review
+include ../../components/endless-btn/endless-btn
+
+mixin reviews-section(args)
+    .reviews-section&attributes(attributes)
+            .reviews-section__list.endless-btn__container
+                each review, index in data.reviews
+                    if ((index + 1 - 1) % 3 === 0)
+                        - review['background'] = 'scrollSvg'
+                    if ((index + 1 - 2) % 3 === 0)
+                        - review['background'] = 'inkSvg'
+                    if ((index + 1) % 3 === 0)
+                        - review['background'] = 'feathersHeartSvg'
+                    +review(review).reviews-section__item(data-anim='anim-3')
+            +endless-btn({ tagName: 'button'}) Загрузить ещё

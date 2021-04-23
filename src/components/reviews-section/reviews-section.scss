@@ -1,0 +1,39 @@
+.reviews-section {
+    $root: &;
+    overflow: hidden;
+
+    @include media-breakpoint-down(sm) {
+        margin-top: 2rem;
+    }
+
+    &__list {
+        margin-bottom: 4rem;
+
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 0;
+        }
+    }
+
+    &__item {
+        animation: appearFromOpacity 0.8s forwards;
+
+        &:nth-child(even) {
+            background-color: $color-13;
+
+            &:last-child {
+                @include media-breakpoint-down(sm) {
+                    margin-bottom: 4rem;
+                }
+            }
+        }
+
+        &:last-child {
+            overflow: visible;
+        }
+    }
+}
+
+@keyframes appearFromOpacity {
+    from { opacity: 0 }
+    to { opacity: 1 }
+}

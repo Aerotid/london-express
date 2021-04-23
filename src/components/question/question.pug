@@ -1,0 +1,12 @@
+include ../btn-expand/btn-expand
+include ../content-area/content-area
+
+mixin question(args)
+    .question&attributes(attributes)
+        .question__top
+            .question__title!=args.item.title
+        .question__text.collapse(id=`question-${args.index}`)
+            +content-area.question__text-content!= args.item.text
+        .question__more-less
+            .question__more-less-hline
+            +btn-expand.question__expand-button(data-toggle='collapse' data-target=`#question-${args.index}`)

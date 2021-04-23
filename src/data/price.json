@@ -1,0 +1,674 @@
+{
+  "advantages": [
+    {
+      "title": "Легкий старт",
+      "text": "Не&nbsp;нужно оплачивать стоимость сразу всего курса, покупайте занятия удобными пакетами от&nbsp;4&nbsp;до&nbsp;64&nbsp;уроков.",
+      "icon": "ball"
+    },
+    {
+      "title": "Система скидок",
+      "text": "Выгодные условия на&nbsp;все формы обучения! Чем больше пакет занятий&nbsp;&mdash; тем больше выгода.",
+      "icon": "cheese"
+    },
+    {
+      "title": "Удобная оплата",
+      "text": "Оплачивайте занятия в&nbsp;личном кабинете через любимые платежные системы в&nbsp;любое удобное время.",
+      "icon": "heart"
+    }
+  ],
+  "partners": [
+    {
+      "img": {
+        "src": "../price/images/partners/1.png",
+        "alt": "Visa"
+      }
+    },
+    {
+      "img": {
+        "src": "../price/images/partners/2.png",
+        "alt": "MasterCard"
+      }
+    },
+    {
+      "img": {
+        "src": "../price/images/partners/3.png",
+        "alt": "QIWI"
+      }
+    },
+    {
+      "img": {
+        "src": "../price/images/partners/4.png",
+        "alt": "Яндекс"
+      }
+    },
+    {
+      "img": {
+        "src": "../price/images/partners/5.png",
+        "alt": "Альфа-Банк"
+      }
+    },
+    {
+      "img": {
+        "src": "../price/images/partners/6.png",
+        "alt": "PSB"
+      }
+    },
+    {
+      "img": {
+        "src": "../price/images/partners/7.png",
+        "alt": "Евросеть"
+      }
+    },
+    {
+      "img": {
+        "src": "../price/images/partners/8.png",
+        "alt": "Сбербанк"
+      }
+    },
+    {
+      "img": {
+        "src": "../price/images/partners/9.png",
+        "alt": "Связной"
+      }
+    },
+    {
+      "img": {
+        "src": "../price/images/partners/10.png",
+        "alt": "Webmoney"
+      }
+    },
+    {
+      "img": {
+        "src": "../price/images/partners/11.png",
+        "alt": "Apple Pay"
+      }
+    },
+    {
+      "img": {
+        "src": "../price/images/partners/12.png",
+        "alt": "МИР"
+      }
+    }
+  ],
+  "questions": [
+    {
+      "title": "Почему в&nbsp;вашей онлайн-школе дешевле заниматься, чем в&nbsp;обычной языковой?",
+      "text": "<p>У&nbsp;нас нет затрат на&nbsp;аренду помещений и&nbsp;иных расходов, связанных с&nbsp;обеспечением жизнедеятельности офиса. Наши преподаватели проводят уроки из&nbsp;дома.</p>"
+    },
+    {
+      "title": "Почему в&nbsp;вашей онлайн-школе дешевле заниматься, чем в&nbsp;обычной языковой?",
+      "text": "<p>У&nbsp;нас нет затрат на&nbsp;аренду помещений и&nbsp;иных расходов, связанных с&nbsp;обеспечением жизнедеятельности офиса. Наши преподаватели проводят уроки из&nbsp;дома.</p>"
+    },
+    {
+      "title": "Почему в&nbsp;вашей онлайн-школе дешевле заниматься, чем в&nbsp;обычной языковой?",
+      "text": "<p>У&nbsp;нас нет затрат на&nbsp;аренду помещений и&nbsp;иных расходов, связанных с&nbsp;обеспечением жизнедеятельности офиса. Наши преподаватели проводят уроки из&nbsp;дома.</p>"
+    }
+  ],
+  "tabs": [
+    {
+      "title": "Преподаватель",
+      "btnLeft": "Русскоязычный",
+      "btnRight": "Носитель языка"
+    },
+    {
+      "title": "Длительность занятия",
+      "btnLeft": "50 минут",
+      "btnRight": "80 минут"
+    },
+    {
+      "title": "Уровень студента",
+      "btnLeft": "Начинающий",
+      "btnRight": "Продвинутый"
+    }
+  ],
+  "single": [
+    {
+      "type": 1,
+      "items": [
+        {
+          "lessons": "4 занятия",
+          "costNew": "3 960",
+          "costOld": "",
+          "costOne": "990",
+          "speakingClub": "",
+          "speakingClubMonth": "",
+          "sticker": ""
+        },
+        {
+          "lessons": "8 занятий",
+          "costNew": "7 520",
+          "costOld": "15 040",
+          "costOne": "940",
+          "speakingClub": "2",
+          "speakingClubMonth": "1",
+          "sticker": ""
+        },
+        {
+          "lessons": "16 занятий",
+          "costNew": "14 240",
+          "costOld": "30 080",
+          "costOne": "890",
+          "speakingClub": "4",
+          "speakingClubMonth": "2",
+          "sticker": "1"
+        },
+        {
+          "lessons": "32 занятия",
+          "costNew": "25 280",
+          "costOld": "31 680",
+          "costOne": "790",
+          "speakingClub": "8",
+          "speakingClubMonth": "4",
+          "sticker": ""
+        },
+        {
+          "lessons": "64 занятия",
+          "costNew": "44 160",
+          "costOld": "63 360",
+          "costOne": "690",
+          "speakingClub": "16",
+          "speakingClubMonth": "8",
+          "sticker": ""
+        }
+      ]
+    },
+    {
+      "type": 2,
+      "items": [
+        {
+          "lessons": "4 занятия",
+          "costNew": "6 320",
+          "costOld": "",
+          "costOne": "1 580",
+          "speakingClub": "",
+          "speakingClubMonth": "",
+          "sticker": ""
+        },
+        {
+          "lessons": "8 занятий",
+          "costNew": "12 000",
+          "costOld": "12 640",
+          "costOne": "1 500",
+          "speakingClub": "2",
+          "speakingClubMonth": "1",
+          "sticker": ""
+        },
+        {
+          "lessons": "16 занятий",
+          "costNew": "22 720",
+          "costOld": "25 280",
+          "costOne": "1 420",
+          "speakingClub": "4",
+          "speakingClubMonth": "2",
+          "sticker": "1"
+        },
+        {
+          "lessons": "32 занятия",
+          "costNew": "40 320",
+          "costOld": "50 560",
+          "costOne": "1 260",
+          "speakingClub": "8",
+          "speakingClubMonth": "4",
+          "sticker": ""
+        },
+        {
+          "lessons": "64 занятия",
+          "costNew": "70 400",
+          "costOld": "101 120",
+          "costOne": "1 100",
+          "speakingClub": "16",
+          "speakingClubMonth": "8",
+          "sticker": ""
+        }
+      ]
+    },
+    {
+      "type": 3,
+      "items": [
+        {
+          "lessons": "4 занятия",
+          "costNew": "4 760",
+          "costOld": "",
+          "costOne": "1 190",
+          "speakingClub": "",
+          "speakingClubMonth": "",
+          "sticker": ""
+        },
+        {
+          "lessons": "8 занятий",
+          "costNew": "9 040",
+          "costOld": "11 198",
+          "costOne": "1 130",
+          "speakingClub": "2",
+          "speakingClubMonth": "1",
+          "sticker": ""
+        },
+        {
+          "lessons": "16 занятий",
+          "costNew": "17 440",
+          "costOld": "19 040",
+          "costOne": "1 090",
+          "speakingClub": "4",
+          "speakingClubMonth": "2",
+          "sticker": "1"
+        },
+        {
+          "lessons": "32 занятия",
+          "costNew": "30 400",
+          "costOld": "38 080",
+          "costOne": "950",
+          "speakingClub": "8",
+          "speakingClubMonth": "4",
+          "sticker": ""
+        },
+        {
+          "lessons": "64 занятия",
+          "costNew": "53 120",
+          "costOld": "76 160",
+          "costOne": "830",
+          "speakingClub": "16",
+          "speakingClubMonth": "8",
+          "sticker": ""
+        }
+      ]
+    },
+    {
+      "type": 4,
+      "items": [
+        {
+          "lessons": "4 занятия",
+          "costNew": "7 600",
+          "costOld": "",
+          "costOne": "1 900",
+          "speakingClub": "",
+          "speakingClubMonth": "",
+          "sticker": ""
+        },
+        {
+          "lessons": "8 занятий",
+          "costNew": "14 400",
+          "costOld": "15 200",
+          "costOne": "1 800",
+          "speakingClub": "2",
+          "speakingClubMonth": "1",
+          "sticker": ""
+        },
+        {
+          "lessons": "16 занятий",
+          "costNew": "27 360",
+          "costOld": "30 400",
+          "costOne": "1 710",
+          "speakingClub": "4",
+          "speakingClubMonth": "2",
+          "sticker": "1"
+        },
+        {
+          "lessons": "32 занятия",
+          "costNew": "48 640",
+          "costOld": "60 800",
+          "costOne": "1 520",
+          "speakingClub": "8",
+          "speakingClubMonth": "4",
+          "sticker": ""
+        },
+        {
+          "lessons": "64 занятия",
+          "costNew": "85 120",
+          "costOld": "121 600",
+          "costOne": "1 330",
+          "speakingClub": "16",
+          "speakingClubMonth": "8",
+          "sticker": ""
+        }
+      ]
+    },
+    {
+      "type": 5,
+      "items": [
+        {
+          "lessons": "4 занятия",
+          "costNew": "7 560",
+          "costOld": "",
+          "costOne": "1 890",
+          "speakingClub": "",
+          "speakingClubMonth": "",
+          "sticker": ""
+        },
+        {
+          "lessons": "8 занятий",
+          "costNew": "14 360",
+          "costOld": "15 120",
+          "costOne": "1 795",
+          "speakingClub": "2",
+          "speakingClubMonth": "1",
+          "sticker": ""
+        },
+        {
+          "lessons": "16 занятий",
+          "costNew": "27 200",
+          "costOld": "30 240",
+          "costOne": "1 700",
+          "speakingClub": "4",
+          "speakingClubMonth": "2",
+          "sticker": "1"
+        },
+        {
+          "lessons": "32 занятия",
+          "costNew": "48 000",
+          "costOld": "60 480",
+          "costOne": "1 500",
+          "speakingClub": "8",
+          "speakingClubMonth": "4",
+          "sticker": ""
+        },
+        {
+          "lessons": "64 занятия",
+          "costNew": "84 480",
+          "costOld": "120 960",
+          "costOne": "1 320",
+          "speakingClub": "16",
+          "speakingClubMonth": "8",
+          "sticker": ""
+        }
+      ]
+    },
+    {
+      "type": 6,
+      "items": [
+        {
+          "lessons": "4 занятия",
+          "costNew": "12 000",
+          "costOld": "",
+          "costOne": "3 000",
+          "speakingClub": "",
+          "speakingClubMonth": "",
+          "sticker": ""
+        },
+        {
+          "lessons": "8 занятий",
+          "costNew": "22 800",
+          "costOld": "24 000",
+          "costOne": "2 850",
+          "speakingClub": "2",
+          "speakingClubMonth": "1",
+          "sticker": ""
+        },
+        {
+          "lessons": "16 занятий",
+          "costNew": "43 200",
+          "costOld": "48 000",
+          "costOne": "2 700",
+          "speakingClub": "4",
+          "speakingClubMonth": "2",
+          "sticker": "1"
+        },
+        {
+          "lessons": "32 занятия",
+          "costNew": "76 800",
+          "costOld": "96 000",
+          "costOne": "2 400",
+          "speakingClub": "8",
+          "speakingClubMonth": "4",
+          "sticker": ""
+        },
+        {
+          "lessons": "64 занятия",
+          "costNew": "134 400",
+          "costOld": "192 000",
+          "costOne": "2 100",
+          "speakingClub": "16",
+          "speakingClubMonth": "8",
+          "sticker": ""
+        }
+      ]
+    }
+  ],
+  "group": [
+    {
+      "type": 1,
+      "items": [
+        {
+          "lessons": "8 занятий",
+          "costNew": "3 920",
+          "costOld": "",
+          "costOne": "490",
+          "speakingClub": "2",
+          "speakingClubMonth": "1",
+          "sticker": ""
+        },
+        {
+          "lessons": "16 занятий",
+          "costNew": "7 440",
+          "costOld": "7 840",
+          "costOne": "465",
+          "speakingClub": "4",
+          "speakingClubMonth": "2",
+          "sticker": "1"
+        },
+        {
+          "lessons": "32 занятий",
+          "costNew": "14 080",
+          "costOld": "15 680",
+          "costOne": "440",
+          "speakingClub": "8",
+          "speakingClubMonth": "4",
+          "sticker": ""
+        },
+        {
+          "lessons": "64 занятий",
+          "costNew": "24 960",
+          "costOld": "31 360",
+          "costOne": "390",
+          "speakingClub": "16",
+          "speakingClubMonth": "8",
+          "sticker": ""
+        }
+      ]
+    },
+    {
+      "type": 2,
+      "items": [
+        {
+          "lessons": "8 занятий",
+          "costNew": "6 240",
+          "costOld": "",
+          "costOne": "780",
+          "speakingClub": "2",
+          "speakingClubMonth": "1",
+          "sticker": ""
+        },
+        {
+          "lessons": "16 занятий",
+          "costNew": "11 840",
+          "costOld": "12 480",
+          "costOne": "740",
+          "speakingClub": "4",
+          "speakingClubMonth": "2",
+          "sticker": "1"
+        },
+        {
+          "lessons": "32 занятий",
+          "costNew": "22 400",
+          "costOld": "24 960",
+          "costOne": "700",
+          "speakingClub": "8",
+          "speakingClubMonth": "4",
+          "sticker": ""
+        },
+        {
+          "lessons": "64 занятий",
+          "costNew": "39 680",
+          "costOld": "49 920",
+          "costOne": "620",
+          "speakingClub": "16",
+          "speakingClubMonth": "8",
+          "sticker": ""
+        }
+      ]
+    },
+    {
+      "type": 3,
+      "items": [
+        {
+          "lessons": "8 занятий",
+          "costNew": "4 720",
+          "costOld": "",
+          "costOne": "590",
+          "speakingClub": "2",
+          "speakingClubMonth": "1",
+          "sticker": ""
+        },
+        {
+          "lessons": "16 занятий",
+          "costNew": "11 840",
+          "costOld": "12 480",
+          "costOne": "740",
+          "speakingClub": "4",
+          "speakingClubMonth": "2",
+          "sticker": "1"
+        },
+        {
+          "lessons": "32 занятий",
+          "costNew": "22 400",
+          "costOld": "24 960",
+          "costOne": "700",
+          "speakingClub": "8",
+          "speakingClubMonth": "4",
+          "sticker": ""
+        },
+        {
+          "lessons": "64 занятий",
+          "costNew": "39 680",
+          "costOld": "49 920",
+          "costOne": "620",
+          "speakingClub": "16",
+          "speakingClubMonth": "8",
+          "sticker": ""
+        }
+      ]
+    },
+    {
+      "type": 4,
+      "items": [
+        {
+          "lessons": "8 занятий",
+          "costNew": "7 520",
+          "costOld": "",
+          "costOne": "940",
+          "speakingClub": "2",
+          "speakingClubMonth": "1",
+          "sticker": ""
+        },
+        {
+          "lessons": "16 занятий",
+          "costNew": "14 240",
+          "costOld": "15 040",
+          "costOne": "890",
+          "speakingClub": "4",
+          "speakingClubMonth": "2",
+          "sticker": "1"
+        },
+        {
+          "lessons": "32 занятий",
+          "costNew": "26 880",
+          "costOld": "30 080",
+          "costOne": "840",
+          "speakingClub": "8",
+          "speakingClubMonth": "4",
+          "sticker": ""
+        },
+        {
+          "lessons": "64 занятий",
+          "costNew": "48 000",
+          "costOld": "60 160",
+          "costOne": "750",
+          "speakingClub": "16",
+          "speakingClubMonth": "8",
+          "sticker": ""
+        }
+      ]
+    },
+    {
+      "type": 5,
+      "items": [
+        {
+          "lessons": "8 занятий",
+          "costNew": "7 520",
+          "costOld": "",
+          "costOne": "940",
+          "speakingClub": "2",
+          "speakingClubMonth": "1",
+          "sticker": ""
+        },
+        {
+          "lessons": "16 занятий",
+          "costNew": "14 240",
+          "costOld": "15 040",
+          "costOne": "890",
+          "speakingClub": "4",
+          "speakingClubMonth": "2",
+          "sticker": "1"
+        },
+        {
+          "lessons": "32 занятий",
+          "costNew": "27 040",
+          "costOld": "30 080",
+          "costOne": "845",
+          "speakingClub": "8",
+          "speakingClubMonth": "4",
+          "sticker": ""
+        },
+        {
+          "lessons": "64 занятий",
+          "costNew": "48 000",
+          "costOld": "60 160",
+          "costOne": "750",
+          "speakingClub": "16",
+          "speakingClubMonth": "8",
+          "sticker": ""
+        }
+      ]
+    },
+    {
+      "type": 6,
+      "items": [
+        {
+          "lessons": "8 занятий",
+          "costNew": "12 000",
+          "costOld": "",
+          "costOne": "1 500",
+          "speakingClub": "2",
+          "speakingClubMonth": "1",
+          "sticker": ""
+        },
+        {
+          "lessons": "16 занятий",
+          "costNew": "22 720",
+          "costOld": "24 000",
+          "costOne": "1 420",
+          "speakingClub": "4",
+          "speakingClubMonth": "2",
+          "sticker": "1"
+        },
+        {
+          "lessons": "32 занятий",
+          "costNew": "43 200",
+          "costOld": "48 000",
+          "costOne": "1 350",
+          "speakingClub": "8",
+          "speakingClubMonth": "4",
+          "sticker": ""
+        },
+        {
+          "lessons": "64 занятий",
+          "costNew": "76 800",
+          "costOld": "96 000",
+          "costOne": "1 200",
+          "speakingClub": "16",
+          "speakingClubMonth": "8",
+          "sticker": ""
+        }
+      ]
+    }
+  ]
+}

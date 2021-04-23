@@ -1,0 +1,252 @@
+.grid-list {
+    $root: &;
+
+    margin-bottom: 14rem;
+
+    @include media-breakpoint-down(lg) {
+        margin-bottom: 10rem;
+
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 0;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-flow: row wrap;
+        align-content: flex-start;
+        justify-content: space-between;
+
+        @include mobile-offset;
+    }
+
+    &__item {
+        width: 100%;
+        margin-bottom: 10rem;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+
+        @include media-breakpoint-up(xl) {
+            width: calc(50% - 4rem);
+
+            &:nth-last-of-type(2) {
+                margin-bottom: 0;
+            }
+        }
+
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 2rem;
+        }
+
+        &_alt {
+            display: flex;
+            justify-content: space-around;
+            justify-content: space-evenly;
+
+            @include media-breakpoint-up(xl) {
+                justify-content: space-between;
+                width: calc(50% - 8rem);
+            }
+        }
+    }
+
+    &_downward-left {
+        margin-bottom: 34rem;
+
+        @include media-breakpoint-down(md) {
+            margin-bottom: 14rem;
+
+            @include media-breakpoint-down(sm) {
+                margin-bottom: 3rem;
+            }
+        }
+
+        #{$root} {
+            &__item {
+                &:nth-child(odd) {
+                    transform: translateY(8rem);
+
+                    @include media-breakpoint-down(md) {
+                        transform: none;
+                    }
+                }
+            }
+        }
+    }
+
+    &_downward-right {
+        padding-top: 2.5rem;
+
+        @include media-breakpoint-down(sm) {
+            padding-top: 0.5rem;
+        }
+
+        #{$root} {
+            &__item {
+                &:nth-child(even) {
+                    transform: translateY(8rem);
+
+                    &:last-of-type {
+                        margin-bottom: 8rem;
+
+                        @include media-breakpoint-down(lg) {
+                            margin-bottom: 2rem;
+                        }
+                    }
+
+                    @include media-breakpoint-down(lg) {
+                        transform: none;
+                    }
+                }
+            }
+        }
+    }
+
+    &_downward-right2 {
+        padding-top: 2.5rem;
+
+        @include media-breakpoint-down(sm) {
+            padding-top: 0;
+        }
+
+        #{$root} {
+            &__item {
+                &:not(:last-of-type) {
+                    margin-bottom: 8rem;
+
+                    @include media-breakpoint-down(sm) {
+                        margin-bottom: 3rem;
+                    }
+                }
+
+                &:nth-child(even) {
+                    transform: translateY(9rem);
+
+                    &:last-of-type {
+                        margin-bottom: 9rem;
+
+                        @include media-breakpoint-down(lg) {
+                            margin-bottom: 2rem;
+                        }
+                    }
+
+                    @include media-breakpoint-down(lg) {
+                        transform: none;
+                    }
+                }
+            }
+        }
+    }
+
+    &_offset-lr {
+        #{$root} {
+            &__item {
+                &:nth-child(odd) {
+                    padding-left: calc(#{$col-width} * 2);
+
+                    @include media-breakpoint-down(sm) {
+                        padding-left: 0;
+                    }
+                }
+                &:nth-child(even) {
+                    padding-right: calc(#{$col-width} * 2);
+
+                    @include media-breakpoint-down(sm) {
+                        padding-right: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    &_offset-lr-reverse {
+        #{$root} {
+            &__wrapper {
+                flex-direction: row-reverse;
+            }
+            &__item {
+                &:nth-child(odd) {
+                    padding-right: calc(#{$col-width} * 2);
+
+                    @include media-breakpoint-down(sm) {
+                        padding-right: 0;
+                    }
+                }
+                &:nth-child(even) {
+                    padding-left: calc(#{$col-width} * 2);
+
+                    @include media-breakpoint-down(sm) {
+                        padding-left: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    &_offset-list {
+        margin-top: 9rem;
+        margin-bottom: 2rem;
+
+        #{$root} {
+            &__item {
+                &:nth-child(odd) {
+                    padding-left: calc(#{$col-width} * 4.5);
+
+                    @include media-breakpoint-down(sm) {
+                        padding-left: 0;
+                    }
+                }
+                &:nth-child(even) {
+                    padding-right: calc(#{$col-width} * 4.5);
+
+                    @include media-breakpoint-down(sm) {
+                        padding-right: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    &_no-mb {
+        margin-bottom: 0;
+    }
+
+    &_two-per-row {
+        #{$root} {
+            &__item {
+                margin-bottom: 8rem;
+
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+
+                @include media-breakpoint-down(sm) {
+                    margin-bottom: 3rem;
+
+                    &:last-of-type {
+                        margin-bottom: 3rem;
+                    }
+                }
+
+                @include media-breakpoint-up(xl) {
+                    &:nth-last-of-type(2) {
+                        margin-bottom: 8rem;
+                    }
+
+                    &:last-child:nth-child(odd),
+                    &:nth-last-child(2):nth-child(odd),
+                    &:last-child:nth-child(even) {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+
+
+    &_no-mb {
+        margin-bottom: 0;
+    }
+}

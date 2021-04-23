@@ -1,0 +1,182 @@
+extends ../../layout/layout
+include ../../components/main/main
+include ../../components/footer/footer
+include ../../components/section/section
+include ../../components/lead-2/lead-2
+include ../../components/two-cols-with-picture/two-cols-with-picture
+include ../../components/list-circle/list-circle
+include ../../components/londonexp-features/londonexp-features
+include ../../components/text-banner/text-banner
+include ../../components/lessons-gift-banner/lessons-gift-banner
+include ../../components/block-title/block-title
+include ../../components/video-block/video-block
+include ../../components/slider/slider
+include ../../components/prop-block/prop-block
+include ../../components/class-format/class-format
+include ../../components/individual-group-classes/individual-group-classes
+
+block content
+    div#barba-wrapper
+        .barba-container(data-namespace='child-courses')
+            +main
+                +section.section_portage.section_margin
+                    +lead-2({
+                        title: 'Онлайн-курсы английского<br>для детей',
+                        description: 'Качественное образование&nbsp;&mdash; крепкий фундамент для успешного будущего ребенка.',
+                        smallTitle: 'true',
+                        figure: {
+                            img: '../child-courses/images/child-courses-lead-figure.jpg',
+                            sources: [
+                                {
+                                    srcset: '../child-courses/images/child-courses-mob-with-whole-shadow.jpg',
+                                    media: '(max-width: 767.9px)'
+                                }
+                            ],
+                            objectFit: 'contain',
+                            objPos: ['right', 'center']
+                        },
+                        btn: {
+                            text: 'Записаться',
+                            href: '#',
+                            trigger: true
+                        }
+                    }).lead-2_child
+                        +leadSvg7.lead-2__svg
+                +section.section_margin
+                    +two-cols-with-picture({
+                        firstCol: {
+                            title: 'Время учить английский',
+                            subtitle: 'Английский язык&nbsp;&mdash; ключик к&nbsp;большим карьерным и&nbsp;социальным возможностям.',
+                            text: '<mark data-translation=\'Это известный факт\'>It\'s a well-known fact</mark>,  однако многие упускают прекрасное школьное время для изучения языка. Будьте на&nbsp;шаг впереди, займитесь с&nbsp;ребенком английским всерьез уже сегодня.',
+                            img: '../child-courses/images/text-bg-1.png'
+                        },
+                        secondCol: {
+                            title: 'Это страшное слово &laquo;ЕГЭ&raquo;',
+                            subtitle: 'Каждое родительское собрание проходит по&nbsp;мотиву фильма &laquo;Звонок&raquo;: &laquo;Через семь дней вы&nbsp;сдаете ЕГЭ&raquo;. Бр-р-р.',
+                            text: 'Не&nbsp;поддавайтесь панике, возьмите эту задачу под свой контроль. Экзамен по&nbsp;английскому языку сложный, но&nbsp;не&nbsp;смертельный.',
+                            img: '../child-courses/images/text-bg-2.png',
+                            horizontalPic: 'true'
+                        },
+                        pictureBig: {
+                            lazy: true,
+                            sources: [],
+                            img: '../child-courses/images/studying.jpg'
+                        }
+                    })
+                +section.section_pt.section_pb.section_hint-of-red
+                    +block-title({
+                        title: 'Подготовка к&nbsp;экзаменам',
+                        description: '<p>Наш курс &laquo;Подготовка к&nbsp;ОГЭ и&nbsp;ЕГЭ&raquo;, составлен на&nbsp;основе федерального компонента государственного стандарта основного общего образования.</p>'
+                    })
+                    +list-circle
+                    +btn({tagName: 'button'})(data='free-popup').btn_pink.btn_custom-padding.btn_center.btn_mobile-padding28 Записаться на курс
+                +section.section_hint
+                    +londonexp-features({ title: data.featuresChildCourses.title, features: data.featuresChildCourses.features }).londonexp-features_pink
+                +section.section_pt.section_pb
+                    +text-banner({
+                        svg: {
+                            name: 'rocket',
+                        },
+                        text: '<p>Наш принципиальный подход&nbsp;&mdash; нет предела совершенству. Мы&nbsp;постоянно развиваемся сами и&nbsp;стараемся привить эти&nbsp;же ценности и&nbsp;нашим студентам.</p>',
+                        btn: {
+                            link: '/learning-process.html',
+                            text: 'Читать больше о нашей методике'
+                        }
+                    }).text-banner_no-fixed-height
+                +section.child-courses__gift-section
+                    +lessons-gift-banner({
+                        picture: {
+                            sources: [{
+                              srcset: '../../components/lessons-gift-banner/images/lessons-gift-child-mobile.jpg',
+                              media: '(max-width: 1199.98px)'
+                            }],
+                            img: '../../components/lessons-gift-banner/images/lessons-gift-child.jpg',
+                            objectFit: 'cover',
+                            objPos: ['center'],
+                            lazy: true
+                        },
+                        href: '#'
+                    }).lessons-gift-banner_child
+                +class-format({slides: [
+                       {
+                           title: 'Занятия с преподавателем',
+                           description: '<p>На&nbsp;видео-занятиях студент овладевает грамматикой, лексикой, фонетикой, учится слушать и&nbsp;говорить. Использование актуальных современных тем делают занятия максимально приближенными к&nbsp;жизни и&nbsp;динамичными.</p>',
+                           picture: {
+                               sources: [],
+                               img: '../adult-courses/images/class-format-1.png'
+                           }
+                       },
+                       {
+                          title: 'Самостоятельная работа',
+                          description: '<p>Закрепляем материал, проходя интерактивные задания в&nbsp;электронных рабочих тетрадях. Студент также может самостоятельно повторять темы в&nbsp;цифровых учебниках с&nbsp;интегрированными аудио- и&nbsp;видеоматериалами.</p>',
+                          picture: {
+                              sources: [],
+                              img: '../adult-courses/images/class-format-1.png'
+                          }
+                      }
+                   ], text: '<p>Отслеживайте свой прогресс и&nbsp;достижения в&nbsp;личном кабинете. Задавайте вопросы преподавателю в&nbsp;любое удобное время через личный чат.</p>'})
+                +section
+                    +block-title({
+                        title: 'Как проходят занятия'
+                    })
+                    +video-block({
+                        path: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4'
+                    }).video-block_mb
+                +section.section_hint-of-red
+                    +individual-group-classes({ blocks: [{
+                         title: 'Групповые занятия',
+                         description: 'Для групповых занятий мы&nbsp;набираем до&nbsp;4&nbsp;студентов от&nbsp;13&nbsp;лет, схожих по&nbsp;уровню и&nbsp;возрасту.',
+                         text: 'Групповые занятия отлично подойдут для развития коммуникативных навыков подростка.',
+                         picture: {
+                             sources: [],
+                             img: '../child-courses/images/group-child.jpg',
+                             lazy: true
+                         },
+                         circlesNum: 3
+                     },
+                    {
+                        title: 'Индивидуальные занятия',
+                        description: 'Индивидуальные занятия подойдут для детей, которым необходим персональный подход',
+                        text: 'Преподаватель выстраивает программу специально под ребенка, индивидуально движется по&nbsp;курсу, задает задания, разбирает ошибки.',
+                        picture: {
+                            sources: [],
+                            img: '../child-courses/images/individual-child.jpg',
+                            lazy: true
+                        },
+                        circlesNum: 2
+                    },
+                    {
+                        title: 'Бесплатные<br>спикинг-клабы',
+                        description: 'Разговорный клуб вносит разнообразие в&nbsp;процесс изучения языка',
+                        text: 'Актуальные темы каждую неделю, интересные собеседники, живая практика общения. Бесплатное посещение для наших студентов.',
+                        picture: {
+                            sources: [],
+                            img: '../../common/images/speaking-club.png',
+                            lazy: true
+                        },
+                        circlesNum: 1
+                    }]
+                    })
+                +section.section_pt.section_pb
+                    +slider({
+                        type: 'reviews',
+                        slides: data.reviews
+                    })
+                +section
+                    +prop-block({
+                        title: 'Попробовать <br>бесплатно',
+                        description: 'Записаться на&nbsp;пробный урок',
+                        img: {
+                            src: '../../components/prop-block/images/van-front.jpg',
+                            alt: ''
+                        },
+                        btn: {
+                            title: 'Оставить заявку',
+                            href: '#'
+                        },
+                        subtitle: 'Два занятия в&nbsp;подарок!',
+                        subdescription: 'При покупке абонемента в&nbsp;день пробного занятия',
+                        mobileImg: '../../components/prop-block/images/van-front-mobile.jpg',
+                        tabletImg: '../../components/prop-block/images/van-front-tablet.jpg'
+                    })(id='Записаться')
+            +footer

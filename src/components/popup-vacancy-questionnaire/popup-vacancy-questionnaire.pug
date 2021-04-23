@@ -1,0 +1,64 @@
+include ../input/input
+include ../btn-expand/btn-expand
+include ../contact-button/contact-button
+include ../attach-file/attach-file
+include ../btn/btn
+include ../notification/notification
+
+mixin popup-vacancy-questionnaire(args)
+    .popup-vacancy-questionnaire&attributes(attributes)
+        .popup-vacancy-questionnaire__container
+            .popup-vacancy-questionnaire__close
+            .popup-vacancy-questionnaire__logo
+                +svg({name:'logo'})
+            h2.popup-vacancy-questionnaire__title Анкета
+            form(action='/' method='POST').popup-vacancy-questionnaire__form
+                input(type='hidden' name='WEB_FORM_ID')
+                input(type='hidden' name='web_form_submit')
+                input(type='hidden' name='sessid')
+                each section, index in data.vacancyQuestionnaire
+                    .popup-vacancy-questionnaire__section(class=section.collapsible?'popup-vacancy-questionnaire__section_collapsible':'')
+                        .popup-vacancy-questionnaire__section-header
+                            .popup-vacancy-questionnaire__section-title!= section.title
+                            if (section.collapsible)
+                                +btn-expand.btn-expand_no-text-mobile.popup-vacancy-questionnaire__expand-btn(data-toggle='collapse' data-target=`#section-${index}`)
+                        .popup-vacancy-questionnaire__main-wrapper(id=`section-${index}` class=section.collapsible?'collapse':'')
+                            .popup-vacancy-questionnaire__inputs-container
+                                .popup-vacancy-questionnaire__inputs
+                                    each input in section.inputs
+                                        +input({
+                                            id: input.id,
+                                            type: input.type,
+                                            tagName: input.tagName,
+                                            required: input.required,
+                                            autocomplete: input.autocomplete,
+                                            label: input.label,
+                                            notification: input.notification
+                                        }).input_dark.popup-vacancy-questionnaire__input(class=input.tagName == 'textarea' ? 'popup-vacancy-questionnaire__input_textarea': '')
+                            if (section.addButton || section.attach)
+                                .popup-vacancy-questionnaire__section-bottom
+                                    if (section.addButton)
+                                        +btn({tagName: 'button'})(type='button').btn_add.btn_green.btn_mobile-padding38.popup-vacancy-questionnaire__bottom-item(data-add-container=`#section-${index} .popup-vacancy-questionnaire__inputs-container`)
+                                            .btn__plus
+                                            .btn__text!= section.addButton
+                                    if (section.attach)
+                                        +attach-file({
+                                            text: section.attach.text,
+                                            id: section.attach.name,
+                                            name: section.attach.name,
+                                            svg: section.attach.svg,
+                                            type: section.attach.type,
+                                            required: section.attach.required
+                                        }).attach-file_dark.popup-vacancy-questionnaire__bottom-item.popup-vacancy-questionnaire__attach
+                .popup-vacancy-questionnaire__bottom
+                    .popup-vacancy-questionnaire__bottom-info
+                        p Мы заботимся о защите ваших данных
+                        a(href='#') Политика конфиденциальности
+                    +contact-button({ title: args&&args.isAttachment?'Прикрепить':'Отправить' }).contact-button_picton.popup-vacancy-questionnaire__submit
+            if (args.notification)
+                +notification({
+                    title: args.notification.title,
+                    svg: args.notification.svg
+                })(class=args.notification.purple?'notification_bg-purple':'')
+
+

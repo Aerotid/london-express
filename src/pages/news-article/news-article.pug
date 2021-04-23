@@ -1,0 +1,71 @@
+extends ../../layout/layout
+include ../../components/main/main
+include ../../components/footer/footer
+include ../../components/btn/btn
+include ../../components/news-slider/news-slider
+include ../../components/article/article
+
+block content
+    div#barba-wrapper
+        .barba-container(data-namespace='news-article')
+            +main
+                +article({ date: { datetime: '2019-12-08 11:23:01',showDate: '08 декабря 2019'}, title: 'Интересная новость об&nbsp;онлайн&#8288;-&#8288;школе London Express'})
+                    .news-article__content(data-anim='anim-3')
+                        p Дошкольный возраст&nbsp;&mdash; это чудесное время, когда буквально все, что окружает ребенка, становится для него открытием, вызывает яркие эмоции и&nbsp;огромный интерес.
+                        p Малыш как губка впитывает новые знания и&nbsp;быстро приобретает навыки, самостоятельно проявляя интерес к&nbsp;разным сферам жизни. Именно в&nbsp;этом возрасте&nbsp;он, впервые услышав иностранную речь, с&nbsp;удовольствием продолжит знакомство с&nbsp;ней&nbsp;&mdash; главное направить ребенка в&nbsp;нужное русло и&nbsp;сделать это максимально профессионально.
+                        p Процесс обучения дошкольников английскому языку&nbsp;&mdash; интересное и&nbsp;захватывающее занятие для самих учеников и&nbsp;их&nbsp;преподавателей. И&nbsp;на&nbsp;начальном этапе, когда только происходит знакомство детей с&nbsp;новым предметом, педагог должен приложить все усилия, чтобы сформировать интерес к&nbsp;нему и&nbsp;сделать так, чтобы каждый урок запомнился ученикам и&nbsp;был насыщенным познавательными и&nbsp;веселыми моментами.
+                        p Лингвистическая школа &laquo;Лондон Экспресс&raquo; специально для детей в&nbsp;возрасте от&nbsp;3&nbsp;до&nbsp;7&nbsp;лет разработала программу обучения дошкольников английскому языку Kids Club Junior. Ее&nbsp;основу составляет увлекательная коммуникативная игра, которая не&nbsp;просто захватывает детей, она является прогрессивной и&nbsp;эффективной методикой, помогающей дошкольникам получать нужные знания на&nbsp;наших уроках и&nbsp;весело проводить время.
+                    +news-slider([
+                        {
+                            image: './images/news-1.jpg',
+                            caption: 'Подпись к фотографии'
+                        },
+                        {
+                            image: './images/news-1.jpg',
+                            caption: 'Подпись к фотографии 2'
+                        },
+                        {
+                            image: './images/news-1.jpg',
+                            caption: 'Подпись к фотографии 3'
+                        },
+                        {
+                            image: './images/news-1.jpg',
+                            caption: 'Подпись к фотографии 4'
+                        },
+                        {
+                            image: './images/news-1.jpg',
+                            caption: 'Подпись к фотографии 5'
+                        },
+                        {
+                            image: './images/news-1.jpg',
+                            caption: 'Подпись к фотографии 6'
+                        },
+                        {
+                            image: './images/news-1.jpg',
+                            caption: 'Подпись к фотографии 7'
+                        },
+                        {
+                            image: './images/news-1.jpg',
+                            caption: 'Подпись к фотографии 8'
+                        },
+                        {
+                            image: './images/news-1.jpg',
+                            caption: 'Подпись к фотографии 9'
+                        },
+                        {
+                            image: './images/news-1.jpg',
+                            caption: 'Подпись к фотографии 10'
+                        },
+                        {
+                            image: './images/news-1.jpg',
+                            caption: 'Подпись к фотографии 11'
+                        },
+                        {
+                            image: './images/news-1.jpg',
+                            caption: 'Подпись к фотографии 12'
+                        }
+                    ])(data-anim='anim-3')
+                    hr.news-article__hr
+                    .d-flex.justify-content-center
+                        +btn({tagName: 'a'})(href='/news.html').btn_grey-border.btn_mobile-padding21.news-article__return Назад к новостям
+            +footer

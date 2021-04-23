@@ -1,0 +1,63 @@
+{
+    "img": "../../components/sandwich-menu/images/figure.png",
+    "mainMenu": [
+        {
+            "title": "Взрослым",
+            "href": "/adult-courses.html"
+        },
+        {
+            "title": "Детям",
+            "href": "/child-courses.html"
+        },
+        {
+            "title": "Курсы",
+            "href": "/courses.html"
+        },
+        {
+            "title": "Преподаватели",
+            "href": "/teachers.html"
+        }
+    ],
+    "submenu":[
+        {
+            "title": "Вакансии",
+            "href": "https://stavropol.hh.ru/employer/4588785"
+        },
+        {
+            "title": "О школе",
+            "href": "/about.html"
+        },
+        {
+            "title": "Отзывы",
+            "href": "/reviews.html"
+        },
+        {
+            "title": "Преподавателям",
+            "href": "/vacancies.html"
+        },
+        {
+            "title": "Процесс обучения",
+            "href": "/learning-process.html"
+        },
+        {
+            "title": "Стоимость",
+            "href": "/price.html"
+        },
+        {
+            "title": "Новости",
+            "href": "/news.html"
+        },
+        {
+            "title": "Блог",
+            "href": "/blog.html"
+        },
+        {
+            "title": "Контакты",
+            "href": "/contacts.html"
+        },
+        {
+            "title": "Сведения об организации",
+            "href": "/about-the-organisation.html"
+        }
+    ]
+}

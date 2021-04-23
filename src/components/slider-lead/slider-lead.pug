@@ -1,0 +1,32 @@
+include ../lead/lead
+include ../../components/site-awards/site-awards
+
+mixin slider-lead(args)
+    .slider-lead&attributes(attributes)
+        +picture({
+            sources: [{
+                srcset: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7',
+                media: '(max-width: 767.9px)'
+            }],
+            img: args.bg1,
+            objectFit: 'cover'
+        }).slider-lead__shadow.slider-lead__shadow_first
+        +picture(args.bg2).slider-lead__shadow.slider-lead__shadow_second
+        .swiper-container
+            .swiper-wrapper
+                each lead, i in args.data
+                    .swiper-slide
+                        +lead(lead)
+                            if (i === 0)
+                                +mainLeadSvg1.lead__svg
+                            else if (i === 1)
+                                +mainLeadSvg2.lead__svg
+                            else if (i === 2)
+                                +mainLeadSvg3.lead__svg
+                            else if (i === 3)
+                                +mainLeadSvg4.lead__svg
+        .slider-lead__images(data-speed='-2')
+            +picture(args.picture).slider-lead__person
+            +mustache.slider-lead__mustache
+        if (args.awards)
+            +site-awards(args.awards)

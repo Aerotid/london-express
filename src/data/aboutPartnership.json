@@ -1,0 +1,30 @@
+[
+    {
+        "title": "Мировое издательство Cambridge University Press",
+        "images": {
+            "default": "../about/images/partner-1.png",
+            "hover": "../about/images/partner-1-hover.png"
+        }
+    },
+    {
+        "title": "Мировое издательство Macmillan Education",
+        "images": {
+            "default": "../about/images/partner-2.png",
+            "hover": "../about/images/partner-2-hover.png"
+        }
+    },
+    {
+        "title": "Методический центр Cambridge Resource Centre",
+        "images": {
+            "default": "../about/images/partner-3.png",
+            "hover": "../about/images/partner-3-hover.png"
+        }
+    },
+    {
+        "title": "Экзаменационный синдикат Cambridge English Qualifications",
+        "images": {
+            "default": "../about/images/partner-4.png",
+            "hover": "../about/images/partner-4-hover.png"
+        }
+    }
+]

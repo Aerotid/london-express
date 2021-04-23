@@ -1,0 +1,36 @@
+include ../picture/picture
+include ../../components/btn/btn
+include ../notification/notification
+include ../input/input
+include ../contact-button/contact-button
+
+mixin subscription-free-course(args)
+    .subscription-free-course&attributes(attributes)
+        .subscription-free-course__wrapper
+            if (args.picture)
+                .subscription-free-course__bg
+                    +picture(args.picture)
+            .subscription-free-course__content(data-anim="anim-1")
+                .subscription-free-course__title!=args.title
+                .subscription-free-course__subtitle!=args.subtitle
+                form.subscription-free-course__form(action='/', method='POST')
+                    input(type='hidden' name='WEB_FORM_ID')
+                    input(type='hidden' name='web_form_submit')
+                    input(type='hidden' name='sessid')
+                    +input({
+                        id: 'free-course-email',
+                        name: 'email',
+                        type: 'email',
+                        required: true,
+                        label: 'Ваш email',
+                        notification: 'В формате: primer@email.ru'
+                    }).input_subscription
+                    +contact-button({ title: 'Подписаться' }).contact-button_subscription
+                    .subscription-free-course__bottom-info
+                        p
+                            | Нажимая кнопку &laquo;Подписаться&raquo;, вы&nbsp;принимаете условия Политики, и&nbsp;предоставляете согласие на&nbsp;обработку
+                            | своих персональных данных на&nbsp;условиях <a href='/privacy-policy.html' target='_blank'>Политики конфиденциальности</a>
+                +notification({
+                    svg: 'smile',
+                    title: 'Вы успешно подписаны на email-рассылку',
+                }).notification_bg-purple

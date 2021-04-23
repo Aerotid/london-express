@@ -1,0 +1,298 @@
+[data-namespace="courses"] {
+    .lead-2 {
+        margin-bottom: 0;
+    }
+
+    .adult-courses {
+        position: relative;
+        padding-bottom: 2.3rem;
+
+        @include media-breakpoint-down(sm) {
+            padding-bottom: 4rem;
+        }
+
+        &__description {
+            margin-bottom: 14rem;
+            @include mobile-offset;
+            @include font-3;
+            text-align: center;
+
+            @include media-breakpoint-down(lg) {
+                margin-bottom: 10rem;
+
+                @include media-breakpoint-down(sm) {
+                    margin-bottom: 4rem;
+                }
+            }
+        }
+
+        &__background {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+        }
+    }
+
+    .children-courses,
+    .corporate {
+        &__block-title {
+            margin-bottom: 8.5rem;
+
+            @include media-breakpoint-down(sm) {
+                margin-bottom: 3rem;
+            }
+        }
+    }
+
+    .exams {
+        &__block-title {
+            margin-bottom: 8.9rem;
+
+            @include media-breakpoint-down(sm) {
+                margin-bottom: 3rem;
+            }
+        }
+    }
+
+    .children-courses,
+    .exams,
+    .corporate {
+        padding-bottom: 0.1rem;
+    }
+
+    .corporate {
+        &__steps {
+            display: flex;
+            align-items: center;
+
+            ol {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            li {
+                position: relative;
+                display: flex;
+                align-items: center;
+                margin-bottom: 3rem;
+                @include font-4;
+            }
+
+            p {
+                margin-bottom: 0;
+            }
+
+            &-number {
+                flex-shrink: 0;
+                display: flex;
+                justify-content: center;
+                flex-grow: 0;
+                flex-shrink: 0;
+                align-items: center;
+                margin-right: 3rem;
+                width: 8rem;
+                height: 8rem;
+                border: 1px solid rgba(white, 0.5);
+                border-radius: 50%;
+
+                @include media-breakpoint-down(sm) {
+                    margin-right: 1.8rem;
+                    width: 4.2rem;
+                    height: 4.2rem;
+                }
+            }
+        }
+    }
+
+    .about-classes {
+        margin-bottom: 14rem;
+
+        @include media-breakpoint-down(lg) {
+            margin-bottom: 10rem;
+            overflow: hidden;
+
+            @include media-breakpoint-down(sm) {
+                margin-bottom: 4rem;
+            }
+        }
+
+        &__row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 9.6rem;
+            @include mobile-offset;
+
+            @include media-breakpoint-down(lg) {
+                margin-bottom: 4rem;
+                flex-direction: column;
+
+                @include media-breakpoint-down(sm) {
+                    margin-bottom: 0;
+                }
+            }
+
+            &:nth-child(2) {
+                margin-bottom: 10rem;
+
+                @include media-breakpoint-down(lg) {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        &__column {
+            width: calc(50% - #{$col-width}/2);
+
+            @include media-breakpoint-down(lg) {
+                width: 100%;
+            }
+        }
+
+        &__title {
+            @include font-2;
+
+            @include media-breakpoint-down(lg) {
+                margin-bottom: 3rem;
+            }
+        }
+
+        &__description {
+            margin-bottom: 3rem;
+            @include font-11;
+
+            @include media-breakpoint-down(lg) {
+                margin-bottom: 2rem;
+            }
+        }
+
+        &__subtitle {
+            @include font-26;
+
+            @include media-breakpoint-down(lg) {
+                margin-bottom: 3rem;
+            }
+        }
+
+        &__bold-text {
+            @include font-8;
+            margin-bottom: 2rem;
+        }
+
+        &__wrapper {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+
+            @include media-breakpoint-down(lg) {
+                justify-content: flex-start;
+            }
+        }
+
+        &__tag {
+            display: flex;
+            align-items: baseline;
+            margin-bottom: 3.8rem;
+
+            @include media-breakpoint-down(lg) {
+                margin-right: 4rem;
+
+                @include media-breakpoint-down(sm) {
+                    margin-bottom: 2rem;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+            &:last-child:nth-child(odd),
+            &:nth-last-child(2):nth-child(odd),
+            &:last-child:nth-child(even) {
+                margin-bottom: 0;
+            }
+
+            &-circle {
+                flex-shrink: 0;
+                flex-grow: 0;
+                margin-right: 2rem;
+                width: 1rem;
+                height: 1rem;
+                background-color: $color-14;
+                border-radius: 50%;
+
+                @include media-breakpoint-down(sm) {
+                    margin-right: 1.5rem;
+                    width: 0.5rem;
+                    height: 0.5rem;
+                }
+            }
+
+            &-text {
+                width: 21.3rem;
+                @include font-26;
+
+                @include media-breakpoint-down(sm) {
+                    width: auto;
+                }
+            }
+        }
+
+        &__levels {
+            display: flex;
+            justify-content: space-between;
+
+            @include media-breakpoint-down(lg) {
+                width: 1200px;
+                transform: translateX(-15.5%);
+
+                @include media-breakpoint-down(sm) {
+                    width: 897px;
+                    transform: translateX(-15.5%);
+                }
+            }
+        }
+
+        &__level {
+            @include font-28;
+
+            @include media-breakpoint-down(lg) {
+                font-size: 14px;
+
+                @include media-breakpoint-down(sm) {
+                    font-size: 14px;
+
+                    &:not(:last-child) {
+                        margin-right: 50px;
+                    }
+                }
+            }
+        }
+
+        &__level-progression {
+            margin-top: 4rem;
+
+            @include media-breakpoint-down(lg) {
+                transform: translateX(-14%);
+                width: 1200px;
+
+                @include media-breakpoint-down(sm) {
+                    margin-top: 3rem;
+                    transform: translateX(-12.15%);
+                    width: 897px;
+                }
+            }
+
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    .courses__subscription {
+        margin-bottom: 0;
+    }
+
+}

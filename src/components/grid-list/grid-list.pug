@@ -1,0 +1,8 @@
+mixin grid-list(args)
+    if args && args.class
+        - attributes.class = args.class;
+    .grid-list&attributes(attributes)
+        .row
+            .grid-list__wrapper.col-md-22.col-xxl-20.offset-md-1.offset-xxl-2
+                //- wrap each item with div.two-cols__item or add class 'two-cols__item'
+                block

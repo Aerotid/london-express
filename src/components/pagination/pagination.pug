@@ -1,0 +1,7 @@
+include ../btn-arrow/btn-arrow
+
+mixin pagination(args)
+    .pagination&attributes(attributes)
+        +btn-arrow({svg: 'arrow-left'}).pagination__btn-arrow.pagination__btn-arrow_prev
+        .pagination__page!= args.activeIndex
+        +btn-arrow({svg: 'arrow-right'}).pagination__btn-arrow.pagination__btn-arrow_next

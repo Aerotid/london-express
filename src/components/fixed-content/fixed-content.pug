@@ -1,0 +1,7 @@
+include ../chat/chat
+include ../subscription-form-side/subscription-form-side
+
+mixin fixed-content(args)
+    .fixed-content&attributes(attributes)
+        +subscription-form-side.fixed-content__item
+        +chat.fixed-content__item

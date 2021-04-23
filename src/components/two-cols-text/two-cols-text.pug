@@ -1,0 +1,8 @@
+mixin two-cols-text(args)
+    block
+    .two-cols-text&attributes(attributes)
+        .row.d-none.d-md-flex
+            .col-md-5.offset-md-6.two-cols-text__content
+                -createBlock('left')
+            .col-md-9.two-cols-text__content
+                -createBlock('right')

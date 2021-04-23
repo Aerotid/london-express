@@ -1,0 +1,20 @@
+include ../btn-group/btn-group
+include ../btn/btn
+
+mixin upcoming-lesson(args)
+    .upcoming-lesson&attributes(attributes)
+        .upcoming-lesson__container
+            .upcoming-lesson__title!= args.title
+            .upcoming-lesson__info
+                .upcoming-lesson__info-day!= args.date
+                .upcoming-lesson__info-time
+                    .upcoming-lesson__info-time-icon
+                    != args.time
+            .upcoming-lesson__type курс
+            .upcoming-lesson__text!= args.course
+        if (args.page === 'vacancies')
+            +btn({tagName: 'button'}).btn_small.btn_full-width.btn_green Начать
+        else
+            +btn-group.upcoming-lesson__btn-wrapper
+                +btn({tagName: 'button'}).btn_grey.btn_small Перенести
+                +btn({tagName: 'button'}).btn.btn_gray-border.btn_small Отменить

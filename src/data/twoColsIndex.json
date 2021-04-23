@@ -1,0 +1,65 @@
+[
+    {
+        "bigTitle": "Онлайн-школа иностранных языков<br>London Express Online",
+        "picture": {
+            "sources": [
+                {
+                    "srcset": "../index/images/grandma-mobile.jpg",
+                    "media": "(max-width: 767.9px)"
+                }
+            ],
+            "img": "../index/images/grandma.jpg",
+            "objectFit": "cover",
+            "lazy": "true"
+        },
+        "pictureBottom": true,
+        "link": {
+            "title": "Подробнее о&nbsp;школе",
+            "href": "/about.html"
+        },
+        "title": "Profound",
+        "description": "Фундаментальный подход в&nbsp;цифровом формате",
+        "reverse": false
+    },
+    {
+        "title": "Международный опыт",
+        "picture": {
+            "sources": [
+                {
+                    "srcset": "../index/images/globe-mobile.jpg",
+                    "media": "(max-width: 767.9px)"
+                }
+            ],
+            "img": "../index/images/globe.jpg",
+            "objectFit": "cover",
+            "lazy": "true"
+        },
+        "description": "Собственные авторские программы с&nbsp;использованием лучших международных методик",
+        "link": {
+            "title": "Подробнее о&nbsp;методике",
+            "href": "/learning-process.html"
+        },
+        "reverse": true
+    },
+    {
+        "title": "Superteacher",
+        "picture": {
+            "sources": [
+                {
+                    "srcset": "../index/images/hero-mobile.jpg",
+                    "media": "(max-width: 767.9px)"
+                }
+            ],
+            "img": "../index/images/hero.jpg",
+            "objectFit": "cover",
+            "lazy": "true"
+        },
+        "pictureBottom": true,
+        "description": "Одолеем страх неудачи, сломаем языковой барьер, научим летать на&nbsp;английском",
+        "link": {
+            "title": "Подробнее о&nbsp;преподавателях",
+            "href": "/teachers.html"
+        },
+        "reverse": false
+    }
+]

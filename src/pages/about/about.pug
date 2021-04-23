@@ -1,0 +1,117 @@
+extends ../../layout/layout
+include ../../components/main/main
+include ../../components/footer/footer
+include ../../components/section/section
+include ../../components/lead-2/lead-2
+include ../../components/block-title/block-title
+include ../../components/block-title-2/block-title-2
+include ../../components/block-text/block-text
+include ../../components/london-logos/london-logos
+include ../../components/tile-card/tile-card
+include ../../components/two-cols-text/two-cols-text
+include ../../components/about-stats/about-stats
+include ../../components/content-area/content-area
+include ../../components/three-cols-row/three-cols-row
+include ../../components/about-item/about-item
+include ../../components/person-card/person-card
+include ../../components/two-cols-with-picture/two-cols-with-picture
+include ../../components/slider-history/slider-history
+
+block content
+    div#barba-wrapper
+        .barba-container(data-namespace='about')
+            +main
+                +section.section_whisper2.section_margin
+                    +lead-2({
+                        title: 'О школе',
+                        description: 'Онлайн-школа английского языка с&nbsp;качественно новым уровнем преподавания иностранных языков для взрослых и&nbsp;детей.',
+                        figure: {
+                            img: '../about/images/about-lead-figure.jpg',
+                            sources: [
+                                {
+                                    srcset: '../about/images/about-lead-figure-mob.jpg',
+                                    media: '(max-width: 767.9px)'
+                                }
+                            ],
+                            objectFit: 'contain',
+                            objPos: ['right', 'center']
+                        },
+                        btn: {
+                            text: 'Пробное занятие',
+                            color: 'pink',
+                            href: '#',
+                            trigger: true
+                        }
+                    }).lead-2_about
+                        +leadSvg2.lead-2__svg
+                +section.section_pb
+                    +block-title({
+                        title: 'London Express Online',
+                        description: '<p>Методология онлайн-школы опирается на&nbsp;собственный многолетний опыт офлайн-образования и&nbsp;новейшие международные достижения в&nbsp;области методики и&nbsp;практики обучения языку, в&nbsp;частности инновационных технологий.</p><p>London Express Online предоставляет исключительно лицензионный доступ к&nbsp;платформе ведущего международного издательства с&nbsp;разнообразным учебным материалом: интерактивными упражнениями, играми, аудио- и&nbsp;видеозаписями.</p>'
+                    }).about__block-title-main
+                    +london-logos
+                +section.section_pt.section_whisper-offset
+                    +block-title({
+                        title: 'Группа компаний<br>London Express'
+                    }).block-title_mobile-title-left
+                    +two-cols-with-picture({
+                        firstCol: {
+                            text: 'Группа компаний London Express включает в&nbsp;себя сеть частных лингвистических школ London Express, онлайн-школу London Express Online, сеть центров детского развития London Express Junior.'
+                        },
+                        secondCol: {
+                            text: 'Флагманская лингвистическая школа London Express&nbsp;&mdash; это аккредитованный открытый центр RU177 по&nbsp;подготовке и&nbsp;сдаче международных экзаменов Сambridge Exams, а&nbsp;также первый CELTA центр в&nbsp;городе с&nbsp;населением 150 тысяч человек.'
+                        },
+                        pictureBig: {
+                            lazy: true,
+                            sources: [],
+                            img: '../about/images/image.jpg'
+                        }
+                    }).two-cols-with-picture_no-pic
+                +section.section_pt
+                    +block-text({text: '<p>За&nbsp;годы существования нашей компании выпущены десятки тысяч благодарных студентов, которые могли&nbsp;бы составить небольшой город<br>London Express City.</p>'})
+                +section.section_margin.section_pt.section_pb
+                    +block-title({
+                        title: 'Самая широко представленная сеть в&nbsp;России',
+                        description: 'Все учреждения компании London Express лицензированы Министерством образования Российской Федерации. Уровень обучения соответствует общеевропейской шкале (CEFR).'
+                    })
+                    +about-stats
+                +section.section_hint.section_margin
+                    +slider-history({
+                        slides: data.sliderHistory
+                    })(data-anim="anim-1")
+                +section
+                    +block-title({
+                        title: 'Основатели'
+                    }).about__founders-block-title
+                    each card, index in data.aboutFounders
+                        +person-card(card, index)(data-anim="anim-1")
+                +section.section_hint-of-red.section_mobile-white.section_pt.section_pb.about__partnership
+                    +block-title({
+                        title: 'Партнерство',
+                        description: 'Компания London Express&nbsp;&mdash; партнер британского экзаменационного синдиката, крупнейших международных издательств, публикующих академическую, научную и&nbsp;учебную литературу.'
+                    }).about__block-title-partnership
+                    +grid-list.grid-list_no-mb(data-anim="anim-1")
+                        .grid-list__item.grid-list__item_alt
+                            each item, i in data.aboutPartnership
+                                if (i <= 1)
+                                    +about-item(item)
+                        .grid-list__item.grid-list__item_alt
+                            each item, i in data.aboutPartnership
+                                if (i > 1)
+                                    +about-item(item).about__last-item
+                +section.bg_pink
+                    +tile-card({
+                        background: ''
+                    })(data-anim="anim-1")
+                        .tile-card__title Контакты
+                        .tile-card__row
+                            .tile-card__case
+                                .tile-card__subtitle PR-отдел
+                                a(href='mailto:pr@londonexpress-online.ru') pr@londonexpress-online.ru
+                            .tile-card__case
+                                .tile-card__subtitle HR-отдел
+                                a(href='mailto:hr@londonexpress-online.ru') hr@londonexpress-online.ru
+                            .tile-card__case
+                                .tile-card__subtitle Отдел заботы о&nbsp;клиентах
+                                a(href='mailto:care@londonexpress-online.ru') care@londonexpress-online.ru
+            +footer

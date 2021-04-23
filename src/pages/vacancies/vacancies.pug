@@ -1,0 +1,164 @@
+extends ../../layout/layout
+include ../../components/main/main
+include ../../components/footer/footer
+include ../../components/section/section
+include ../../components/lead-2/lead-2
+include ../../components/block-title/block-title
+include ../../components/block-title-2/block-title-2
+include ../../components/video-block/video-block
+include ../../components/grid-list/grid-list
+include ../../components/info-block-1/info-block-1
+include ../../components/register-proposal/register-proposal
+include ../../components/slider/slider
+include ../../components/contact-form/contact-form
+include ../../components/popup-event/popup-event
+include ../../components/upcoming-lesson/upcoming-lesson
+include ../../components/content-picture/content-picture
+include ../../components/popup-vacancy-questionnaire/popup-vacancy-questionnaire
+include ../../components/londonexp-features/londonexp-features
+include ../../components/right-list/right-list
+
+block content
+    div#barba-wrapper
+        .barba-container(data-namespace='vacancies')
+            +main
+                +section.section_whisper2.section_margin.vacancies__lead
+                    +lead-2({
+                        title: 'Приглашаем талантливых преподавателей',
+                        description: 'Супер-люди нужны всегда. Присоединяйтесь к&nbsp;нашей команде!',
+                        figure: {
+                            img: '../vacancies/images/vacancies-lead-figure.jpg',
+                            sources: [
+                                {
+                                    srcset: '../vacancies/images/vacancies-lead-figure-mob.png',
+                                    media: '(max-width: 767.9px)'
+                                }
+                            ],
+                            objectFit: 'contain',
+                            objPos: ['right', 'bottom']
+                        },
+                        bottom: true,
+                        btn: {
+                            text: 'Откликнуться',
+                            color: 'pink',
+                            href: '#Откликнуться'
+                        }
+                    }).lead-2_stick-bottom.lead-2_vacancies
+                        +leadSvg3.lead-2__svg
+                +section.section_margin
+                    +block-title({
+                        title: 'Формат работы в&nbsp;онлайн-школе'
+                    })
+                    +video-block({
+                        path: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4'
+                    }).video-block_mb
+                +section.section_hint-of-red
+                    +londonexp-features({
+                        features: data.vacancies.advantages.features
+                    }).londonexp-features_vacancies
+                +section.section_pt
+                    +register-proposal({
+                        description: '<p>Удобный личный кабинет преподавателя со&nbsp;всей необходимой информацией в&nbsp;одном месте: учебное пособие, прогресс ученика, финансы, показатели своей эффективности и&nbsp;другое</p>',
+                        img: {
+                            src: '../vacancies/images/poster.png',
+                            alt: ''
+                        },
+                        picture: {
+                            sources: [
+                                {
+                                    srcset: "../vacancies/images/poster-mobile.jpg",
+                                    media: "(max-width: 1199px)"
+                                }
+                            ],
+                            img: "../vacancies/images/poster.png"
+                        }
+                    }).register-proposal_line-bottom.register-proposal_not-animated.register-proposal_smaller(data-anim='anim-3')
+                        +popup-event({
+                            date: '13 октября',
+                            time: '11:00 - 12:00',
+                            student: 'Некрасова Елена',
+                            count: '3 занятия',
+                            course: 'Общий курс английского языка для взрослых'
+                        }).popup-event_vacancies
+                +section
+                    +block-title-2({
+                        title: 'Печеньки'
+                    })
+                    +grid-list.grid-list_offset-lr(data-anim='trigger').vacancies__bonuses
+                        each vacanciesBonuse in data.vacancies.bonuses
+                            .grid-list__item(data-anim='anim-2')
+                                +info-block-1(vacanciesBonuse)
+                +section
+                    +right-list({
+                        title: 'Настоящий Superteacher',
+                        description: 'Ответственный, общительный, влюбленный в&nbsp;английский язык Мы&nbsp;ищем сотрудников с&nbsp;активной жизненной позицией, умеющих работать в&nbsp;команде и&nbsp;самостоятельно.',
+                        listTitle: data.vacancies.candidates.title,
+                        cols: data.vacancies.candidates.candidatesList,
+                        picture: {
+                             sources: [
+                                 {
+                                     srcset: '../vacancies/images/hero-mobile.jpg',
+                                     media: '(max-width: 767.9px)'
+                                 },
+                                 {
+                                      srcset: '../vacancies/images/hero-tablet.jpg',
+                                      media: '(max-width: 1199.9px)'
+                                 }
+                             ],
+                             img: '../vacancies/images/hero.jpg',
+                             lazy: true,
+                             objectFit: 'contain',
+                             objPos: ['bottom']
+
+                         }
+                    }).right-list_blue.right-list_image-bottom.right-list_vacancies
+                +section.section_pt.section_pb
+                    +block-title({
+                        title: 'Отзывы наших сотрудников'
+                    })
+                    +slider({
+                        type: 'reviews',
+                        slides: data.reviewsTeachers
+                    })
+                +section
+                    +content-picture({reverse: true, picture: {
+                      sources: [
+                          {
+                              srcset: "../learning-process/images/grandma-mobile.jpg",
+                              media: "(max-width: 767.9px)"
+                          }
+                      ],
+                      img: "../vacancies/images/grandma.jpg",
+                      lazy: true,
+                      objectFit: 'contain'
+                    }}).bg_hint-of-red.content-picture_vacancies.content-picture_mob-image-last(data-anim='anim-3')
+                        h2.content-picture__h2-title Стань членом<br>супер-команды
+                        p.content-picture__small-text Сотрудники нашей компании учат английский бесплатно. Найди свою вакансию в&nbsp;London Express Online, стань членом команды профессионалов
+                        +btn({ tagName: 'a'})(href='https://stavropol.hh.ru/employer/4588785' target='_blank').btn_pink Вакансии на hh.ru
+                +section.section_margin(id='Откликнуться').vacancies__form-section
+                    .row
+                        .offset-md-1.col-md-22.offset-xl-2.col-xl-20
+                            +contact-form({
+                                title: 'Присоединиться к&nbsp;команде',
+                                text: 'Загорелись глаза, захотелось поработать на&nbsp;нашей онлайн-платформе? Самое время отправить резюме!',
+                                bottomText: 'Прикрепите к&nbsp;форме готовое резюме либо заполните анкету.',
+                                notification: {
+                                    title: 'Спасибо! Мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время.',
+                                    svg: 'smile'
+                                },
+                                background: {
+                                    img: '../../components/contact-form/images/form-bg.png',
+                                    sources: [
+                                        {
+                                            srcset: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=',
+                                            media: '(max-width: 768px)'
+                                        }
+                                    ],
+                                    objectFit: 'contain',
+                                    objectPosition: 'right',
+                                    lazy: true
+                                },
+                                data: data.contactForm
+                            }).contact-form_vacancy
+                +popup-vacancy-questionnaire({ isAttachment: true })
+            +footer

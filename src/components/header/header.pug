@@ -1,0 +1,29 @@
+include ../logo/logo
+include ../header-menu/header-menu
+include ../sandwich-menu-btn/sandwich-menu-btn
+include ../language-selector/language-selector
+include ../btn/btn
+
+mixin header(args)
+    header.header&attributes(
+        attributes)
+        .row.align-items-center
+            .col-10.col-md-8.col-xl-3.offset-md-1.offset-xxl-2
+                +logo.header__logo
+            .col-6.col-xxxl-6.d-none.d-xl-block
+                +header-menu(data.headerMenu)
+            .col-14.col-xl-13.col-xxl-11.col-xxxl-11.col-fhd-10.offset-fhd-1.header__left
+                .header__left-item.d-none.d-xl-block
+                    a(href='tel:+78005554455').header__link.header__phone 8 800 500 66 74
+                .header__left-item
+                    a.btn.btn_header(href='#' data='free-popup').header__free
+                        span Бесплатное занятие
+                .header__left-item.d-none.d-xl-block
+                    +language-selector.header__language
+                .header__left-item.d-none.d-xl-block
+                    +btn({ tagName: 'a' })(href='https://lk.londonexpress-online.com').btn_lk.header__login
+                        span.btn__text Кабинет
+                        .btn__icon
+                            +svg({ name: 'lk' })
+                .header__left-item
+                    +sandwich-menu-btn

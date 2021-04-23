@@ -1,0 +1,90 @@
+[
+  {
+    "name": "index",
+    "title": "Главная"
+  },
+  {
+    "name": "404",
+    "title": "404"
+  },
+  {
+    "name": "about",
+    "title": "О школе"
+  },
+  {
+    "name": "reviews",
+    "title": "Отзывы"
+  },
+  {
+    "name": "vacancies",
+    "title": "Вакансии"
+  },
+  {
+    "name": "courses",
+    "title": "Курсы"
+  },
+  {
+    "name": "adult-courses",
+    "title": "Курсы для взрослых"
+  },
+  {
+    "name": "child-courses",
+    "title": "Курсы для детей"
+  },
+  {
+    "name": "teachers",
+    "title": "Преподаватели"
+  },
+  {
+    "name": "news",
+    "title": "Новости"
+  },
+  {
+    "name": "news-article",
+    "title": "Карточка новости"
+  },
+  {
+    "name": "price",
+    "title": "Стоимость"
+  },
+  {
+    "name": "contacts",
+    "title": "Контакты"
+  },
+  {
+    "name": "learning-process",
+    "title": "Процесс"
+  },
+  {
+    "name": "blog-article",
+    "title": "Статья"
+  },
+  {
+    "name": "blog",
+    "title": "Блог"
+  },
+  {
+    "name": "blog-section",
+    "title": "Блог подраздел"
+  },
+  {
+    "name": "course",
+    "title": "Страница"
+  },
+  {
+    "name": "privacy-policy",
+    "title": "Политика"
+  },
+  {
+    "name": "contract-offer",
+    "title": "Договор-оферта"
+  },
+  {
+    "name": "about-the-organisation",
+    "title": "Сведения об организации"
+  },
+  {
+    "name": "methodology-documents",
+    "title": "Методические документы"
+  }
+]

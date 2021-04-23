@@ -1,0 +1,35 @@
+{
+    "inputs": [
+        {
+            "id": "pr-name",
+            "name": "name",
+            "label": "Имя",
+            "type": "text",
+            "required": true,
+            "notification": "Не менее 3-х символов"
+        },
+        {
+            "id": "pr-phone",
+            "name": "phone",
+            "label": "Телефон",
+            "type": "tel",
+            "required": true,
+            "notification": "Телефон не заполнен"
+        },
+        {
+            "id": "pr-email",
+            "name": "email",
+            "label": "Email",
+            "type": "email",
+            "required": true,
+            "notification": "В формате: primer@email.ru"
+        },
+        {
+            "tagName": "textarea",
+            "id": "pr-message",
+            "name": "message",
+            "label": "Сообщение"
+        }
+    ],
+    "buttonTitle": "Отправить"
+}

@@ -1,0 +1,37 @@
+include ../../components/input/input
+include ../../components/contact-button/contact-button
+include ../../components/contact-form/contact-form
+include ../../components/popup-base/popup-base
+
+mixin popup-comment(args)
+    .popup-comment&attributes(attributes)
+        +popup-base
+           +contact-form({
+               title: 'Добавить комментарий',
+               data: {
+                    inputs: [
+                        {
+                          id: 'comment-name',
+                          name: 'name',
+                          label: 'Имя',
+                          type: 'text',
+                          required: true,
+                          notification: 'Поле должно содержать не менее 3-х символов'
+                        },
+                        {
+                            tagName: 'textarea',
+                            id: 'comments-message',
+                            name: 'message',
+                            required: true,
+                            label: 'Сообщение'
+                        }
+                    ]
+               },
+               notification: {
+                   title: 'Спасибо! Ваш комментарий на модерации.',
+                   svg: 'smile',
+                   purple: true
+               },
+               bottomHand: true
+           }).contact-form_pink.contact-form_comment
+

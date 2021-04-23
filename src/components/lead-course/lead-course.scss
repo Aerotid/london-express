@@ -1,0 +1,137 @@
+.lead-course {
+    $root: &;
+    position: relative;
+    @include mobile-offset;
+    color: $color-9;
+
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        overflow: hidden;
+        display: flex;
+        align-items: flex-end;
+
+        picture {
+            width: 100%;
+            height: auto;
+
+            @include media-breakpoint-down(lg) {
+                display: none;
+            }
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__wrapper {
+        position: relative;
+        z-index: 2;
+        min-height: 100vh;
+        padding-top: 27.7vh;
+
+        @include media-breakpoint-down(lg) {
+            padding-top: 16rem;
+
+            @include media-breakpoint-down(sm) {
+                padding-top: 9rem;
+            }
+        }
+    }
+
+    &__flex-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__title {
+        margin-bottom: 6rem;
+        width: 73%;
+        @include font-2;
+        text-align: center;
+
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 3.2rem;
+        }
+    }
+
+    &__description {
+        margin-bottom: 6rem;
+        @include font-3;
+        text-align: center;
+        width: 100%;
+
+        p {
+            margin-bottom: 2rem;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 4rem;
+        }
+    }
+
+    &__details {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 8rem;
+        width: 100%;
+
+        @include media-breakpoint-down(lg) {
+            flex-direction: column;
+            text-align: center;
+
+            @include media-breakpoint-down(sm) {
+                margin-bottom: 2.9rem;
+            }
+        }
+    }
+
+    &__details-item {
+        max-width: 31%;
+
+        @include media-breakpoint-down(lg) {
+            max-width: initial;
+
+            &:not(:last-child) {
+                margin-bottom: 4rem;
+            }
+        }
+    }
+
+    &__details-text {
+        margin-bottom: 2rem;
+        @include font-22;
+        font-weight: normal;
+
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__details-value {
+        margin-bottom: 0;
+        @include font-44;
+        color: $color-18;
+    }
+
+    &__btn {
+        margin-bottom: 7rem;
+
+
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 4.8rem;
+        }
+    }
+}

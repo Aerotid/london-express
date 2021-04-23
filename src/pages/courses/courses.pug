@@ -1,0 +1,146 @@
+extends ../../layout/layout
+include ../../components/main/main
+include ../../components/footer/footer
+include ../../components/lead-2/lead-2
+include ../../components/section/section
+include ../../components/block-title/block-title
+include ../../components/btn/btn
+include ../../components/course-card-2/course-card-2
+include ../../components/grid-list/grid-list
+include ../../components/prop-block/prop-block
+include ../../components/subscription-free-course/subscription-free-course
+
+block content
+    div#barba-wrapper
+        .barba-container(data-namespace='courses')
+            +main
+                +section().section_portage
+                    +lead-2({
+                        title: 'Онлайн-курсы<br>английского языка',
+                        description: 'Программа обучения развивает все языковые навыки: письменную, устную речь, чтение и&nbsp;восприятие на&nbsp;слух',
+                        smallTitle: 'true',
+                        href: '#',
+                        figure: {
+                            img: '../courses/images/courses-lead-figure.jpg',
+                            sources: [
+                                {
+                                    srcset: '../courses/images/courses-lead-without-shadow-pruning-mob.jpg',
+                                    media: '(max-width: 767.9px)'
+                                }
+                            ],
+                            objectFit: 'contain',
+                            objPos: ['right', 'center']
+                        },
+                        btn: {
+                            text: 'Пробное занятие',
+                            href: '#',
+                            trigger: true
+                        }
+                    }).lead-2_courses
+                        +leadSvg4.lead-2__svg
+                +section().section_whisper2.section_pt.adult-courses
+                    .row(data-anim="anim-1")
+                        .col-md-22.offset-md-1.col-xl-12.offset-xl-6
+                            p.adult-courses__description Погрузитесь в&nbsp;языковую среду, освойте практику международного общения, овладейте повседневным лексиконом.
+                    +block-title({
+                        title: 'Курсы для взрослых'
+                    })
+                    +grid-list.grid-list_downward-right2
+                        each course in data.courses.adults
+                            +course-card-2(course).grid-list__item(data-anim="anim-3")
+                +section().section_pt.children-courses
+                    +block-title({
+                        title: 'Курсы для детей'
+                    }).children-courses__block-title
+                    +grid-list.grid-list_two-per-row(data-anim="trigger")
+                        each course in data.courses.children
+                            +course-card-2(course).course-card-2_soft-peach.grid-list__item(data-anim="anim-2")
+                +section().section_whisper2.section_pt.exams
+                    +block-title({
+                     title: 'Подготовка к&nbsp;экзаменам'
+                    }).exams__block-title
+                    +grid-list.grid-list_two-per-row(data-anim="trigger")
+                         each course in data.courses.exams
+                             +course-card-2(course).grid-list__item(data-anim="anim-2")
+                +section().section_portage.section_pt.corporate
+                    +block-title({
+                     title: 'Корпоративным клиентам'
+                    }).corporate__block-title
+                    +grid-list(data-anim="anim-1")
+                        +course-card-2(data.courses.corporate).course-card-2_violet.grid-list__item
+                        .grid-list__item.corporate__steps
+                            ol
+                                - let steps = ['Подбор программы в&nbsp;соответствии с&nbsp;родом деятельности', 'Разработка соответствующей учебной программы', 'Анализ языковых потребностей компании', 'Тестирование и&nbsp;сертификация']
+                                each step, index in steps
+                                    li
+                                        .corporate__steps-number= index+1
+                                        p!= step
+                +section().section_pt.about-classes
+                    .row(data-anim="anim-1")
+                        .col-md-22.offset-md-1.col-xxl-16.offset-xxl-4
+                            .about-classes__row(data-anim="anim-1")
+                                .about-classes__column
+                                    h2.about-classes__title Занятия с&nbsp;иностранными преподавателями
+                                .about-classes__column
+                                    .about-classes__description Любой из&nbsp;наших курсов <span data-textHint='Кроме курсов по&nbsp;подготовке к&nbsp;ОГЭ/ЕГЭ'>?</span> можно пройти как&nbsp;с&nbsp;русскоязычным так и&nbsp;с&nbsp;иностранным преподавателем.
+                                    .about-classes__subtitle Занятия с&nbsp;носителем языка рекомендованы для студентов, которые хотят выйти на&nbsp;&laquo;новый уровень&raquo;, погрузиться в&nbsp;языковую среду
+                            .about-classes__row
+                                .about-classes__column(data-anim="anim-1")
+                                    .about-classes__bold-text А2 +
+                                    .about-classes__subtitle Занятия доступны для детей<br>и&nbsp;взрослых с&nbsp;уровнем от&nbsp;А2 (Elementary)
+                                .about-classes__column
+                                    .about-classes__wrapper
+                                        - let tags = ['Избавьтесь от&nbsp;неуверенности в&nbsp;общении с&nbsp;иностранцами', 'Добавьте в&nbsp;лексику грамотную живую английскую речь', 'Узнайте тонкости культуры другой страны']
+                                        each tag in tags
+                                            .about-classes__tag
+                                                span.about-classes__tag-circle
+                                                span.about-classes__tag-text!= tag
+                            .about-classes__levels(data-anim="anim-1").d-none.d-xl-flex
+                                .about-classes__level
+                                    .about-classes__level-abbr Pre-A1
+                                    .about-classes__level-name (Starter)
+                                .about-classes__level
+                                    .about-classes__level-abbr A1
+                                    .about-classes__level-name (Beginner)
+                                .about-classes__level
+                                    .about-classes__level-abbr A2
+                                    .about-classes__level-name (Elementary)
+                                .about-classes__level
+                                    .about-classes__level-abbr B1
+                                    .about-classes__level-name (Pre-intermediate)
+                                .about-classes__level
+                                    .about-classes__level-abbr B1+
+                                    .about-classes__level-name (Intermediate)
+                                .about-classes__level
+                                    .about-classes__level-abbr B2
+                                    .about-classes__level-name (Upper-Intermediate)
+                                .about-classes__level
+                                    .about-classes__level-abbr C1
+                                    .about-classes__level-name (Advanced)
+                                .about-classes__level
+                                    .about-classes__level-abbr C2
+                                    .about-classes__level-name (Proficiency)
+                            .about-classes__level-progression.d-none.d-xl-block
+                                +img({path: '../courses/images/levels-line.png'})
+                +section().section_white
+                    +prop-block({
+                        title: 'Попробовать <br>бесплатно',
+                        description: 'Записаться на&nbsp;пробный урок',
+                        img: {
+                            src: '../../components/prop-block/images/van.jpg',
+                            alt: ''
+                        },
+                        btn: {
+                            title: 'Оставить заявку',
+                            href: '#'
+                        },
+                        subtitle: 'Два занятия в&nbsp;подарок!',
+                        subdescription: 'При покупке абонемента в&nbsp;день пробного занятия',
+                        mobileImg: '../../components/prop-block/images/van-mobile.jpg',
+                        tabletImg: '../../components/prop-block/images/van-tablet.jpg'
+                    })
+                +subscription-free-course({
+                    title: 'Бесплатный еmail курс',
+                    subtitle: 'Начните с&nbsp;малого. Подпишитесь на&nbsp;бесплатную рассылку небольших уроков для самостоятельного изучения.'
+                }).d-none.d-md-flex.courses__subscription
+            +footer

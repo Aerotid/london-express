@@ -1,0 +1,15 @@
+include ../../components/blog-statistics/blog-statistics
+
+mixin blog-recommendations(args)
+    .blog-recommendations&attributes(attributes)
+        h2.blog-recommendations__section-title.d-none.d-md-block(data-anim='anim-1') Читайте также
+        .blog-recommendations__wrapper(data-anim='anim-1')
+            each post in args.posts
+                a(href='/blog-article.html').blog-recommendations__post
+                    .blog-recommendations__img
+                        +img({path: post.image})(data-object-fit='cover')
+                    h3.blog-recommendations__title!= post.title
+                    +blog-statistics.d-flex.d-md-none.blog-recommendations__stats
+
+
+

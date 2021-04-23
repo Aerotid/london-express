@@ -1,0 +1,18 @@
+include ../../components/contact-form/contact-form
+include ../../components/popup-base/popup-base
+
+mixin popup-pr(args)
+    .popup-pr&attributes(attributes)
+        +popup-base.popup-base_dark
+            +contact-form({
+                title: 'Отправить заявку в&nbsp;PR-отдел',
+                text: 'Будем рады обсудить вопросы рекламного сотрудничества.',
+                data: data.prForm,
+                bottomHand: true,
+                dark: true,
+                notification: {
+                    title: 'Спасибо! Мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время.',
+                    svg: 'smile',
+                    purple: true
+                }
+            }).contact-form_popup.contact-form_whisper2.contact-form_pr

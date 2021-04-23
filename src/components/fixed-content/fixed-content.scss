@@ -1,0 +1,42 @@
+.fixed-content {
+    $root: &;
+    position: fixed;
+    bottom: 152px;
+    right: 20px;
+    z-index: 9;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-end;
+    opacity: 0;
+    visibility: hidden;
+    //padding-right: 2.9rem;
+
+    @include media-breakpoint-down(sm) {
+        bottom: 112px;
+        display: none;
+    }
+
+    &__item {
+        &:not(:first-child) {
+            margin-top: 32px;
+        }
+    }
+
+    &_fullscreen {
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-color: rgba($color-8, .9);
+
+        @include media-breakpoint-down(sm) {
+            bottom: 0;
+            z-index: 10;
+        }
+
+        &>*:not(.subscription-form-side) {
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+}

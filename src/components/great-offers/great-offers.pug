@@ -1,0 +1,10 @@
+include ../../components/btn-arrow/btn-arrow
+
+mixin great-offers(args)
+    .great-offers&attributes(attributes)
+        .great-offers__navigation
+            +btn-arrow({ type: 'prev' })
+            +btn-arrow({ type: 'next' })
+        .swiper-container.great-offers__container
+            .swiper-wrapper.great-offers__wrapper
+                block

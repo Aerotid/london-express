@@ -1,0 +1,40 @@
+include ../logo/logo
+include ../btn/btn
+
+mixin footer(args)
+    footer.footer&attributes(attributes)
+        .col-24.col-md-22.offset-md-1.col-xxl-20.offset-xxl-2.footer__row
+            .footer__col.order-0
+                +logo({
+                    name: 'logo'
+                }).footer__logo
+            .footer__col.order-2.order-xl-1
+                a(href='tel:88005554455').footer__phone 8&nbsp;800 555-4455
+                .footer__phone-description (звонок бесплатный)
+            .footer__col.order-1.order-xl-2
+                +btn({
+                    tagName: 'a'
+                })(href='#' target='_blank' data='free-popup').btn_pink.footer__btn Пробное занятие
+            .footer__col.footer__col_last.order-3
+                +btn({
+                    tagName: 'button'
+                }).btn_link(data='subscription-popup').footer__btn-sub Подписка на рассылку
+        hr.footer__line.d-md-none
+        .row.footer__center
+            .col-md-22.offset-md-1.col-xxl-20.offset-xxl-2
+                ul.footer__menu
+                     each listItem in data.footer.menu
+                         li.footer__menu-item
+                             a(href!= listItem.href target=`${listItem.title === 'Вакансии'? '_blank':''}`)!= listItem.title
+        hr.footer__line
+        .row.footer__row-bottom.align-items-center
+            .col-md-6.offset-md-1.col-xxl-6.offset-xxl-2.order-md-1.order-1
+                a.footer__contract(href='/contract-offer.html') Договор-оферта
+            .col-md-8.col-xxl-6.offset-xxl-1.order-md-1.order-0
+                ul.footer__socials
+                    each social in data.footer.socials
+                        li
+                            a.footer__social(href!= social.href target='_blank' title=social.title class=`${social.icon}`)
+                                +svg({name: social.icon})
+            .col-md-7.offset-md-1.col-xxl-5.offset-xxl-1.text-md-right.order-md-1.order-2
+                a(href='/privacy-policy.html').footer__privacy-policy Политика конфиденциальности

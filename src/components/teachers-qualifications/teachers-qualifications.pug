@@ -1,0 +1,13 @@
+include ../../components/big-text-with-subtitle/big-text-with-subtitle
+include ../../components/btn/btn
+
+mixin teachers-qualifications(args)
+    .teachers-qualifications&attributes(attributes)
+        .row
+            .col-md-22.offset-md-1.col-xl-16.offset-xl-4
+                ul.teachers-qualifications__certifications(data-anim="anim-1")
+                    each qualification in args
+                        li
+                            +big-text-with-subtitle({big: qualification.abbreviation, subtitle: qualification.name}).big-text-with-subtitle_portage.big-text-with-subtitle_text-align-center
+        .teachers-qualifications__join-link
+            +btn({tagName: 'a'})(href='/vacancies.html').btn_grey-border.btn_mobile-padding21 Присоединиться к команде

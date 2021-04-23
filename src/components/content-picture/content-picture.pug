@@ -1,0 +1,7 @@
+mixin content-picture(args)
+    .content-picture&attributes(attributes)(class= `${args.reverse ? 'content-picture_row-reverse' : ''}`)
+        .content-picture__image
+            +picture(args.picture)
+        .content-picture__wrapper
+            .content-picture__content
+                block

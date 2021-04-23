@@ -1,0 +1,68 @@
+{
+    "work": [
+        {
+            "title": "Воля к&nbsp;победе",
+            "text": "Преподаватель работает со&nbsp;студентом на&nbsp;протяжении всего курса, от&nbsp;первого занятия до&nbsp;итогового тестирования. Прогресс достигается только совместными усилиями и&nbsp;волей к&nbsp;победе."
+        },
+        {
+            "title": "Больше практики",
+            "text": "Каждое занятие преподаватель способствует развитию всех языковых навыков студента, практикует качественно лучшие высказывания, включает студента в&nbsp;исследование языка."
+        },
+        {
+            "title": "Только по&nbsp;любви",
+            "text": "Мы&nbsp;стремимся пробудить искренний интерес, любовь к&nbsp;изучению английского языка, желание экспериментировать, с&nbsp;азартом подбирать выразительные средства."
+        }
+    ],
+    "qualifications": [
+        {
+            "abbreviation": "CAE",
+            "name": "Certificate in advanced English"
+        },
+        {
+            "abbreviation": "CPE",
+            "name": "Certificate of Proficiency in English"
+        },
+        {
+            "abbreviation": "TKT",
+            "name": "University of Cambridge ESOL Examinations"
+        },
+        {
+            "abbreviation": "CELTA",
+            "name": "Certificate in teaching English to speakers of other languages"
+        }
+    ],
+    "teachersList": [
+        {
+            "name": "Мария Соболева",
+            "photo": "../teachers/images/photo-1.jpg"
+        },
+        {
+            "name": "Mark Williamson",
+            "photo": "../teachers/images/photo-2.jpg"
+        },
+        {
+            "name": "Лолита Пилоян",
+            "photo": "../teachers/images/photo-3.jpg"
+        },
+        {
+            "name": "Анастасия Желтова",
+            "photo": "../teachers/images/photo-4.jpg"
+        },
+        {
+            "name": "Валентина Кузнецова",
+            "photo": "../teachers/images/photo-5.jpg"
+        },
+        {
+            "name": "Алена Маликова",
+            "photo": "../teachers/images/photo-6.jpg"
+        },
+        {
+            "name": "Роман Керкис",
+            "photo": "../teachers/images/photo-7.jpg"
+        },
+        {
+            "name": "София Кречетова",
+            "photo": "../teachers/images/photo-8.jpg"
+        }
+    ]
+}

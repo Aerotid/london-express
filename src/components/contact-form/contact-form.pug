@@ -1,0 +1,76 @@
+include ../input/input
+include ../contact-button/contact-button
+include ../notification/notification
+include ../attach-file/attach-file
+
+mixin contact-form(args)
+    .contact-form&attributes(attributes)(data-anim='anim-3')
+        - var buttonText = args.data.buttonTitle?args.data.buttonTitle:'Отправить'
+        if args.background
+            .contact-form__bg(class=args.background.objectFit == 'contain'?'contact-form__bg_contain':'')
+                +picture(args.background)
+        if args.bottomHand
+            .contact-form__hand
+                +img({path: '../../components/contact-form/images/hand.png', lazy: true})
+        if args.freePopup
+            h3.contact-form__title-top!= args.title
+        .contact-form__container(class=args.dark?'contact-form__container_dark':'')
+            .contact-form__left
+                .contact-form__left-top
+                    if !args.freePopup
+                        h3.contact-form__title!= args.title
+                    .contact-form__text!= args.text
+                        if args.freePopup
+                            .contact-form__left-info
+                                p Нажимая кнопку &laquo;#{buttonText}&raquo;, вы принимаете условия <a href='/contract-offer.html' target='_blank'>Договора-оферты</a>, <a href='/privacy-policy.html' target='_blank'>Политики</a> и других Документов
+                if args.bottomText
+                    .contact-form__bottom-text!= args.bottomText
+            form(action='/' method='POST').contact-form__form
+                input(type='hidden' name='WEB_FORM_ID')
+                input(type='hidden' name='web_form_submit')
+                input(type='hidden' name='sessid')
+                .contact-form__inputs
+                    each input in args.data.inputs
+                        +input({
+                            id: input.id,
+                            name: input.name ? input.name : input.id,
+                            type: input.type,
+                            tagName: input.tagName,
+                            required: input.required,
+                            autocomplete: input.autocomplete,
+                            label: input.label,
+                            notification: input.notification
+                        }).contact-form__inputs-item(class=args.dark?'input_dark':'')
+                .contact-form__middle
+                    if args.data.questionnaire
+                        button(type='button').contact-form__questionnaire-button.contact-form__middle-item
+                            .contact-form__questionnaire-icon
+                                +svg({name: 'questionnaire'})
+                            .contact-form__questionnaire-text!= args.data.questionnaire
+                    if args.data.attach
+                        +attach-file({
+                            text: args.data.attach.text,
+                            svg: args.data.attach.svg,
+                            id: 'attach-file',
+                            name: 'files[]'
+                        }).contact-form__middle-item.contact-form__attach(class=args.dark?'attach-file_dark':'')
+                .contact-form__errors.error-block
+                    p.contact-form__error_email
+                    p.contact-form__error_phone
+                .contact-form__bottom
+                    if !args.freePopup
+                        .contact-form__bottom-info
+                            p
+                                | Нажимая кнопку &laquo;#{buttonText}&raquo;, вы&nbsp;принимаете условия Политики, и&nbsp;предоставляете согласие на&nbsp;обработку
+                                | своих персональных данных на&nbsp;условиях <a href='/privacy-policy.html' target='_blank'>Политики конфиденциальности</a>
+                    - let buttonClass;
+                    if args.dark
+                        - buttonClass = 'contact-button_grey-border'
+                    if args.buttonStyle
+                        - buttonClass = `contact-button_${args.buttonStyle}`
+                    +contact-button({ title: buttonText })(class=`${buttonClass}`)
+        if (args.notification)
+            +notification({
+                title: args.notification.title,
+                svg: args.notification.svg
+            })(class=args.notification.purple?'notification_bg-purple':'')

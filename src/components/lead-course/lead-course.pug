@@ -1,0 +1,28 @@
+include ../../components/btn/btn
+
+mixin lead-course(args)
+    .lead-course&attributes(attributes)
+        .lead-course__bg
+            +picture({
+                sources: [{
+                    srcset: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7',
+                    media: '(max-width: 767.9px)'
+                }],
+                img: '../../components/lead-course/images/lead-hats.jpg'
+            })
+        .lead-course__wrapper
+            .row
+                .offset-md-2.col-md-20.offset-xl-5.col-xl-14.offset-xxl-6.col-xxl-12.lead-course__flex-container
+                    h1.lead-course__title(data-anim='anim-3')!= args.title
+                    .lead-course__description(data-anim='anim-3')!= args.description
+                    dl.lead-course__details(data-anim='anim-3')
+                        .lead-course__details-item
+                            dt.lead-course__details-text Рекомендованная интенсивность
+                            dd.lead-course__details-value!= args.recommendedIntensity
+                        .lead-course__details-item
+                            dt.lead-course__details-text Длительность занятия
+                            dd.lead-course__details-value!= args.classDuration
+                        .lead-course__details-item
+                            dt.lead-course__details-text Продолжительность курса
+                            dd.lead-course__details-value!= args.courseDuration
+                    +btn({tagName: 'button'})(data='free-popup' data-anim='anim-3').btn_pink.btn_mobile-padding21.lead-course__btn Пробное занятие

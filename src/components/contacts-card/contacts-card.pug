@@ -1,0 +1,15 @@
+include ../../components/btn/btn
+
+mixin contacts-card(args)
+    .contacts-card&attributes(attributes)
+        .contacts-card__wrapper
+            .contacts-card__top
+                h3.contacts-card__title!= args.title
+                p.contacts-card__description!= args.description
+                a(href=`mailto:${args.email}`).contacts-card__email!= args.email
+                a(href=`tel:${args.phone.href}`).contacts-card__phone!= args.phone.text
+            .contacts-card__bottom
+                if (args.btn.dataPopup)
+                    +btn({ tagName: 'button' })(data=args.btn.dataPopup).btn_pink.btn_mobile-padding28.contacts-card__btn!= args.btn.text
+                if (args.btn.href)
+                    +btn({tagName: 'a'})(href=args.btn.href).btn_pink.btn_mobile-padding28.contacts-card__btn!= args.btn.text

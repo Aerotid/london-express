@@ -1,0 +1,147 @@
+.post-stats {
+    $root: &;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding-top: calc(2px + 4rem);
+
+    @include media-breakpoint-down(sm) {
+        padding-top: calc(2px + 3rem);
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        height: 2px;
+        width: 100%;
+        background-color: rgba($color-9, 0.2);
+    }
+
+    &__like,
+    &__viewed {
+        display: flex;
+        align-items: center;
+    }
+
+    &__like-icon {
+        position: relative;
+        margin-right: 26px;
+        font-size: 0;
+
+        &::before {
+            content: '';
+            position: absolute;
+            //z-index: -1;
+            top: 50%;
+            left: -16px;
+            width: 50px;
+            height: 50px;
+            background-color: rgba($color-18, 0.1);
+            border-radius: 50%;
+            transform: translateY(-50%) scale(0);
+            transition: transform 0.4s;
+        }
+    }
+
+    &__like {
+        margin-left: 1.5rem;
+        padding: 0;
+        border: none;
+        background-color: transparent;
+        outline: none;
+
+        svg {
+            width: 18px;
+            height: 14px;
+            fill: rgba($color-8, 0.5);
+            transition: fill 0.3s;
+        }
+
+        &:hover,
+        &:focus {
+            outline: none;
+
+            svg {
+                fill: rgba($color-8, 0.7);
+            }
+
+            #{$root}__count_like  {
+                color: rgba($color-8, 0.7);
+            }
+        }
+
+        &.liked {
+            #{$root}__like-icon {
+                &::before {
+                    transform: translateY(-50%) scale(1);
+                    animation: like-circle 0.4s cubic-bezier(.26,.46,0,1.18);
+                }
+            }
+
+            svg {
+                fill: $color-18;
+                animation: pulse 0.4s;
+            }
+
+            #{$root}__count_like  {
+                color: $color-8;
+            }
+        }
+    }
+
+    &__viewed {
+        svg {
+            margin-right: 10px;
+            width: 23px;
+            height: 14px;
+            fill: rgba($color-6, 0.5);
+        }
+    }
+
+    &__count {
+        font-family: $font-gotham;
+        font-size: 1.6rem;
+        line-height: 1;
+        color: rgba($color-9, 0.5);
+        transition: color 0.3s;
+    }
+
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.4);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    &_review {
+        padding-top: 0;
+
+        @include media-breakpoint-down(sm) {
+            padding-top: 0;
+        }
+
+        &::before {
+            display: none;
+        }
+    }
+
+    @keyframes like-circle {
+        0% {
+            transform: translateY(-50%) scale(0);
+        }
+        50% {
+            transform: translateY(-50%) scale(1.2);
+        }
+        100% {
+            transform: translateY(-50%) scale(1);
+        }
+    }
+}

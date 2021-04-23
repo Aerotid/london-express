@@ -1,0 +1,88 @@
+extends ../../layout/layout
+include ../../components/main/main
+include ../../components/footer/footer
+include ../../components/section/section
+include ../../components/lead-course/lead-course
+include ../../components/block-title/block-title
+include ../../components/content-area/content-area
+include ../../components/btn/btn
+include ../../components/right-list/right-list
+include ../../components/course-modules/course-modules
+include ../../components/prop-block/prop-block
+include ../../components/slider-levels/slider-levels
+
+block content
+    div#barba-wrapper
+        .barba-container(data-namespace='course')
+            +main
+                +section.section_whisper2
+                    +lead-course(data.courseChildren13to17)
+                +section.section_pt.section_pb
+                    +block-title({
+                        title: 'Особенности подросткового обучения',
+                        description: 'Дети подросткового возраста очень требовательны к&nbsp;самому процессу обучения, поэтому он&nbsp;должен быть не&nbsp;просто интерактивным и&nbsp;увлекательным, а&nbsp;отображать интересы и&nbsp;проблемы современного мира. Курс предусматривает развитие основных языковых навыков для полноценного общения со&nbsp;сверстниками, в&nbsp;том числе из&nbsp;англоговорящих стран.'
+                        }).course__features-title
+                    .row
+                        .col-md-22.offset-md-1.col-xl-20.offset-xl-2.course__picture
+                            +content-area
+                                +picture({
+                                    lazy: true,
+                                    sources: [{
+                                          srcset: '../course/images/studying.jpg',
+                                          media: '(max-width: 767.9px)'
+                                      }],
+                                    img: '../course/images/teenager.jpg'
+                                })(data-anim='anim-scale')
+                +section
+                    +right-list({
+                        title: 'Содержание курса',
+                        description: data.courseChildren13to17.obtainedSkills.description,
+                        listTitle: 'Приобретаемые навыки',
+                        cols: data.courseChildren13to17.obtainedSkills.cols,
+                        picture: data.courseChildren13to17.obtainedSkills.picture,
+                        btn: {
+                            tagName: 'button',
+                            text: 'Записаться на курс',
+                            data: 'free-popup'
+                        }
+                    }).right-list_pink
+                +section.section_pt.section_pb
+                    +block-title({
+                        title: 'Модули курса'
+                    })
+                    +course-modules(data.courseChildren13to17.courseModules)
+                    .row.course__picture
+                        .col-md-22.offset-md-1.col-xl-20.offset-xl-2
+                            +content-area
+                                +picture({
+                                    lazy: true,
+                                    sources: [{
+                                          srcset: '../course/images/teenagers-studying-mobile.jpg',
+                                          media: '(max-width: 767.9px)'
+                                      }],
+                                    img: '../course/images/teenagers-studying.jpg'
+                                })(data-anim='anim-scale')
+                +section
+                    +block-title({
+                        title: 'Результаты курса',
+                        description: 'Итоговый результат зависит от&nbsp;уровня студента на&nbsp;старте обучения и&nbsp;интенсивности занятий. При полноценном прохождении одного уровня (от&nbsp;80&nbsp;занятий) ученик может пройти финальное тестирование и&nbsp;получить сертификат онлайн-школы об&nbsp;успешном завершении курса и&nbsp;подтверждении нового уровня знаний и&nbsp;навыков.'
+                    })
+                    +slider-levels(data.courseChildren13to17.levels)
+                +section.section_pt
+                    +prop-block({
+                        title: 'Попробовать <br>бесплатно',
+                        description: 'Записаться на&nbsp;пробный урок',
+                        img: {
+                            src: '../../components/prop-block/images/van-side.jpg',
+                            alt: ''
+                        },
+                        btn: {
+                            title: 'Оставить заявку',
+                            href: '#'
+                        },
+                        subtitle: 'Два занятия в&nbsp;подарок!',
+                        subdescription: 'При покупке абонемента в&nbsp;день пробного занятия',
+                        mobileImg: '../../components/prop-block/images/van-mobile.jpg',
+                        tabletImg: '../../components/prop-block/images/van-tablet.jpg'
+                    })
+            +footer

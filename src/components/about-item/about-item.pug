@@ -1,0 +1,12 @@
+mixin about-item(args)
+    .about-item&attributes(attributes)
+        .about-item__image
+            +img({
+                path: args.images.default,
+                lazy: true
+            })
+            +img({
+                path: args.images.hover,
+                lazy: true
+            }).hover
+        .about-item__title!= args.title

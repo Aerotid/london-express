@@ -1,0 +1,48 @@
+@mixin states {
+  &:hover,
+  &:focus,
+  &:active {
+    outline: none;
+    @content;
+  }
+}
+
+.endless-btn {
+  $root: &;
+  display: block;
+  margin: 0 auto 10rem;
+  background-color: transparent;
+  box-sizing: border-box;
+  border-radius: 20rem;
+  padding: 1.5rem 4rem;
+  font-family: $font-gilroy;
+  font-style: normal;
+  font-weight: 400;
+  @include font-13;
+  transition: color 0.2s, background-color 0.2s, border 0.2s, opacity 0.2s;
+  border: 2px solid rgba(36, 36, 36, 0.2);
+  white-space: nowrap;
+  text-align: center;
+
+  @include media-breakpoint-down(md) {
+    padding: 0.8rem 3.2rem;
+
+      @include media-breakpoint-down(sm) {
+          padding: 0.7rem 2.8rem;
+          margin-bottom: 4rem;
+      }
+  }
+
+    @include states {
+        border-color: $color-9;
+        color: $color-8;
+    }
+
+    &:active {
+        background-color: rgba(36, 36, 36, 0.1);
+    }
+
+    &_is-hidden {
+        display: none;
+    }
+}

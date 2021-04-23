@@ -1,0 +1,122 @@
+[
+    {
+        "title": "Путешествия",
+        "description": "Изучаем лексику и&nbsp;грамматику для отличного путешествия",
+        "tags": [
+            {
+                "title": "Лексика",
+                "color": "#FF6F82"
+            },
+            {
+                "title": "Аудирование",
+                "color": "#764CED"
+            }
+        ],
+        "link": {
+            "href": "#",
+            "title": "Подробнее о курсе"
+        },
+        "picture": {
+            "sources": [
+                {
+                    "srcset": "../index/images/case-mobile.jpg",
+                    "media": "(max-width: 767.9px)"
+                }
+            ],
+            "img": "../index/images/case.jpg",
+            "objectFit": "contain",
+            "objPos": ["bottom", "right"],
+            "lazy": "true"
+        }
+    },
+    {
+        "title": "Легкое общение",
+        "description": "Прокачиваем разговорный навык, преодолеваем языковой барьер",
+        "tags": [
+            {
+                "title": "Лексика",
+                "color": "#FF6F82"
+            },
+            {
+                "title": "Аудирование",
+                "color": "#764CED"
+            }
+        ],
+        "link": {
+            "title": "Подробнее о курсе",
+            "href": "#"
+        },
+        "picture": {
+            "sources": [
+                {
+                    "srcset": "../index/images/cup-mobile.jpg",
+                    "media": "(max-width: 767.9px)"
+                }
+            ],
+            "img": "../index/images/cup.jpg",
+            "objectFit": "contain",
+            "objPos": ["bottom", "right"],
+            "lazy": "true"
+        }
+    },
+    {
+        "title": "Карьерный рост",
+        "description": "Развиваем все языковые навыки и&nbsp;профессиональную лексику.",
+        "tags": [
+            {
+                "title": "Аудирование",
+                "color": "#764CED"
+            },
+            {
+                "title": "Бизнес-лексика",
+                "color": "#FF6C5D"
+            }
+        ],
+        "link": {
+            "title": "Подробнее о курсе",
+            "href": "#"
+        },
+        "picture": {
+            "sources": [
+                {
+                    "srcset": "../index/images/oskar-mobile.jpg",
+                    "media": "(max-width: 767.9px)"
+                }
+            ],
+            "img": "../index/images/oskar.jpg",
+            "objectFit": "contain",
+            "objPos": ["bottom", "right"],
+            "lazy": "true"
+        }
+    },
+    {
+        "title": "Поступление в вуз",
+        "description": "Систематизируем знания, тренируем все аспекты для успешной сдачи экзаменов",
+        "tags": [
+            {
+                "title": "Перевод",
+                "color": "#FF6F82"
+            },
+            {
+                "title": "Грамматика",
+                "color": "#FFB804"
+            }
+        ],
+        "link": {
+            "href": "#",
+            "title": "Подробнее о курсе"
+        },
+        "picture": {
+            "sources": [
+                {
+                    "srcset": "../index/images/university-mobile.jpg",
+                    "media": "(max-width: 767.9px)"
+                }
+            ],
+            "img": "../index/images/university.jpg",
+            "objectFit": "contain",
+            "objPos": ["bottom", "right"],
+            "lazy": "true"
+        }
+    }
+]

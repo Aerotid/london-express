@@ -1,0 +1,13 @@
+include ../../components/btn/btn
+include ../picture/picture
+
+mixin course-card-2(args)
+    .course-card-2&attributes(attributes)
+        .course-card-2__bg !{args.svg}
+        .course-card-2__wrapper
+            a(href= args.links.more).course-card-2__main
+                h3.course-card-2__title!= args.title
+                .course-card-2__description!= args.description
+            .course-card-2__links
+                +btn({ tagName: 'button'})(data='free-popup').btn_pink.btn_mobile-padding28.course-card-2__sign-up Записаться на курс
+                +btn({ tagName: 'a'})(href= args.links.more).btn_link.course-card-2__more Подробнее

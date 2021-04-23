@@ -1,0 +1,18 @@
+include ../btn/btn
+include ../picture/picture
+
+mixin not-found(args)
+    .not-found&attributes(attributes)
+        +picture({
+            sources: [{
+              srcset: '../../components/not-found/images/404-mobile.png',
+              media: '(max-width: 767.9px)'
+            }],
+            img: '../../components/not-found/images/404.png'
+        }).not-found__image
+        .row
+            .col-md-10.offset-md-2.not-found__wrapper
+                .not-found__title!= "Oops...<br>You&rsquo;ve broken the Internet."
+                +btn({
+                    tagName: 'a'
+                })(href='/').btn_pink.btn_mobile-padding28 На главную

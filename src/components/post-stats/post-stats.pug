@@ -1,0 +1,10 @@
+mixin post-stats(args)
+    .post-stats&attributes(attributes)
+        button.post-stats__like
+            .post-stats__like-icon
+                +svg({name: 'like'})
+            span.post-stats__count.post-stats__count_like!= args.likes
+        if (args.views)
+            .post-stats__viewed
+                +svg({name: 'viewed'})
+                span.post-stats__count.post-stats__count_view!= args.views

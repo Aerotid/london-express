@@ -1,0 +1,18 @@
+.language-selector {
+    $root: &;
+
+    a {
+        @include font-7;
+        color: currentColor;
+        @include linkHover(false, white);
+    }
+
+    .sandwich-closing-contrast .header &,
+    .sandwich-open .header &,
+    .header_sticky  &,
+    .header._contrast & {
+        a {
+            @include linkHover;
+        }
+    }
+}

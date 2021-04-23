@@ -1,0 +1,15 @@
+include ../../components/btn-arrow/btn-arrow
+
+mixin news-slider(args)
+    .news-slider&attributes(attributes)
+        +btn-arrow({type: 'prev'})
+        .swiper-container
+            .swiper-wrapper
+                each slide in args
+                    .swiper-slide
+                        figure.news-slider__figure
+                            .news-slider__image-wrapper
+                                +img({path: slide.image}).news-slider__image
+                            figcaption.news-slider__caption!= slide.caption
+            .swiper-pagination.news-slider__pagination
+        +btn-arrow({type: 'next'})

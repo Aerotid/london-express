@@ -1,0 +1,5 @@
+[data-namespace="privacy-policy"] {
+    .privacy-policy__content {
+        @include mobile-offset;
+    }
+}

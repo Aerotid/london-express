@@ -1,0 +1,37 @@
+extends ../../layout/layout
+include ../../components/main/main
+include ../../components/footer/footer
+include ../../components/section/section
+include ../../components/content-area/content-area
+
+block content
+    div#barba-wrapper
+        .barba-container(data-namespace='methodology-documents')
+            +main
+                +section.section_pb
+                    .row
+                        .col-md-22.offset-md-1.col-xl-12.offset-xl-6
+                            +content-area.content-area_about-the-organisation.content-area_wrapped
+                                .content-area__group(data-anim="anim-3")
+                                    h2 Список документов
+                                    p Текст
+                                    ol
+                                        li
+                                            a(href='#') Документ 1
+                                        li
+                                            a(href='#') Документ 2
+                                        li
+                                            a(href='#') Документ 3
+                                        li
+                                            a(href='#') Документ 4
+                                        li
+                                            a(href='#') Документ 5
+                                        li
+                                            a(href='#') Документ 6
+                                        li
+                                            a(href='#') Документ 7
+                                        li
+                                            a(href='#') Документ 8
+                                        li
+                                            a(href='#') Документ 9
+            +footer

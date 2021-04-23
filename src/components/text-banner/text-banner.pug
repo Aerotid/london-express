@@ -1,0 +1,14 @@
+include ../btn/btn
+
+mixin text-banner(args)
+    .text-banner(class=args.btn?'text-banner_smaller-padding':'')&attributes(attributes)
+        .row
+            .col-md-22.offset-md-1.col-xl-12.offset-xl-6
+                .text-banner__content(data-anim="anim-1" data-hook=0.8)
+                    if args.svg
+                        .text-banner__svg(class=`text-banner__svg_${args.svg.name}`)
+                            //+svg({name: args.svg.name })
+                            +img({path: `../../common/images/${args.svg.name}.svg`, lazy: true})
+                    .text-banner__text!= args.text
+                    if args.btn
+                        +btn({ tagName: 'a' })(href=args.btn.link)(class= attributes.class=='text-banner_pink' || attributes.class=='text-banner_portage'?'btn_white-border text-banner__btn btn_mobile-padding28':'btn_pink text-banner__btn btn_mobile-padding28')!= args.btn.text

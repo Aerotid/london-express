@@ -1,0 +1,49 @@
+include ../common/pug/mixins
+include ../common/pug/helpers
+include ../common/pug/leadSvg
+include ../common/pug/mainLeadSvg
+include ../common/pug/caseSvg
+include ../common/pug/otherSvg
+include ../components/header/header
+include ../components/footer/footer
+include ../components/popup-free/popup-free
+include ../components/popup-subscription/popup-subscription
+include ../components/preloader/preloader
+include ../components/fixed-content/fixed-content
+include ../components/sandwich-menu/sandwich-menu
+
+doctype html
+html(lang='ru')
+    head
+        meta(name='viewport' content='width=device-width, initial-scale=1')
+        meta(charset='utf-8')
+        script.
+            var handler = function() {
+                window.removeEventListener('scroll', handler);
+                window.ChatraID = '6b3x3WDT7tDj69WvN';
+                var s = document.createElement('script');
+                window['Chatra'] = window['Chatra'] || function() {
+                    (window['Chatra'].q = window['Chatra'].q || []).push(arguments);
+                };
+                s.defer = true;
+                s.src = 'https://call.chatra.io/chatra.js';
+                if (document.head) document.head.appendChild(s);
+            };
+            window.addEventListener('scroll', handler);
+            window.ChatraSetup = {
+                startHidden: true,
+                colors: {
+                    buttonText: '#ff5c6a',
+                    buttonBg: '#FFFFFF'
+                },
+                buttonSize: 100
+            };
+    //-body.preloading
+    body
+        //-+preloader
+        +sandwich-menu
+        +header
+        block content
+        +popup-free
+        +popup-subscription
+        +fixed-content

@@ -1,0 +1,12 @@
+.info-block-1 {
+    $root: &;
+
+    &__title {
+        margin-bottom: 3rem;
+        @include font-6;
+
+        @include media-breakpoint-down(md) {
+            margin-bottom: 2rem;
+        }
+    }
+}

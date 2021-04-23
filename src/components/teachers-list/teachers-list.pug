@@ -1,0 +1,16 @@
+include ../../components/teacher/teacher
+
+mixin teachers-list(args)
+    .teachers-list&attributes(attributes)(data-anim="trigger" data-hook=0.8)
+        if(args.description)
+            .row(data-anim="anim-1")
+                .col-md-18.offset-md-3
+                    .teachers-list__description!= args.description
+        .row
+            .col-md-20.offset-md-2.col-xl-16.offset-xl-4
+                .swiper-container
+                    ul.teachers-list__list.swiper-wrapper
+                        each teacher in args.teachers
+                            li.swiper-slide(data-anim="anim-2")
+                                +teacher(teacher)
+                    .swiper-custom-scrollbar.teachers-list__scrollbar.d-md-none

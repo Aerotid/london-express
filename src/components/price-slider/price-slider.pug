@@ -1,0 +1,18 @@
+include ../price-item/price-item
+include ../btn-group/btn-group
+include ../btn/btn
+
+mixin price-slider(args)
+    .price-slider&attributes(attributes)(data-anim="anim-3")
+        .price-slider__tabs
+            each tab, i in data.price.tabs
+                .price-slider__tab(data-tab=i)
+                    .price-slider__tab-title!=tab.title
+                    +btn-group.upcoming-lesson__btn-wrapper
+                        +btn({ tagName: 'button' })(data-option=0).btn_small.price-slider__tab-btn.active!=tab.btnLeft
+                        +btn({ tagName: 'button' })(data-option=1).btn_small.price-slider__tab-btn!=tab.btnRight
+        each slider in args
+            .swiper-container(data-slider!=slider.type).price-slider__container
+                .swiper-wrapper.price-slider__wrapper
+                    each item in slider.items
+                        +price-item(item).swiper-slide

@@ -1,0 +1,30 @@
+.mobile-fixed-overlay {
+    $root: &;
+
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    display: none;
+    background-color: white;
+    padding: 1.7rem 2rem 1.4rem;
+
+    @include media-breakpoint-down(md) {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    //.btn {
+    //    svg {
+    //        display: inline-block;
+    //        vertical-align: text-top;
+    //        margin-top: 0.1rem;
+    //        margin-left: 0.5rem;
+    //        width: 1.4rem;
+    //        height: 1.4rem;
+    //    }
+    //}
+}

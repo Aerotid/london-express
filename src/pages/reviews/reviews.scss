@@ -1,0 +1,50 @@
+[data-namespace="reviews"] {
+    .reviews {
+        &__text-banner {
+            svg {
+                @include media-breakpoint-down(sm) {
+                    width: 8.2rem;
+                    height: 8.9rem;
+                }
+            }
+        }
+
+        &__title {
+            margin-bottom: 0;
+        }
+
+        &__achievements-title {
+            padding-top: 0;
+
+            @include media-breakpoint-up(md) {
+                margin-bottom: 8.6rem;
+            }
+
+            .block-title__description {
+                margin-top: 6.5rem;
+
+                @include media-breakpoint-down(sm) {
+                    margin-top: 2rem;
+                }
+            }
+        }
+
+        &__results-text {
+            margin-bottom: 10rem;
+
+            @include media-breakpoint-down(sm) {
+                margin-bottom: 4rem;
+            }
+        }
+
+        &__achievements-section {
+            &::before {
+             height: 80%;
+
+             @include media-breakpoint-down(sm) {
+                 opacity: 0;
+             }
+            }
+        }
+    }
+}

@@ -1,0 +1,7 @@
+[data-namespace="news"] {
+    .lessons-gift-banner {
+        @include media-breakpoint-down(sm) {
+            display: none;
+        }
+    }
+}

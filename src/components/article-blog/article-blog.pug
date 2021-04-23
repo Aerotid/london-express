@@ -1,0 +1,57 @@
+include ../../components/article/article
+include ../../components/table-of-contents/table-of-contents
+include ../../components/video-block/video-block
+include ../../components/post-stats/post-stats
+include ../../components/comments/comments
+
+mixin article-blog(args)
+    .article-blog&attributes(attributes)
+        +article({blogSection: args.blogSection, title: args.title})
+            if (args.description)
+                .article-blog__description(data-anim='trigger')
+                    if (args.description.text)
+                        .article-blog__description-text(data-anim='anim-2')!= args.description.text
+                    if (args.description.image)
+                        figure.article-blog__figure(data-anim='anim-2')
+                            .article-blog__img-wrapper(data-anim='anim-scale')
+                                 if (args.description.image.path)
+                                    +img({path: args.description.image.path, alt: args.description.image.alt?args.description.image.alt:'', lazy: true})(data-object-fit='cover')
+                                 if (args.description.image.source)
+                                    img(src=args.description.image.source.src, alt=args.description.image.alt?args.description.image.alt:'')(data-object-fit='cover')
+                            if (args.description.image.source)
+                                figcaption.article-blog__figure-caption
+                                    a(href=args.description.image.source.href)!= args.description.image.source.text
+            +table-of-contents({title: 'Содержание статьи:'})(data-anim='anim-3')
+            .table-of-contents__content-section-wrapper
+                each section in args.sections
+                    .article-blog__section(data-anim='anim-3')
+                        if (section.title)
+                            h3.article-blog__h3-title!= section.title
+                        .article-blog__text!= section.text
+                        if (section.image)
+                            figure.article-blog__figure(data-anim='anim-2')
+                                .article-blog__img-wrapper(data-anim='anim-scale')
+                                     if (section.image.path)
+                                        +img({path: section.image.path, alt: section.image.alt?section.image.alt:'', lazy: true})(data-object-fit='cover')
+                                     if (section.image.source)
+                                        img(src=section.image.source.src, alt=section.image.alt?section.image.alt:'').lazy(data-object-fit='cover')
+                                if (section.image.source)
+                                    figcaption.article-blog__figure-caption
+                                        a(href=section.image.source.href) section.image.source.text
+                        if (section.videoEmbed || section.videoLocal)
+                            figure.article-blog__figure.article-blog__figure_video
+                                if (section.videoEmbed)
+                                    +video-block({
+                                        embed: section.videoEmbed
+                                    }).video-block_blog
+                                    figcaption.article-blog__figure-caption
+                                        a(href=`https://youtube.com/watch?v=${section.videoEmbed}`) youtube.com
+                                if (section.videoLocal)
+                                    +video-block({
+                                        path: section.videoLocal
+                                }).video-block_blog
+            section.article-blog__stats
+                +post-stats(args.stats)
+            section.article-blog__comments
+                +comments(args.comments)
+

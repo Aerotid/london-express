@@ -1,0 +1,5 @@
+mixin tile-card(args)
+    .tile-card&attributes(attributes)
+        .col-md-22.offset-md-1.col-xl-16.offset-xl-4
+            .tile-card__container(class= args.background ?`bg_${args.background}`: '')
+                block

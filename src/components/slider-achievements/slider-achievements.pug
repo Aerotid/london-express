@@ -1,0 +1,20 @@
+include ../../components/btn-arrow/btn-arrow
+
+mixin slider-achievements(args)
+    .slider-achievements&attributes(attributes)(data-anim='anim-3')
+        .row.justify-content-center
+            .col-md-2.d-none.d-md-block
+                +btn-arrow({type: 'prev', svg: 'sliderArrow'})
+            .col-md-20
+                .swiper-container
+                    .swiper-wrapper
+                        each slide in data.achievementsSlides
+                            .swiper-slide
+                                .slider-achievements__slide-achievement
+                                    p!= slide.achievement
+                                .slider-achievements__slide-hline
+                                .slider-achievements__slide-student
+                                    p!= slide.student
+                    .swiper-custom-scrollbar.slider-achievements__scrollbar.d-md-none
+            .col-md-2.d-none.d-md-block
+                +btn-arrow({type: 'next', svg: 'sliderArrow'})

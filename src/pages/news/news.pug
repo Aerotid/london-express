@@ -1,0 +1,25 @@
+extends ../../layout/layout
+include ../../components/main/main
+include ../../components/footer/footer
+include ../../components/h1-title/h1-title
+include ../../components/section/section
+include ../../components/pagination/pagination
+include ../../components/blog-new/blog-new
+include ../../components/news-main/news-main
+
+block content
+    div#barba-wrapper
+        .barba-container(data-namespace='news')
+            +main
+                +h1-title({title:'Новости'}).news__title
+                +section.section_margin.section_hint(data-anim='anim-3')
+                    +news-main
+                +section.section_pb
+                    +blog-new({
+                        data: data.news,
+                        type: 'news',
+                        part: 0,
+                        lessonPlace: 4
+                    })
+                    +pagination({activeIndex: 1})
+            +footer

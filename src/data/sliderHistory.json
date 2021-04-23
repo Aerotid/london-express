@@ -1,0 +1,27 @@
+[
+  {
+    "date": "2010",
+    "text": "История нашей компании началась в&nbsp;2010 году с&nbsp;небольшой языковой студии в&nbsp;городе Пятигорск. На&nbsp;сегодняшний день сеть лингвистических школ представлена на&nbsp;территории всей России.",
+    "img": "../../components/slider-history/images/2010.jpg"
+  },
+  {
+    "date": "2014",
+    "text": "С&nbsp;2014 года стартовал франчайзинговый проект London Express, который в&nbsp;настоящее время является самой успешной франшизой в&nbsp;сегменте дополнительного образования. Более 50&nbsp;школ английского языка London Express открыты по&nbsp;всей России.",
+    "img": "../../components/slider-history/images/2014.jpg"
+  },
+  {
+    "date": "2016",
+    "text": "Флагманская школа London Express с&nbsp;2016 года является аккредитованным открытым центром по&nbsp;приему Cambridge Exams. Тысячи студентов сдали в&nbsp;нашем центре экзамены и&nbsp;получили официальные сертификаты университета Cambridge.",
+    "img": "../../components/slider-history/images/2016.jpg"
+  },
+  {
+    "date": "2018",
+    "text": "В&nbsp;2018 году London Express присвоен статус Cambridge CELТA CENTRE, позволяющим выдавать сертификаты Cambridge CELТA с&nbsp;правом преподавания английского языка в&nbsp;любой стране мира.",
+    "img": "../../components/slider-history/images/4.jpg"
+  },
+  {
+    "date": "2020",
+    "text": "В&nbsp;2020 году открыта онлайн-школа London Express Online с&nbsp;собственной образовательной платформой и&nbsp;лицензионным доступом к&nbsp;международному издательству.",
+    "img": "../../components/slider-history/images/2.jpg"
+  }
+]

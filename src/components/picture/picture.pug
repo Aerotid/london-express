@@ -1,0 +1,15 @@
+mixin picture(args)
+    - var classList = '';
+    if (args && args.classList)
+        each classItem in args.classList
+            - classList += `picture_${classItem} `
+    picture.picture(class= args.classList ? classList : '')&attributes(attributes)
+        if (args && args.sources)
+            each source in args.sources
+                source(data-srcset=args.lazy?source.srcset:'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7' srcset=args.lazy?'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7':source.srcset media= source.media ? source.media : null type= source.type ? source.type: null)
+        if (args && args.img)
+            +img({
+                path: args.img,
+                alt: args.alt ? args.alt : false,
+                lazy: !!args.lazy
+            })(data-object-fit= args.objectFit ? args.objectFit : false data-object-position= args.objPos ? args.objPos.join(' '): false)

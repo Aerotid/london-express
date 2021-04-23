@@ -1,0 +1,81 @@
+.attach-file {
+    $root: &;
+    color: white;
+    //text-align: right;
+
+    label {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 0;
+        color: #fff;
+        transition: border .3s;
+        cursor: pointer;
+
+        @include media-breakpoint-down(sm) {
+            min-width: 100%;
+            font-size: 18px;
+            text-transform: none;
+        }
+    }
+
+    &__text {
+        @include font-4;
+    }
+
+    &__icon {
+        position: relative;
+        width: 1.6rem;
+        height: 2.2rem;
+        margin-right: 1.8rem;
+
+        &_icon {
+            width: 1.6rem;
+            height: 2.2rem;
+        }
+
+        &_photo {
+            width: 2.2rem;
+            height: 1.9rem;
+        }
+
+        &_pink-plus {
+            align-self: center;
+            width: 5rem;
+            height: 5rem;
+
+            & + #{$root}__text {
+                align-self: center;
+            }
+        }
+
+        svg {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__input {
+        position: absolute;
+        width: 0;
+        height: 0;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
+
+    &:not(.fill) {
+        #{$root}__input[required] + label {
+            color: $color-18;
+        }
+    }
+
+    &.fill {}
+
+    &_dark {
+        label {
+            color: $color-9;
+        }
+    }
+}

@@ -1,0 +1,7 @@
+mixin partners(args)
+    .partners&attributes(attributes)
+        .swiper-container.partners__container(data-anim='anim-1')
+            .swiper-wrapper.partners__wrapper
+                each item in args
+                    .swiper-slide.partners__item
+                        +img({path: item.img.src})(data-object-fit='contain')

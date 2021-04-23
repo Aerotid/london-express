@@ -1,0 +1,50 @@
+.teachers-qualifications {
+    $root: &;
+
+    &__certifications {
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 0;
+        margin-bottom: 8rem;
+        list-style: none;
+        @include mobile-offset;
+
+        @include media-breakpoint-down(sm) {
+            justify-content: space-between;
+            margin-bottom: 0;
+        }
+
+        li {
+            margin-right: #{$col-width};
+            width: calc(#{$col-width}*3);
+
+            @include media-breakpoint-down(lg) {
+                margin-right: calc(#{$col-width}*0.5);
+                width: calc(#{$col-width}*5);
+
+                @include media-breakpoint-down(sm) {
+                    width: 46.4%;
+                    margin-right: 0rem;
+                    margin-bottom: 3rem;
+                }
+            }
+
+            &:first-child {
+                margin-left: calc(#{$col-width}*0.5);
+
+                @include media-breakpoint-down(lg) {
+                    margin-left: 0rem;
+                }
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    &__join-link {
+        display: flex;
+        justify-content: center;
+    }
+}

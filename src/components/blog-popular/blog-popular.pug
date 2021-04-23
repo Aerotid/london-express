@@ -1,0 +1,19 @@
+include ../../components/btn-arrow/btn-arrow
+include ../../components/blog-statistics/blog-statistics
+
+mixin blog-popular(args)
+    .blog-popular&attributes(attributes)
+        .d-none.d-xl-block
+            +btn-arrow({ type: 'prev' })
+            +btn-arrow({ type: 'next' })
+        .swiper-container.blog-popular__container
+            .swiper-wrapper
+                each item in args.data
+                    .swiper-slide.blog-popular__slide
+                        a(href='/blog-article.html').blog-popular__slide-wrapper
+                            .blog-popular__slide-image
+                                +img({path: item.image})
+                            .blog-popular__slide-content
+                                .blog-popular__slide-article Популярное
+                                h3.blog-popular__slide-title!=item.title
+                                +blog-statistics
